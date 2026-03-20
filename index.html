@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIP Dashboard — Live</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080c12;--s1:#0e1420;--s2:#141b27;--border:#1e2d42;--accent:#4f9cf9;--green:#34d399;--red:#f87171;--yellow:#fbbf24;--purple:#a78bfa;--text:#e2e8f0;--muted:#64748b;--r:12px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Onest',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+  header{background:linear-gradient(135deg,#0a1628,#0e1e38);border-bottom:1px solid var(--border);padding:18px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-icon{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,#4f9cf9,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:18px}
+  .logo h1{font-size:17px;font-weight:800;letter-spacing:-.02em}
+  .logo span{font-size:11px;color:var(--muted)}
+  .hright{display:flex;align-items:center;gap:14px}
+  .live{display:flex;align-items:center;gap:6px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.25);color:var(--green);border-radius:99px;padding:4px 11px;font-size:11px;font-weight:700}
+  .ldot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  #upd{font-size:11px;color:var(--muted)}
+  main{max-width:1380px;margin:0 auto;padding:28px 20px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:24px}
+  .card{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:18px;transition:transform .2s,border-color .2s}
+  .card:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .card-lbl{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+  .card-val{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .card-sub{font-size:11px;color:var(--muted);margin-top:5px}
+  .cv-green{color:var(--green)}.cv-red{color:var(--red)}.cv-blue{color:var(--accent)}.cv-yellow{color:var(--yellow)}.cv-purple{color:var(--purple)}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+  .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:18px}
+  @media(max-width:860px){.g2,.g3{grid-template-columns:1fr}}
+  .panel{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+  .ph{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+  .pt{font-size:13px;font-weight:700}
+  .pc{background:var(--s2);border:1px solid var(--border);border-radius:99px;padding:2px 9px;font-size:11px;font-weight:700;color:var(--muted)}
+  .tbl{width:100%;border-collapse:collapse;font-size:12px}
+  .tbl th{padding:9px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--s2);border-bottom:1px solid var(--border)}
+  .tbl td{padding:10px 14px;border-bottom:1px solid rgba(30,45,66,.4);vertical-align:middle}
+  .tbl tr:last-child td{border-bottom:none}
+  .tbl tr:hover td{background:rgba(79,156,249,.03)}
+  .badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:99px;font-size:10px;font-weight:700;letter-spacing:.03em;white-space:nowrap}
+  .bg{background:rgba(52,211,153,.12);color:var(--green);border:1px solid rgba(52,211,153,.2)}
+  .br{background:rgba(248,113,113,.12);color:var(--red);border:1px solid rgba(248,113,113,.2)}
+  .by{background:rgba(251,191,36,.12);color:var(--yellow);border:1px solid rgba(251,191,36,.2)}
+  .bb{background:rgba(79,156,249,.12);color:var(--accent);border:1px solid rgba(79,156,249,.2)}
+  .bp{background:rgba(167,139,250,.12);color:var(--purple);border:1px solid rgba(167,139,250,.2)}
+  .prob{padding:12px 18px;border-bottom:1px solid rgba(30,45,66,.4);display:flex;align-items:flex-start;gap:12px}
+  .prob:last-child{border-bottom:none}
+  .pnum{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);background:var(--s2);border:1px solid var(--border);border-radius:5px;padding:3px 7px;white-space:nowrap;flex-shrink:0}
+  .pname{font-weight:700;font-size:12px;margin-bottom:2px}
+  .pmeta{font-size:11px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+  .ptxt{font-size:11px;color:var(--muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px}
+  .srow{padding:11px 18px;border-bottom:1px solid rgba(30,45,66,.4)}
+  .srow:last-child{border-bottom:none}
+  .stop{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+  .sname{font-size:12px;font-weight:600}
+  .sstats{font-size:11px;color:var(--muted)}
+  .pbar-bg{height:3px;background:var(--border);border-radius:99px;overflow:hidden;margin-top:5px}
+  .pbar-f{height:100%;border-radius:99px;transition:width .5s}
+  .stars{color:var(--yellow)}
+  .empty{padding:36px;text-align:center;color:var(--muted);font-size:13px}
+  .spin-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;height:160px;gap:12px;color:var(--muted);font-size:13px}
+  .spin{width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:sp .8s linear infinite}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  footer{border-top:1px solid var(--border);padding:18px 28px;text-align:center;font-size:11px;color:var(--muted);max-width:1380px;margin:0 auto}
+  footer a{color:var(--accent);text-decoration:none;font-weight:600}
+  code{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:11px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <div class="logo-icon">📡</div>
+    <div>
+      <h1>SIP Dashboard</h1>
+      <span>BrunoSantiagoIT • Live</span>
+    </div>
+  </div>
+  <div class="hright">
+    <span id="upd">Загрузка...</span>
+    <div class="live"><div class="ldot"></div>LIVE</div>
+  </div>
+</header>
+
+<main>
+  <div class="cards" id="cards"><div class="spin-wrap" style="grid-column:1/-1;height:100px"><div class="spin"></div><span>Загружаем данные...</span></div></div>
+  <div class="g2">
+    <div class="panel"><div class="ph"><div class="pt">🚨 Открытые проблемы</div><span class="pc" id="oc">—</span></div><div id="op"><div class="spin-wrap"><div class="spin"></div></div></div></div>
+    <div class="panel"><div class="ph"><div class="pt">📞 SIP аккаунты (занятые)</div><span class="pc" id="sc">—</span></div><div id="st"><div class="spin-wrap"><div class="spin"></div></div></div></div>
+  </div>
+  <div class="g3">
+    <div class="panel"><div class="ph"><div class="pt">🏢 Поставщики</div><span class="pc" id="supc">—</span></div><div id="sl"><div class="spin-wrap"><div class="spin"></div></div></div></div>
+    <div class="panel"><div class="ph"><div class="pt">👥 Работники</div><span class="pc" id="wc">—</span></div><div id="wl"><div class="spin-wrap"><div class="spin"></div></div></div></div>
+    <div class="panel"><div class="ph"><div class="pt">⭐ Оценки связи</div><span class="pc" id="rc">—</span></div><div id="rl"><div class="spin-wrap"><div class="spin"></div></div></div></div>
+  </div>
+</main>
+
+<footer>SIP-Бот v7.0 &nbsp;•&nbsp; <a href="https://t.me/bruno_santia">@bruno_santia</a> &nbsp;•&nbsp; <a href="https://t.me/santiago_IT">Канал santiago_IT</a> &nbsp;•&nbsp; Обновляется каждые 30 сек</footer>
+
+<script>
+const URL='https://raw.githubusercontent.com/BrunoSantiagoIT/sip/main/data.json';
+let D=null;
+
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function stars(n){return'★'.repeat(Math.round(n))+'☆'.repeat(5-Math.round(n))}
+function spin(){return'<div class="spin-wrap"><div class="spin"></div></div>'}
+
+async function load(){
+  try{
+    const r=await fetch(URL+'?t='+Date.now());
+    if(!r.ok)throw new Error(r.status);
+    D=await r.json();
+    render();
+    const m=D._meta||{};
+    document.getElementById('upd').textContent='Обновлено: '+(m.updated_at||'—');
+  }catch(e){document.getElementById('upd').textContent='Ошибка загрузки :('}
+}
+
+function render(){
+  const sips=Object.values(D.sips||{});
+  const probs=Object.values(D.problems||{});
+  const sups=Object.values(D.suppliers||{});
+  const users=D.users||[];
+  const ratings=D.ratings||[];
+
+  const free=sips.filter(s=>!s.assigned_to&&!s.multisip).length;
+  const busy=sips.filter(s=>s.assigned_to&&!s.multisip).length;
+  const openP=probs.filter(p=>p.status==='open').length;
+  const closedP=probs.filter(p=>p.status==='closed').length;
+  const avgR=ratings.length?(ratings.reduce((a,r)=>a+r.rating,0)/ratings.length).toFixed(1):'—';
+
+  // Cards
+  document.getElementById('cards').innerHTML=`
+    <div class="card"><div class="card-lbl">Всего SIP</div><div class="card-val cv-blue">${sips.length}</div><div class="card-sub">${sups.length} поставщиков</div></div>
+    <div class="card"><div class="card-lbl">🟢 Свободных</div><div class="card-val cv-green">${free}</div><div class="card-sub">Готовы к выдаче</div></div>
+    <div class="card"><div class="card-lbl">🔴 Занятых</div><div class="card-val cv-red">${busy}</div><div class="card-sub">Закреплены</div></div>
+    <div class="card"><div class="card-lbl">🚨 Проблем открыто</div><div class="card-val cv-red">${openP}</div><div class="card-sub">${closedP} закрыто всего</div></div>
+    <div class="card"><div class="card-lbl">👥 Работников</div><div class="card-val cv-blue">${users.length}</div><div class="card-sub">В боте</div></div>
+    <div class="card"><div class="card-lbl">⭐ Ср. оценка</div><div class="card-val cv-yellow">${avgR}</div><div class="card-sub">${ratings.length} оценок</div></div>
+  `;
+
+  // Open problems
+  const op=Object.entries(D.problems||{}).filter(([,p])=>p.status==='open').sort(([a],[b])=>+b-+a);
+  document.getElementById('oc').textContent=op.length;
+  document.getElementById('op').innerHTML=op.length?op.slice(0,10).map(([pid,p])=>`
+    <div class="prob">
+      <div class="pnum">#${pid}</div>
+      <div style="flex:1;min-width:0">
+        <div class="pname">${esc(p.user_name)} ${p.user_tg?`<span style="color:var(--muted);font-weight:400">@${esc(p.user_tg)}</span>`:''} ${p.callsign?`<span class="badge bp">${esc(p.callsign)}</span>`:''}</div>
+        <div class="pmeta"><span>📞 <code>${esc(p.sip_number)}</code></span><span>🏢 ${esc(p.supplier_name)}</span></div>
+        <div class="ptxt">${esc(p.text)}</div>
+      </div>
+    </div>`).join(''):'<div class="empty">✅ Открытых проблем нет</div>';
+
+  // SIPs
+  const bsips=sips.filter(s=>s.assigned_to).slice(0,15);
+  const supMap=D.suppliers||{};
+  document.getElementById('sc').textContent=sips.length;
+  document.getElementById('st').innerHTML=bsips.length?`<table class="tbl"><thead><tr><th>Номер</th><th>Поставщик</th><th>За кем</th><th>Тип</th></tr></thead><tbody>${bsips.map(s=>{const sup=supMap[s.supplier_id]||{};return`<tr><td><code>${s.number}</code></td><td>${esc(sup.name||'—')}</td><td style="font-weight:600">${esc(s.assigned_to)}</td><td>${s.multisip?'<span class="badge bp">🔀 Мульти</span>':'<span class="badge br">🔴 Занят</span>'}</td></tr>`}).join('')}</tbody></table>`:'<div class="empty">🟢 Все SIP свободны</div>';
+
+  // Suppliers
+  document.getElementById('supc').textContent=sups.length;
+  document.getElementById('sl').innerHTML=sups.length?sups.map(sup=>{
+    const ss=sips.filter(s=>s.supplier_id===sup.id);
+    const fr=ss.filter(s=>!s.assigned_to).length;
+    const bz=ss.filter(s=>s.assigned_to).length;
+    const pc=ss.length?Math.round(bz/ss.length*100):0;
+    const pc_probs=Object.values(D.problems||{}).filter(p=>p.supplier_name===sup.name).length;
+    const mw=sup.multisip_workers||[];
+    return`<div class="srow"><div class="stop"><div class="sname">${sup.multisip?'🔀 ':'🏢 '}${esc(sup.name)}${sup.multisip?` <span style="font-size:10px;color:var(--purple)">(${mw.length} польз.)</span>`:''}</div><div class="sstats">${ss.length} SIP • ${pc_probs} проблем</div></div>${sup.multisip?`<div style="font-size:11px;color:var(--muted);margin-top:3px">${mw.length?mw.map(w=>`<span class="badge bp" style="margin:1px">${w}</span>`).join(' '):'Никто не использует'}</div>`:`<div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:3px"><span>🟢${fr}</span><span>🔴${bz}</span></div><div class="pbar-bg"><div class="pbar-f" style="width:${pc}%;background:${pc>70?'var(--red)':pc>40?'var(--yellow)':'var(--green)'}"></div></div>`}</div>`;
+  }).join(''):'<div class="empty">Поставщиков нет</div>';
+
+  // Workers
+  const uinf={};
+  Object.values(D.problems||{}).forEach(p=>{if(p.user_id&&!uinf[p.user_id])uinf[p.user_id]={name:p.user_name,tg:p.user_tg}});
+  const wlist=users.map(uid=>{const inf=uinf[uid]||{};const cs=(D.workers||{})[String(uid)]||{};const st=(D.user_stats||{})[String(uid)]||{};return{uid,name:inf.name||'user_'+uid,tg:inf.tg||'',cs:cs.callsign||'',probs:st.problems_count||0}}).sort((a,b)=>b.probs-a.probs).slice(0,12);
+  document.getElementById('wc').textContent=users.length;
+  document.getElementById('wl').innerHTML=wlist.length?`<table class="tbl"><thead><tr><th>Работник</th><th>Позывной</th><th>Проблем</th></tr></thead><tbody>${wlist.map(w=>`<tr><td><div style="font-weight:600">${esc(w.name)}</div>${w.tg?`<div style="font-size:10px;color:var(--muted)">@${esc(w.tg)}</div>`:''}</td><td>${w.cs?`<span class="badge bp">${esc(w.cs)}</span>`:'<span style="color:var(--muted)">—</span>'}</td><td style="font-weight:700;color:${w.probs>10?'var(--red)':w.probs>0?'var(--accent)':'var(--muted)'}">${w.probs}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">Нет работников</div>';
+
+  // Ratings
+  const rlist=(D.ratings||[]).slice(-5).reverse();
+  const avg2=(D.ratings||[]).length?(D.ratings||[]).reduce((a,r)=>a+r.rating,0)/(D.ratings||[1]).length:0;
+  const dist=[1,2,3,4,5].map(n=>({n,c:(D.ratings||[]).filter(r=>r.rating===n).length}));
+  const mx=Math.max(...dist.map(d=>d.c),1);
+  document.getElementById('rc').textContent=(D.ratings||[]).length;
+  document.getElementById('rl').innerHTML=`
+    <div style="padding:14px 18px;border-bottom:1px solid var(--border)">
+      <div style="font-size:28px;font-weight:800;color:var(--yellow)">${avg2.toFixed(1)}</div>
+      <div class="stars">${stars(avg2)}</div>
+      <div style="margin-top:10px">${dist.reverse().map(d=>`<div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><span style="font-size:10px;color:var(--yellow);width:8px">${d.n}</span><div class="pbar-bg" style="flex:1"><div class="pbar-f" style="width:${Math.round(d.c/mx*100)}%;background:var(--yellow)"></div></div><span style="font-size:10px;color:var(--muted);width:18px">${d.c}</span></div>`).join('')}</div>
+    </div>
+    ${rlist.map(r=>`<div style="padding:9px 18px;border-bottom:1px solid rgba(30,45,66,.35);display:flex;align-items:center;gap:10px"><span class="stars" style="font-size:13px">${stars(r.rating)}</span><div><div style="font-size:12px;font-weight:600">${esc(r.user_name||'—')}</div><div style="font-size:10px;color:var(--muted)">${esc(r.label||'')}</div></div></div>`).join('')}
+  `;
+}
+
+load();
+setInterval(load,30000);
+</script>
+</body>
+</html>
