@@ -1,0 +1,1199 @@
+{
+  "sips": {
+    "34": {
+      "id": "34",
+      "supplier_id": "7",
+      "number": "3202",
+      "server": "87.120.92.216",
+      "password": "***",
+      "assigned_to": "настя"
+    },
+    "35": {
+      "id": "35",
+      "supplier_id": "7",
+      "number": "3213",
+      "server": "87.120.92.216",
+      "password": "***",
+      "assigned_to": null
+    },
+    "36": {
+      "id": "36",
+      "supplier_id": "4",
+      "number": "10113201",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": "ауфер"
+    },
+    "37": {
+      "id": "37",
+      "supplier_id": "4",
+      "number": "10113202",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": "qera"
+    },
+    "38": {
+      "id": "38",
+      "supplier_id": "4",
+      "number": "10113203",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": "loka"
+    },
+    "39": {
+      "id": "39",
+      "supplier_id": "4",
+      "number": "10113204",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "40": {
+      "id": "40",
+      "supplier_id": "4",
+      "number": "10113205",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "41": {
+      "id": "41",
+      "supplier_id": "4",
+      "number": "10113206",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "42": {
+      "id": "42",
+      "supplier_id": "4",
+      "number": "10113207",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "43": {
+      "id": "43",
+      "supplier_id": "5",
+      "number": "1225",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": "коля"
+    },
+    "44": {
+      "id": "44",
+      "supplier_id": "5",
+      "number": "1301",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": "женя"
+    },
+    "45": {
+      "id": "45",
+      "supplier_id": "5",
+      "number": "1303",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": null
+    },
+    "46": {
+      "id": "46",
+      "supplier_id": "5",
+      "number": "1305",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": null
+    },
+    "47": {
+      "id": "47",
+      "supplier_id": "5",
+      "number": "1307",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": null
+    },
+    "48": {
+      "id": "48",
+      "supplier_id": "5",
+      "number": "4301",
+      "server": "178.17.50.98",
+      "password": "***",
+      "assigned_to": null
+    },
+    "49": {
+      "id": "49",
+      "supplier_id": "5",
+      "number": "4302",
+      "server": "178.17.50.98",
+      "password": "***",
+      "assigned_to": null
+    },
+    "50": {
+      "id": "50",
+      "supplier_id": "7",
+      "number": "123218",
+      "server": "51.91.36.2:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "51": {
+      "id": "51",
+      "supplier_id": "7",
+      "number": "123219",
+      "server": "51.91.36.2:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "52": {
+      "id": "52",
+      "supplier_id": "7",
+      "number": "123220",
+      "server": "51.91.36.2:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "53": {
+      "id": "53",
+      "supplier_id": "7",
+      "number": "123221",
+      "server": "51.91.36.2:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "54": {
+      "id": "54",
+      "supplier_id": "7",
+      "number": "123222",
+      "server": "51.91.36.2:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "55": {
+      "id": "55",
+      "supplier_id": "7",
+      "number": "123223",
+      "server": "51.91.36.2:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "56": {
+      "id": "56",
+      "supplier_id": "7",
+      "number": "123224",
+      "server": "51.91.36.2:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "57": {
+      "id": "57",
+      "supplier_id": "6",
+      "number": "2026",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": "гена"
+    },
+    "58": {
+      "id": "58",
+      "supplier_id": "6",
+      "number": "2027",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": "ира"
+    },
+    "59": {
+      "id": "59",
+      "supplier_id": "6",
+      "number": "2028",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": ".22"
+    },
+    "60": {
+      "id": "60",
+      "supplier_id": "6",
+      "number": "2029",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "61": {
+      "id": "61",
+      "supplier_id": "6",
+      "number": "2030",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "62": {
+      "id": "62",
+      "supplier_id": "6",
+      "number": "3029",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "63": {
+      "id": "63",
+      "supplier_id": "6",
+      "number": "3030",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "64": {
+      "id": "64",
+      "supplier_id": "5",
+      "number": "1226",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": null
+    },
+    "65": {
+      "id": "65",
+      "supplier_id": "5",
+      "number": "1315",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": null
+    },
+    "66": {
+      "id": "66",
+      "supplier_id": "5",
+      "number": "1316",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": null
+    },
+    "67": {
+      "id": "67",
+      "supplier_id": "5",
+      "number": "1317",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": null
+    },
+    "68": {
+      "id": "68",
+      "supplier_id": "5",
+      "number": "1319",
+      "server": "87.120.216.240",
+      "password": "***",
+      "assigned_to": null
+    },
+    "69": {
+      "id": "69",
+      "supplier_id": "6",
+      "number": "5008",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "70": {
+      "id": "70",
+      "supplier_id": "6",
+      "number": "5009",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "71": {
+      "id": "71",
+      "supplier_id": "6",
+      "number": "5010",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "72": {
+      "id": "72",
+      "supplier_id": "6",
+      "number": "5011",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "73": {
+      "id": "73",
+      "supplier_id": "6",
+      "number": "5012",
+      "server": "77.110.106.195:5060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "74": {
+      "id": "74",
+      "supplier_id": "4",
+      "number": "10123227",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "75": {
+      "id": "75",
+      "supplier_id": "4",
+      "number": "10123228",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "76": {
+      "id": "76",
+      "supplier_id": "4",
+      "number": "10123229",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "77": {
+      "id": "77",
+      "supplier_id": "4",
+      "number": "10123230",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "78": {
+      "id": "78",
+      "supplier_id": "4",
+      "number": "10123231",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "79": {
+      "id": "79",
+      "supplier_id": "4",
+      "number": "10123232",
+      "server": "51.77.185.52",
+      "password": "***",
+      "assigned_to": null
+    },
+    "80": {
+      "id": "80",
+      "supplier_id": "4",
+      "number": "133216",
+      "server": "5.149.255.185:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "81": {
+      "id": "81",
+      "supplier_id": "4",
+      "number": "133217",
+      "server": "5.149.255.185:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "82": {
+      "id": "82",
+      "supplier_id": "4",
+      "number": "133218",
+      "server": "5.149.255.185:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "83": {
+      "id": "83",
+      "supplier_id": "4",
+      "number": "133219",
+      "server": "5.149.255.185:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "84": {
+      "id": "84",
+      "supplier_id": "4",
+      "number": "133220",
+      "server": "5.149.255.185:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "85": {
+      "id": "85",
+      "supplier_id": "4",
+      "number": "133221",
+      "server": "5.149.255.185:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "86": {
+      "id": "86",
+      "supplier_id": "4",
+      "number": "133222",
+      "server": "5.149.255.185:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "87": {
+      "id": "87",
+      "supplier_id": "4",
+      "number": "133223",
+      "server": "5.149.255.185:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "88": {
+      "id": "88",
+      "supplier_id": "4",
+      "number": "133224",
+      "server": "5.149.255.185:6060",
+      "password": "***",
+      "assigned_to": null
+    },
+    "89": {
+      "id": "89",
+      "supplier_id": "5",
+      "number": "101",
+      "server": "45.129.199.234",
+      "password": "***",
+      "assigned_to": null
+    },
+    "90": {
+      "id": "90",
+      "supplier_id": "5",
+      "number": "102",
+      "server": "45.129.199.234",
+      "password": "***",
+      "assigned_to": null
+    },
+    "91": {
+      "id": "91",
+      "supplier_id": "5",
+      "number": "103",
+      "server": "45.129.199.234",
+      "password": "***",
+      "assigned_to": null
+    },
+    "92": {
+      "id": "92",
+      "supplier_id": "5",
+      "number": "104",
+      "server": "45.129.199.234",
+      "password": "***",
+      "assigned_to": null
+    },
+    "93": {
+      "id": "93",
+      "supplier_id": "5",
+      "number": "105",
+      "server": "45.129.199.234",
+      "password": "***",
+      "assigned_to": null
+    },
+    "94": {
+      "id": "94",
+      "supplier_id": "5",
+      "number": "106",
+      "server": "45.129.199.234",
+      "password": "***",
+      "assigned_to": null
+    },
+    "95": {
+      "id": "95",
+      "supplier_id": "5",
+      "number": "107",
+      "server": "45.129.199.234",
+      "password": "***",
+      "assigned_to": null
+    },
+    "96": {
+      "id": "96",
+      "supplier_id": "5",
+      "number": "108",
+      "server": "45.129.199.234",
+      "password": "***",
+      "assigned_to": null
+    },
+    "97": {
+      "id": "97",
+      "supplier_id": "5",
+      "number": "109",
+      "server": "45.129.199.234",
+      "password": "***",
+      "assigned_to": null
+    },
+    "98": {
+      "id": "98",
+      "supplier_id": "8",
+      "number": "1231314",
+      "server": "123123.1231.132",
+      "password": "***",
+      "assigned_to": "кира"
+    },
+    "99": {
+      "id": "99",
+      "supplier_id": "9",
+      "number": "546352",
+      "server": "12534..4653432565.564",
+      "password": "***",
+      "assigned_to": null
+    }
+  },
+  "suppliers": {
+    "4": {
+      "id": "4",
+      "name": "джин",
+      "chat_id": "8240409625",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "5": {
+      "id": "5",
+      "name": "ахитектор",
+      "chat_id": null,
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "6": {
+      "id": "6",
+      "name": "цру",
+      "chat_id": "-1003772517699",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "7": {
+      "id": "7",
+      "name": "хотабыч",
+      "chat_id": "-1003772517699",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "8": {
+      "id": "8",
+      "name": "бродяга",
+      "chat_id": null,
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "9": {
+      "id": "9",
+      "name": "Alien",
+      "chat_id": null,
+      "multisip": true,
+      "multisip_workers": [
+        "ally",
+        "overlay",
+        "kokoshnik",
+        "йцукен"
+      ]
+    }
+  },
+  "supplier_counter": 9,
+  "sip_counter": 99,
+  "users": [
+    8364789204,
+    7322806824,
+    8240409625,
+    1847396592,
+    7577059606,
+    8579802193,
+    7153340025,
+    7181315588,
+    8173039508
+  ],
+  "workers": {},
+  "problems": {
+    "1": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "213",
+      "supplier_name": "Сигнал",
+      "text": "уака",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "2": {
+      "user_id": 1847396592,
+      "user_name": "Peace",
+      "user_tg": "gidozepam1488",
+      "callsign": "",
+      "sip_number": "213",
+      "supplier_name": "Сигнал",
+      "text": "Сип гамно",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "3": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "weqwe",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "4": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "хуй епта",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "5": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "пизда",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "6": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "🐺ауф",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "7": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "ысысы",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "8": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "уаццц",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "9": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "нпгнпгана",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "10": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "ыпвкарвке",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "11": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "ываыв",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "12": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "рееееееееееееееееееееееееее",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "13": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "авввв",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "14": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "12113",
+      "supplier_name": "бРУНО",
+      "text": "GYTYFYRRYRFY",
+      "photo_id": null,
+      "status": "closed"
+    },
+    "15": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "234",
+      "supplier_name": "Сигнал",
+      "text": "wfeewf\\",
+      "photo_id": null,
+      "status": "closed",
+      "closed_at": 1773918112
+    },
+    "16": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "ewfwef",
+      "supplier_name": "Сигнал",
+      "text": "пй",
+      "photo_id": null,
+      "status": "open"
+    },
+    "17": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "пизда",
+      "supplier_name": "—",
+      "text": "пиздп",
+      "photo_id": null,
+      "status": "open"
+    },
+    "18": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "умираю помогите",
+      "photo_id": null,
+      "status": "open"
+    },
+    "19": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "123213.1231",
+      "supplier_name": "Test",
+      "text": "тест 3",
+      "photo_id": null,
+      "status": "open"
+    },
+    "20": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "1243",
+      "supplier_name": "Test",
+      "text": "Ку",
+      "photo_id": null,
+      "status": "closed",
+      "closed_at": 1773934976
+    },
+    "21": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "1243",
+      "supplier_name": "Test",
+      "text": "пезда",
+      "photo_id": null,
+      "status": "closed",
+      "created_at": 1773935841,
+      "closed_at": 1774007447
+    },
+    "22": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "1243",
+      "supplier_name": "Test",
+      "text": "укпк",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1773936130
+    },
+    "23": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "1243",
+      "supplier_name": "Test",
+      "text": "jregf",
+      "photo_id": null,
+      "status": "closed",
+      "created_at": 1773936157,
+      "closed_at": 1773936485
+    },
+    "24": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "1243",
+      "supplier_name": "Test",
+      "text": "мне грустно",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1773936503
+    },
+    "25": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "1243",
+      "supplier_name": "Test",
+      "text": "ГРУСТНО",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1773936563
+    },
+    "26": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "1243",
+      "supplier_name": "Test",
+      "text": "lf",
+      "photo_id": null,
+      "status": "closed",
+      "created_at": 1773936630,
+      "closed_at": 1773958120
+    },
+    "27": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "1243",
+      "supplier_name": "Test",
+      "text": "хелп",
+      "photo_id": null,
+      "status": "closed",
+      "created_at": 1773957685,
+      "closed_at": 1774015487
+    },
+    "28": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "133223",
+      "supplier_name": "джин",
+      "text": "pizda",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774007899
+    },
+    "29": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "133219",
+      "supplier_name": "джин",
+      "text": "pizda",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774007955
+    },
+    "30": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "104",
+      "supplier_name": "ахитектор",
+      "text": "pizda",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774008020
+    },
+    "31": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "133221",
+      "supplier_name": "джин",
+      "text": "pizda",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774008037
+    },
+    "32": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "123218",
+      "supplier_name": "хотабыч",
+      "text": "alaaka",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774008161
+    },
+    "33": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "107",
+      "supplier_name": "ахитектор",
+      "text": "qq",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774011688
+    },
+    "34": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "3202",
+      "supplier_name": "хотабыч",
+      "text": "[eq",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774013369
+    },
+    "35": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "546352",
+      "supplier_name": "Alien",
+      "text": "quqareky",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774014617
+    },
+    "36": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "3202",
+      "supplier_name": "хотабыч",
+      "text": "fpfpf",
+      "photo_id": null,
+      "status": "closed",
+      "created_at": 1774014689,
+      "closed_at": 1774015492
+    },
+    "37": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "3202",
+      "supplier_name": "хотабыч",
+      "text": "^)",
+      "photo_id": null,
+      "status": "closed",
+      "created_at": 1774014743,
+      "closed_at": 1774015495
+    },
+    "38": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "3202",
+      "supplier_name": "хотабыч",
+      "text": "1\\\\",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774015594
+    },
+    "39": {
+      "user_id": 8364789204,
+      "user_name": "Mr Robot",
+      "user_tg": "mrRobot2244",
+      "callsign": "",
+      "sip_number": "3202",
+      "supplier_name": "хотабыч",
+      "text": "12",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774015628
+    },
+    "40": {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "user_tg": "bruno_santia",
+      "callsign": "",
+      "sip_number": "3202",
+      "supplier_name": "хотабыч",
+      "text": "Азазаз",
+      "photo_id": null,
+      "status": "open",
+      "created_at": 1774034229
+    }
+  },
+  "problem_counter": 40,
+  "active_problem": {
+    "8364789204": "39",
+    "8240409625": "40"
+  },
+  "user_stats": {
+    "8240409625": {
+      "messages_count": 35,
+      "problems_count": 26,
+      "sips_used": [
+        {
+          "number": "213",
+          "supplier_name": "Сигнал"
+        },
+        {
+          "number": "123213.1231",
+          "supplier_name": "Test"
+        },
+        {
+          "number": "12113",
+          "supplier_name": "бРУНО"
+        },
+        {
+          "number": "234",
+          "supplier_name": "Сигнал"
+        },
+        {
+          "number": "ewfwef",
+          "supplier_name": "Сигнал"
+        },
+        {
+          "number": "пизда",
+          "supplier_name": "—"
+        },
+        {
+          "number": "1243",
+          "supplier_name": "Test"
+        },
+        {
+          "number": "3202",
+          "supplier_name": "хотабыч"
+        }
+      ]
+    },
+    "1847396592": {
+      "messages_count": 1,
+      "problems_count": 1,
+      "sips_used": [
+        {
+          "number": "213",
+          "supplier_name": "Сигнал"
+        }
+      ]
+    },
+    "8364789204": {
+      "messages_count": 13,
+      "problems_count": 13,
+      "sips_used": [
+        {
+          "number": "1243",
+          "supplier_name": "Test"
+        },
+        {
+          "number": "133223",
+          "supplier_name": "джин"
+        },
+        {
+          "number": "133219",
+          "supplier_name": "джин"
+        },
+        {
+          "number": "104",
+          "supplier_name": "ахитектор"
+        },
+        {
+          "number": "133221",
+          "supplier_name": "джин"
+        },
+        {
+          "number": "123218",
+          "supplier_name": "хотабыч"
+        },
+        {
+          "number": "107",
+          "supplier_name": "ахитектор"
+        },
+        {
+          "number": "3202",
+          "supplier_name": "хотабыч"
+        },
+        {
+          "number": "546352",
+          "supplier_name": "Alien"
+        }
+      ]
+    }
+  },
+  "custom_buttons": [],
+  "custom_btn_counter": 1,
+  "it_stats": {
+    "total_sips_ever": 0,
+    "total_suppliers_ever": 0,
+    "suppliers_history": []
+  },
+  "ratings": [
+    {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "rating": 5,
+      "label": "🤩 Очень хорошая"
+    }
+  ],
+  "autofix_mode": "this_bot",
+  "polls": {
+    "1": {
+      "id": "1",
+      "question": "как дела?",
+      "options": [
+        "тест 1",
+        "тест 2",
+        "тест 3"
+      ],
+      "anonymous": true,
+      "active": false,
+      "answers": {
+        "8240409625": {
+          "option_idx": 0,
+          "user_name": "Bruno Santiago"
+        }
+      }
+    }
+  },
+  "poll_counter": 1,
+  "chinim_enabled": true
+}
