@@ -580,7 +580,9 @@
       "id": "106",
       "supplier_id": "8",
       "number": "1235",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -1099,8 +1101,8 @@
   },
   "user_last_sip": {},
   "_meta": {
-    "updated_at": "21.03.2026 13:11:44",
-    "updated_ts": 1774087904,
+    "updated_at": "21.03.2026 13:11:54",
+    "updated_ts": 1774087914,
     "version": "7.0"
   }
 }
