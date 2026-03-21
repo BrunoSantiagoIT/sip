@@ -70,7 +70,8 @@
       "id": "45",
       "supplier_id": "5",
       "number": "1303",
-      "assigned_to": null
+      "assigned_to": "ара",
+      "category": "холодка"
     },
     "46": {
       "id": "46",
@@ -852,8 +853,8 @@
   "poll_counter": 1,
   "chinim_enabled": true,
   "_meta": {
-    "updated_at": "21.03.2026 10:30:15",
-    "updated_ts": 1774078215,
+    "updated_at": "21.03.2026 10:31:42",
+    "updated_ts": 1774078302,
     "version": "7.0"
   }
 }
