@@ -1,388 +1,874 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIP Dashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<style>
-:root{--bg:#070b14;--s1:#0c1220;--s2:#111827;--border:#1a2540;--accent:#3b82f6;--a2:#06b6d4;--green:#10b981;--red:#ef4444;--yellow:#f59e0b;--purple:#8b5cf6;--pink:#ec4899;--text:#f1f5f9;--muted:#64748b;--r:14px}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
-.bg-grid{position:fixed;inset:0;z-index:0;background-image:linear-gradient(rgba(59,130,246,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.03) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
-.g1{position:fixed;width:700px;height:700px;top:-200px;left:-150px;border-radius:50%;background:var(--accent);filter:blur(130px);opacity:.09;animation:d1 22s ease-in-out infinite;pointer-events:none;z-index:0}
-.g2{position:fixed;width:600px;height:600px;bottom:-180px;right:-120px;border-radius:50%;background:var(--purple);filter:blur(130px);opacity:.09;animation:d2 28s ease-in-out infinite;pointer-events:none;z-index:0}
-.g3{position:fixed;width:450px;height:450px;top:42%;left:42%;border-radius:50%;background:var(--a2);filter:blur(120px);opacity:.07;animation:d3 20s ease-in-out infinite;pointer-events:none;z-index:0}
-@keyframes d1{0%,100%{transform:translate(0,0)}50%{transform:translate(90px,70px)}}
-@keyframes d2{0%,100%{transform:translate(0,0)}50%{transform:translate(-70px,-90px)}}
-@keyframes d3{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.25)}}
-header{position:sticky;top:0;z-index:100;background:rgba(7,11,20,.88);backdrop-filter:blur(22px);border-bottom:1px solid var(--border);padding:13px 28px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:13px}
-.lm{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--purple));display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 20px rgba(59,130,246,.3)}
-.lt h1{font-family:'Unbounded',sans-serif;font-size:14px;font-weight:900}
-.lt span{font-size:10px;color:var(--muted)}
-.hright{display:flex;align-items:center;gap:13px}
-.live{display:flex;align-items:center;gap:5px;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);color:var(--green);border-radius:99px;padding:4px 11px;font-size:10px;font-weight:700;letter-spacing:.05em}
-.ldot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(16,185,129,.4)}50%{opacity:.5;box-shadow:0 0 0 5px rgba(16,185,129,0)}}
-#upd{font-size:10px;color:var(--muted);font-family:'JetBrains Mono',monospace}
-/* Tabs */
-.tabs{position:relative;z-index:2;display:flex;gap:0;background:var(--s1);border-bottom:1px solid var(--border);padding:0 24px;overflow-x:auto}
-.tab{padding:12px 18px;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;user-select:none}
-.tab:hover{color:var(--text)}
-.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
-.tab-content{display:none}.tab-content.active{display:block}
-main{position:relative;z-index:1;max-width:1440px;margin:0 auto;padding:24px 20px 60px}
-.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:22px}
-@media(max-width:1100px){.cards{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
-.card{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:16px;transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.4)}
-.ci{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:12px}
-.cv{font-family:'Unbounded',sans-serif;font-size:28px;font-weight:900;line-height:1;margin-bottom:4px}
-.cl{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-.cs{font-size:10px;color:var(--muted);margin-top:4px}
-.ci-b{background:rgba(59,130,246,.15);color:var(--accent)}.ci-g{background:rgba(16,185,129,.15);color:var(--green)}.ci-r{background:rgba(239,68,68,.15);color:var(--red)}.ci-y{background:rgba(245,158,11,.15);color:var(--yellow)}.ci-p{background:rgba(139,92,246,.15);color:var(--purple)}.ci-k{background:rgba(236,72,153,.15);color:var(--pink)}
-.cv-b{color:var(--accent)}.cv-g{color:var(--green)}.cv-r{color:var(--red)}.cv-y{color:var(--yellow)}.cv-p{color:var(--purple)}.cv-k{color:var(--pink)}
-.cb{border-top:2px solid var(--accent)}.cg{border-top:2px solid var(--green)}.cr{border-top:2px solid var(--red)}.cy{border-top:2px solid var(--yellow)}.cp{border-top:2px solid var(--purple)}.ck{border-top:2px solid var(--pink)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
-.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px}
-.row21{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-bottom:14px}
-@media(max-width:900px){.row2,.row3,.row21{grid-template-columns:1fr}}
-.panel{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
-.ph{padding:13px 17px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.015)}
-.pt{font-size:12px;font-weight:700}
-.pc{background:var(--s2);border:1px solid var(--border);border-radius:99px;padding:2px 8px;font-size:10px;font-weight:700;color:var(--muted);font-family:'JetBrains Mono',monospace}
-.chart-wrap{padding:12px 14px}.chart-wrap canvas{max-height:200px}
-.tbl{width:100%;border-collapse:collapse;font-size:12px}
-.tbl th{padding:8px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.02);border-bottom:1px solid var(--border)}
-.tbl td{padding:9px 14px;border-bottom:1px solid rgba(26,37,64,.45);vertical-align:middle}
-.tbl tr:last-child td{border-bottom:none}
-.tbl tr:hover td{background:rgba(59,130,246,.04)}
-.badge{display:inline-flex;align-items:center;padding:2px 7px;border-radius:99px;font-size:10px;font-weight:700;white-space:nowrap}
-.bg{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.2)}
-.br{background:rgba(239,68,68,.12);color:var(--red);border:1px solid rgba(239,68,68,.2)}
-.by{background:rgba(245,158,11,.12);color:var(--yellow);border:1px solid rgba(245,158,11,.2)}
-.bb{background:rgba(59,130,246,.12);color:var(--accent);border:1px solid rgba(59,130,246,.2)}
-.bp{background:rgba(139,92,246,.12);color:var(--purple);border:1px solid rgba(139,92,246,.2)}
-.cat-c{background:rgba(59,130,246,.12);color:var(--accent);border:1px solid rgba(59,130,246,.2)}
-.cat-g{background:rgba(245,158,11,.12);color:var(--yellow);border:1px solid rgba(245,158,11,.2)}
-.cat-e{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.2)}
-.pcard{padding:11px 16px;border-bottom:1px solid rgba(26,37,64,.45);display:flex;align-items:flex-start;gap:10px;transition:background .15s}
-.pcard:hover{background:rgba(59,130,246,.04)}.pcard:last-child{border-bottom:none}
-.pnum{font-family:'JetBrains Mono',monospace;font-size:10px;background:rgba(239,68,68,.1);color:var(--red);border:1px solid rgba(239,68,68,.2);border-radius:6px;padding:3px 6px;white-space:nowrap;flex-shrink:0;margin-top:1px}
-.pname{font-size:12px;font-weight:700;margin-bottom:2px}
-.pmeta{display:flex;gap:8px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-bottom:2px}
-.ptxt{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px}
-.srow{padding:11px 16px;border-bottom:1px solid rgba(26,37,64,.45)}.srow:last-child{border-bottom:none}
-.stop2{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
-.sname{font-size:12px;font-weight:700}.sstats{font-size:11px;color:var(--muted)}
-.pbar{height:3px;background:var(--border);border-radius:99px;overflow:hidden;margin-top:4px}
-.pbarf{height:100%;border-radius:99px;transition:width .5s}
-.wrow{display:flex;align-items:center;gap:10px;padding:9px 16px;border-bottom:1px solid rgba(26,37,64,.45)}.wrow:last-child{border-bottom:none}
-.wavatar{width:30px;height:30px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
-.wname{font-size:12px;font-weight:700}.wsub{font-size:10px;color:var(--muted)}
-.wprobs{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700}
-.rb{text-align:center;padding:16px}
-.rnum{font-family:'Unbounded',sans-serif;font-size:48px;font-weight:900;color:var(--yellow);line-height:1}
-.rstars{font-size:18px;margin:6px 0;letter-spacing:3px}
-.rsub{font-size:11px;color:var(--muted)}
-.stitle{font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:18px 0 11px;display:flex;align-items:center;gap:9px}
-.stitle::after{content:'';flex:1;height:1px;background:var(--border)}
-.spin-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;gap:10px;color:var(--muted);font-size:12px}
-.spin{width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:sp .7s linear infinite}
-@keyframes sp{to{transform:rotate(360deg)}}
-.empty{padding:28px;text-align:center;color:var(--muted);font-size:12px}
-/* Category section */
-.cat-section{margin-bottom:20px}
-.cat-header{display:flex;align-items:center;gap:10px;padding:10px 16px;background:var(--s2);border:1px solid var(--border);border-radius:10px 10px 0 0;font-weight:700;font-size:13px}
-.cat-body{border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;overflow:hidden}
-footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:16px 28px;text-align:center;font-size:11px;color:var(--muted);max-width:1440px;margin:0 auto}
-footer a{color:var(--accent);text-decoration:none;font-weight:600}
-code{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:11px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* ════════════════════════════════════════════ */
+        /* ЭКРАН ВХОДА */
+        /* ════════════════════════════════════════════ */
+        
+        #login-screen {
+            background: rgba(22, 33, 62, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(100, 200, 255, 0.2);
+        }
+        
+        #login-screen.hidden {
+            display: none;
+        }
+        
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .login-header h1 {
+            font-size: 32px;
+            color: #64c8ff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(100, 200, 255, 0.3);
+        }
+        
+        .login-header p {
+            color: #a0a0a0;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-group label {
+            color: #64c8ff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            padding: 12px 15px;
+            background: rgba(100, 200, 255, 0.1);
+            border: 2px solid rgba(100, 200, 255, 0.3);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #64c8ff;
+            background: rgba(100, 200, 255, 0.15);
+            box-shadow: 0 0 10px rgba(100, 200, 255, 0.2);
+        }
+        
+        .login-btn {
+            padding: 12px;
+            background: linear-gradient(135deg, #64c8ff 0%, #00d4ff 100%);
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(100, 200, 255, 0.3);
+        }
+        
+        .login-btn:active {
+            transform: translateY(0);
+        }
+        
+        .error-message {
+            color: #ff6b6b;
+            font-size: 14px;
+            text-align: center;
+            display: none;
+            padding: 10px;
+            background: rgba(255, 107, 107, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        /* ════════════════════════════════════════════ */
+        /* ОСНОВНОЙ ДАШБОРД */
+        /* ════════════════════════════════════════════ */
+        
+        #dashboard {
+            width: 100%;
+            display: none;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+        }
+        
+        #dashboard.visible {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(22, 33, 62, 0.9);
+            border-bottom: 2px solid rgba(100, 200, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .dashboard-header h1 {
+            color: #64c8ff;
+            font-size: 24px;
+        }
+        
+        .logout-btn {
+            padding: 8px 16px;
+            background: rgba(255, 100, 100, 0.2);
+            border: 1px solid #ff6464;
+            color: #ff6464;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255, 100, 100, 0.3);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+            flex: 1;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(100, 200, 255, 0.2);
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background: rgba(100, 200, 255, 0.1);
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            color: #64c8ff;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        
+        .tab-btn:hover {
+            background: rgba(100, 200, 255, 0.2);
+        }
+        
+        .tab-btn.active {
+            background: linear-gradient(135deg, #64c8ff 0%, #00d4ff 100%);
+            color: #000;
+            border-color: #64c8ff;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: rgba(100, 200, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            color: #64c8ff;
+            transition: all 0.3s;
+        }
+        
+        .stat-card:hover {
+            background: rgba(100, 200, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(100, 200, 255, 0.2);
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .note-card {
+            background: rgba(100, 200, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            color: #64c8ff;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+        
+        .note-card:hover {
+            background: rgba(100, 200, 255, 0.15);
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(100, 200, 255, 0.2);
+        }
+        
+        .note-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #00d4ff;
+        }
+        
+        .note-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(100, 200, 255, 0.2);
+            font-size: 14px;
+        }
+        
+        .note-stat:last-child {
+            border-bottom: none;
+        }
+        
+        .status-good {
+            color: #64ff64;
+        }
+        
+        .status-warn {
+            color: #ffff64;
+        }
+        
+        .status-bad {
+            color: #ff6464;
+        }
+        
+        .last-updated {
+            text-align: center;
+            color: #606060;
+            font-size: 12px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(100, 200, 255, 0.2);
+        }
+        
+        .table-responsive {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(100, 200, 255, 0.2);
+            color: #64c8ff;
+        }
+        
+        th {
+            background: rgba(100, 200, 255, 0.15);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        
+        tr:hover {
+            background: rgba(100, 200, 255, 0.1);
+        }
+    </style>
 </head>
 <body>
-<div class="bg-grid"></div>
-<div class="g1"></div><div class="g2"></div><div class="g3"></div>
-
-<header>
-  <div class="logo">
-    <div class="lm">📡</div>
-    <div class="lt"><h1>SIP Dashboard</h1><span>BrunoSantiagoIT • Live</span></div>
-  </div>
-  <div class="hright">
-    <span id="upd">—</span>
-    <div class="live"><div class="ldot"></div>LIVE</div>
-  </div>
-</header>
-
-<div class="tabs">
-  <div class="tab active" onclick="showTab('overview')">📊 Обзор</div>
-  <div class="tab" onclick="showTab('sip_table')">📞 SIP аккаунты</div>
-  <div class="tab" onclick="showTab('categories')">📂 Холодка / Госы / Входяшка</div>
-  <div class="tab" onclick="showTab('problems')">🚨 Проблемы</div>
-  <div class="tab" onclick="showTab('suppliers')">🏢 Поставщики</div>
-  <div class="tab" onclick="showTab('team')">🪖 Команда</div>
-</div>
-
-<main>
-
-<!-- ══ ОБЗОР ══ -->
-<div id="tab-overview" class="tab-content active">
-  <div class="cards" id="cards"><div class="spin-wrap" style="grid-column:1/-1"><div class="spin"></div><span>Загружаем...</span></div></div>
-  <div class="stitle">Аналитика</div>
-  <div class="row3">
-    <div class="panel"><div class="ph"><div class="pt">📊 SIP по поставщикам</div></div><div class="chart-wrap"><canvas id="c1"></canvas></div></div>
-    <div class="panel"><div class="ph"><div class="pt">📈 Статус проблем</div></div><div class="chart-wrap"><canvas id="c2"></canvas></div></div>
-    <div class="panel"><div class="ph"><div class="pt">📂 SIP по категориям</div></div><div class="chart-wrap"><canvas id="c4"></canvas></div></div>
-  </div>
-  <div class="row21">
-    <div class="panel"><div class="ph"><div class="pt">🚨 Открытые проблемы</div><span class="pc" id="oc">—</span></div><div id="op-short"><div class="spin-wrap"><div class="spin"></div></div></div></div>
-    <div class="panel">
-      <div class="ph"><div class="pt">⭐ Качество связи</div><span class="pc" id="rc">—</span></div>
-      <div class="rb" id="rb"><div class="spin-wrap"><div class="spin"></div></div></div>
-      <div id="rd"></div>
+    <!-- ЭКРАН ВХОДА -->
+    <div id="login-screen">
+        <div class="login-container">
+            <div class="login-header">
+                <h1>🔐 SIP Dashboard</h1>
+                <p>Введите пароль для доступа</p>
+            </div>
+            
+            <div class="error-message" id="error-msg"></div>
+            
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="••••••••"
+                    autocomplete="off"
+                >
+            </div>
+            
+            <button class="login-btn" onclick="handleLogin()">Войти</button>
+            
+            <div style="text-align: center; color: #606060; font-size: 12px; margin-top: 20px;">
+                SIP Dashboard v8.0 • Приватная система
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    
+    <!-- ОСНОВНОЙ ДАШБОРД -->
+    <div id="dashboard">
+        <div class="dashboard-header">
+            <div>
+                <h1>📊 SIP Dashboard</h1>
+            </div>
+            <button class="logout-btn" onclick="handleLogout()">🚪 Выход</button>
+        </div>
+        
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('overview')">📊 Обзор</button>
+                <button class="tab-btn" onclick="switchTab('sips')">📞 SIP</button>
+                <button class="tab-btn" onclick="switchTab('notes')">📝 Примечания</button>
+                <button class="tab-btn" onclick="switchTab('team')">👥 Команда</button>
+                <button class="tab-btn" onclick="switchTab('suppliers')">🏢 Поставщики</button>
+                <button class="tab-btn" onclick="switchTab('problems')">🚨 Проблемы</button>
+            </div>
+            
+            <!-- ОБЗОР -->
+            <div id="overview" class="tab-content active">
+                <h2 style="color: #64c8ff; margin-bottom: 20px;">📊 Обзор системы</h2>
+                <div class="stat-grid" id="overview-stats"></div>
+            </div>
+            
+            <!-- SIP -->
+            <div id="sips" class="tab-content">
+                <h2 style="color: #64c8ff; margin-bottom: 20px;">📞 SIP аккаунты</h2>
+                <div class="table-responsive" id="sips-table"></div>
+            </div>
+            
+            <!-- ПРИМЕЧАНИЯ -->
+            <div id="notes" class="tab-content">
+                <h2 style="color: #64c8ff; margin-bottom: 20px;">📝 Примечания (Работники)</h2>
+                <div id="notes-list"></div>
+            </div>
+            
+            <!-- КОМАНДА -->
+            <div id="team" class="tab-content">
+                <h2 style="color: #64c8ff; margin-bottom: 20px;">👥 Команда</h2>
+                <div class="table-responsive" id="team-table"></div>
+            </div>
+            
+            <!-- ПОСТАВЩИКИ -->
+            <div id="suppliers" class="tab-content">
+                <h2 style="color: #64c8ff; margin-bottom: 20px;">🏢 Поставщики</h2>
+                <div class="table-responsive" id="suppliers-table"></div>
+            </div>
+            
+            <!-- ПРОБЛЕМЫ -->
+            <div id="problems" class="tab-content">
+                <h2 style="color: #64c8ff; margin-bottom: 20px;">🚨 Проблемы</h2>
+                <div class="table-responsive" id="problems-table"></div>
+            </div>
+            
+            <div class="last-updated" id="last-updated"></div>
+        </div>
+    </div>
 
-<!-- ══ SIP ТАБЛИЦА ══ -->
-<div id="tab-sip_table" class="tab-content">
-  <div class="stitle">Все SIP аккаунты</div>
-  <div class="panel"><div class="ph"><div class="pt">📞 SIP аккаунты</div><span class="pc" id="sip-count">—</span></div><div id="sip-table"><div class="spin-wrap"><div class="spin"></div></div></div></div>
-</div>
-
-<!-- ══ КАТЕГОРИИ ══ -->
-<div id="tab-categories" class="tab-content">
-  <div class="stitle">Распределение по категориям</div>
-  <div id="cat-cold" class="cat-section"></div>
-  <div id="cat-gos"  class="cat-section"></div>
-  <div id="cat-ent"  class="cat-section"></div>
-</div>
-
-<!-- ══ ПРОБЛЕМЫ ══ -->
-<div id="tab-problems" class="tab-content">
-  <div class="stitle">Открытые проблемы</div>
-  <div class="panel"><div class="ph"><div class="pt">🚨 Открытые</div><span class="pc" id="op-c2">—</span></div><div id="op-full"><div class="spin-wrap"><div class="spin"></div></div></div></div>
-</div>
-
-<!-- ══ ПОСТАВЩИКИ ══ -->
-<div id="tab-suppliers" class="tab-content">
-  <div class="stitle">Поставщики</div>
-  <div class="panel"><div class="ph"><div class="pt">🏢 Поставщики</div><span class="pc" id="supc">—</span></div><div id="sl"><div class="spin-wrap"><div class="spin"></div></div></div></div>
-</div>
-
-<!-- ══ КОМАНДА ══ -->
-<div id="tab-team" class="tab-content">
-  <div class="stitle">Команда (по позывным)</div>
-  <div class="panel"><div class="ph"><div class="pt">🪖 Позывные</div><span class="pc" id="wc">—</span></div><div id="wl"><div class="spin-wrap"><div class="spin"></div></div></div></div>
-</div>
-
-</main>
-
-<footer>
-  SIP-Бот v7.0 &nbsp;•&nbsp;
-  <a href="https://t.me/bruno_santia">@bruno_santia</a> &nbsp;•&nbsp;
-  <a href="https://t.me/santiago_IT">Канал santiago_IT</a> &nbsp;•&nbsp;
-  Обновляется каждые 30 сек
-</footer>
-
-<script>
-const DATA_URL='https://raw.githubusercontent.com/BrunoSantiagoIT/sip/main/data.json';
-let D=null,CH={};
-const CLR=['#3b82f6','#10b981','#f59e0b','#8b5cf6','#ef4444','#ec4899','#06b6d4','#84cc16'];
-const AVB=['#3b82f6','#10b981','#f59e0b','#8b5cf6','#ef4444','#ec4899'];
-
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
-function stars(n){const f=Math.round(n);return'<span style="color:var(--yellow)">'+'★'.repeat(f)+'</span><span style="color:var(--border)">'+'★'.repeat(5-f)+'</span>'}
-
-function showTab(id){
-  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
-  event.currentTarget.classList.add('active');
-}
-
-function mkChart(id,type,labels,data,colors){
-  const ctx=document.getElementById(id);if(!ctx)return;
-  if(CH[id])CH[id].destroy();
-  CH[id]=new Chart(ctx,{type,data:{labels,datasets:[{data,backgroundColor:colors,borderColor:colors.map(c=>c+'22'),borderWidth:1,tension:.4}]},
-    options:{responsive:true,maintainAspectRatio:true,
-      plugins:{legend:{display:type!=='bar',labels:{color:'#94a3b8',font:{size:10},boxWidth:10,padding:8}}},
-      scales:type==='bar'?{x:{grid:{color:'rgba(255,255,255,.03)'},ticks:{color:'#64748b',font:{size:9}}},y:{grid:{color:'rgba(255,255,255,.03)'},ticks:{color:'#64748b',font:{size:9}},beginAtZero:true}}:undefined}});
-}
-
-function catBadge(cat){
-  const m={'холодка':'<span class="badge cat-c">📞 Холодка</span>','госы':'<span class="badge cat-g">🏛 Госы</span>','входяшка':'<span class="badge cat-e">📥 Входяшка</span>'};
-  return m[cat]||'<span class="badge bb">—</span>';
-}
-
-async function load(){
-  try{
-    const r=await fetch(DATA_URL+'?t='+Date.now());
-    if(!r.ok)throw new Error(r.status);
-    D=await r.json();render();
-    document.getElementById('upd').textContent=(D._meta||{}).updated_at||'—';
-  }catch(e){document.getElementById('upd').textContent='Ошибка загрузки :('}
-}
-
-function render(){
-  const sips=Object.values(D.sips||{});
-  const probs=Object.values(D.problems||{});
-  const sups=Object.values(D.suppliers||{});
-  const workers=D.workers||{};
-  const ratings=D.ratings||[];
-  const ustats=D.user_stats||{};
-
-  const free=sips.filter(s=>!s.assigned_to&&!s.multisip).length;
-  const busy=sips.filter(s=>s.assigned_to&&!s.multisip).length;
-  const multi=sups.filter(s=>s.multisip).length;
-  const openP=probs.filter(p=>p.status==='open').length;
-  const closedP=probs.filter(p=>p.status==='closed').length;
-  const avg=ratings.length?ratings.reduce((a,r)=>a+r.rating,0)/ratings.length:0;
-  const closeRate=probs.length?Math.round(closedP/probs.length*100):0;
-  const cold=sips.filter(s=>s.assigned_to&&(s.category||'холодка')==='холодка').length;
-  const gos=sips.filter(s=>s.assigned_to&&s.category==='госы').length;
-  const ent=sips.filter(s=>s.assigned_to&&s.category==='входяшка').length;
-
-  // Cards
-  document.getElementById('cards').innerHTML=`
-    <div class="card cb"><div class="ci ci-b">📞</div><div class="cv cv-b">${sips.length}</div><div class="cl">Всего SIP</div><div class="cs">${sups.length} поставщиков</div></div>
-    <div class="card cg"><div class="ci ci-g">🟢</div><div class="cv cv-g">${free}</div><div class="cl">Свободных</div><div class="cs">Готовы</div></div>
-    <div class="card cr"><div class="ci ci-r">🔴</div><div class="cv cv-r">${busy}</div><div class="cl">Занятых</div><div class="cs">${closeRate}% закрытость</div></div>
-    <div class="card cy"><div class="ci ci-y">🚨</div><div class="cv cv-y">${openP}</div><div class="cl">Открытых</div><div class="cs">${closedP} закрыто</div></div>
-    <div class="card cp"><div class="ci ci-p">⭐</div><div class="cv cv-p">${avg.toFixed(1)}</div><div class="cl">Ср. оценка</div><div class="cs">${ratings.length} оценок</div></div>
-    <div class="card ck"><div class="ci ci-k">📂</div><div class="cv cv-k">${cold+gos+ent}</div><div class="cl">Занято</div><div class="cs">Х${cold} Г${gos} В${ent}</div></div>`;
-
-  // Charts
-  mkChart('c1','doughnut',sups.map(s=>s.name||'?'),sups.map(s=>sips.filter(x=>x.supplier_id===s.id).length),CLR);
-  mkChart('c2','doughnut',['✅ Закрытых','🔴 Открытых'],[closedP,openP],['#10b981','#ef4444']);
-  mkChart('c4','doughnut',['📞 Холодка','🏛 Госы','📥 Входяшка'],[cold,gos,ent],['#3b82f6','#f59e0b','#10b981']);
-
-  // Open problems (short for overview)
-  const op=Object.entries(D.problems||{}).filter(([,p])=>p.status==='open').sort(([a],[b])=>+b-+a);
-  document.getElementById('oc').textContent=op.length;
-  document.getElementById('op-c2').textContent=op.length;
-  const probHtml=op.length
-    ?op.slice(0,6).map(([pid,p])=>`<div class="pcard"><div class="pnum">#${pid}</div><div style="flex:1;min-width:0"><div class="pname">${esc(p.display_name||'—')}${p.callsign?` <span class="badge bp">${esc(p.callsign)}</span>`:''}</div><div class="pmeta"><span>📞 ${esc(p.sip_number)}</span><span>🏢 ${esc(p.supplier_name)}</span></div><div class="ptxt">${esc(p.text)}</div></div></div>`).join('')
-    :'<div class="empty">✅ Открытых проблем нет</div>';
-  document.getElementById('op-short').innerHTML=probHtml;
-  document.getElementById('op-full').innerHTML=op.length
-    ?op.map(([pid,p])=>`<div class="pcard"><div class="pnum">#${pid}</div><div style="flex:1;min-width:0"><div class="pname">${esc(p.display_name||'—')}${p.callsign?` <span class="badge bp">${esc(p.callsign)}</span>`:''}</div><div class="pmeta"><span>📞 ${esc(p.sip_number)}</span><span>🏢 ${esc(p.supplier_name)}</span></div><div class="ptxt">${esc(p.text)}</div></div></div>`).join('')
-    :'<div class="empty">✅ Нет открытых проблем</div>';
-
-  // Ratings
-  const rDist=[1,2,3,4,5].map(n=>ratings.filter(r=>r.rating===n).length);
-  document.getElementById('rc').textContent=ratings.length;
-  document.getElementById('rb').innerHTML=ratings.length
-    ?`<div class="rnum">${avg.toFixed(1)}</div><div class="rstars">${stars(avg)}</div><div class="rsub">${ratings.length} оценок</div>`
-    :'<div class="empty" style="padding:16px">Нет оценок</div>';
-  const mx=Math.max(...rDist,1);
-  document.getElementById('rd').innerHTML=`<div style="padding:5px 16px 12px">${[5,4,3,2,1].map(n=>{
-    const c=rDist[n-1];const pct=Math.round(c/mx*100);
-    const clr=n>=4?'var(--green)':n===3?'var(--yellow)':'var(--red)';
-    return`<div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><span style="font-size:10px;color:var(--yellow);width:13px;text-align:right">${n}★</span><div class="pbar" style="flex:1"><div class="pbarf" style="width:${pct}%;background:${clr}"></div></div><span style="font-size:10px;color:var(--muted);width:16px;text-align:right;font-family:'JetBrains Mono',monospace">${c}</span></div>`;
-  }).join('')}</div>`;
-
-  // SIP Table
-  document.getElementById('sip-count').textContent=sips.length;
-  const supMap=D.suppliers||{};
-  const sortedSips=sips.sort((a,b)=>{
-    if(!a.assigned_to && b.assigned_to) return 1;
-    if(a.assigned_to && !b.assigned_to) return -1;
-    return (a.number||'').localeCompare(b.number||'');
-  });
-  document.getElementById('sip-table').innerHTML=sortedSips.length
-    ?`<table class="tbl"><thead><tr><th>Номер SIP</th><th>Поставщик</th><th>Статус</th><th>За кем (позывной)</th><th>Категория</th></tr></thead><tbody>${
-      sortedSips.map(s=>{
-        const sup=supMap[s.supplier_id]||{};
-        const isFree=!s.assigned_to&&!s.multisip;
-        const isMulti=s.multisip;
-        const cat=s.category||'холодка';
-        // Ищем позывной
-        let displayWorker=s.assigned_to||'';
-        if(displayWorker){
-          for(const [uid,w] of Object.entries(workers)){
-            if(w.callsign&&w.callsign.toLowerCase()===displayWorker.toLowerCase()){
-              displayWorker=`<span class="badge bp">🪖 ${esc(w.callsign)}</span>`;
-              break;
+    <script>
+        // ════════════════════════════════════════════
+        // КОНФИГУРАЦИЯ
+        // ════════════════════════════════════════════
+        
+        const DASHBOARD_PASSWORD = "2244";
+        const SESSION_KEY = "sip_dashboard_auth";
+        const SESSION_TIMEOUT = 24 * 60 * 60 * 1000; // 24 часа
+        
+        // ════════════════════════════════════════════
+        // ФУНКЦИИ АУТЕНТИФИКАЦИИ
+        // ════════════════════════════════════════════
+        
+        function handleLogin() {
+            const password = document.getElementById("password").value;
+            const errorMsg = document.getElementById("error-msg");
+            
+            if (!password) {
+                showError("Введите пароль");
+                return;
             }
-          }
-          if(!displayWorker.includes('badge'))displayWorker=`<span style="font-weight:600">${esc(displayWorker)}</span>`;
+            
+            if (password === DASHBOARD_PASSWORD) {
+                const authData = {
+                    authenticated: true,
+                    timestamp: Date.now()
+                };
+                localStorage.setItem(SESSION_KEY, JSON.stringify(authData));
+                showDashboard();
+                loadDashboardData();
+            } else {
+                showError("❌ Неверный пароль");
+                document.getElementById("password").value = "";
+            }
         }
-        return`<tr>
-          <td><code>${esc(s.number)}</code></td>
-          <td>${esc(sup.name||'—')}</td>
-          <td>${isMulti?'<span class="badge bp">🔀 Мульти</span>':isFree?'<span class="badge bg">🟢 Свободен</span>':'<span class="badge br">🔴 Занят</span>'}</td>
-          <td>${displayWorker||'<span style="color:var(--muted)">—</span>'}</td>
-          <td>${isFree||isMulti?'<span style="color:var(--muted)">—</span>':catBadge(cat)}</td>
-        </tr>`;
-      }).join('')
-    }</tbody></table>`
-    :'<div class="empty">SIP не найдены</div>';
-
-  // Categories
-  function renderCat(catKey,label,icon,elId){
-    const catSips=sips.filter(s=>s.assigned_to&&(s.category||'холодка')===catKey);
-    // Group by worker name
-    const byWorker={};
-    catSips.forEach(s=>{
-      const sup=supMap[s.supplier_id]||{};
-      const wname=s.assigned_to||'?';
-      let cs='';
-      for(const [uid,w] of Object.entries(workers)){
-        if(w.callsign&&w.callsign.toLowerCase()===wname.toLowerCase()){cs=w.callsign;break;}
-      }
-      const key=cs||wname;
-      if(!byWorker[key])byWorker[key]={callsign:cs,name:wname,sips:[]};
-      byWorker[key].sips.push({num:s.number,sup:sup.name||'?'});
-    });
-    const rows=Object.entries(byWorker).sort((a,b)=>b[1].sips.length-a[1].sips.length);
-    document.getElementById(elId).innerHTML=`
-      <div class="cat-header">${icon} ${label} <span class="badge bb" style="margin-left:6px">${catSips.length} SIP</span></div>
-      <div class="cat-body">${rows.length
-        ?`<table class="tbl"><thead><tr><th>Позывной</th><th>SIP номера</th><th>Кол-во</th></tr></thead><tbody>${
-          rows.map(([key,w])=>`<tr>
-            <td><span class="badge bp">🪖 ${esc(key)}</span></td>
-            <td>${w.sips.map(s=>`<code>${esc(s.num)}</code><span style="font-size:10px;color:var(--muted)"> (${esc(s.sup)})</span>`).join(', ')}</td>
-            <td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accent)">${w.sips.length}</td>
-          </tr>`).join('')
-        }</tbody></table>`
-        :'<div class="empty">Нет SIP в этой категории</div>'
-      }</div>`;
-  }
-  renderCat('холодка','Холодка','📞','cat-cold');
-  renderCat('госы','Госы','🏛','cat-gos');
-  renderCat('входяшка','Входяшка','📥','cat-ent');
-
-  // Suppliers
-  document.getElementById('supc').textContent=sups.length;
-  document.getElementById('sl').innerHTML=sups.length?sups.map(sup=>{
-    const ss=sips.filter(s=>s.supplier_id===sup.id);
-    const fr=ss.filter(s=>!s.assigned_to).length;
-    const bz=ss.filter(s=>s.assigned_to).length;
-    const pct=ss.length?Math.round(bz/ss.length*100):0;
-    const np=probs.filter(p=>p.supplier_name===sup.name).length;
-    const mw=sup.multisip_workers||[];
-    const clr=pct>70?'var(--red)':pct>40?'var(--yellow)':'var(--green)';
-    return`<div class="srow"><div class="stop2"><div class="sname">${sup.multisip?'🔀 ':'🏢 '}${esc(sup.name)}${sup.multisip?` <span class="badge bp">${mw.length} польз.</span>`:''}</div><div class="sstats">${np} проблем</div></div>${sup.multisip
-      ?`<div style="font-size:11px;color:var(--muted);margin-top:3px">${mw.length?mw.map(w=>`<span class="badge bp" style="margin:2px">${esc(w)}</span>`).join(''):'Никто'}</div>`
-      :`<div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-bottom:3px"><span>🟢${fr}</span><span>🔴${bz}</span><span>${pct}%</span></div><div class="pbar"><div class="pbarf" style="width:${pct}%;background:${clr}"></div></div>`
-    }</div>`;
-  }).join(''):'<div class="empty">Нет поставщиков</div>';
-
-  // Team
-  const wlist=Object.entries(workers).map(([uid,w])=>({cs:w.callsign||'',probs:(ustats[uid]||{}).problems_count||0})).filter(w=>w.cs).sort((a,b)=>b.probs-a.probs);
-  document.getElementById('wc').textContent=wlist.length;
-  document.getElementById('wl').innerHTML=wlist.length
-    ?wlist.map((w,i)=>`<div class="wrow"><div class="wavatar" style="background:${AVB[i%AVB.length]}">${w.cs[0]}</div><div><div class="wname">${esc(w.cs)}</div><div class="wsub">Позывной</div></div><div class="wprobs" style="color:${w.probs>10?'var(--red)':w.probs>3?'var(--yellow)':'var(--green)'}">${w.probs}</div></div>`).join('')
-    :'<div class="empty">Позывные не заданы</div>';
-}
-
-load();
-setInterval(load,30000);
-</script>
+        
+        function handleLogout() {
+            localStorage.removeItem(SESSION_KEY);
+            location.reload();
+        }
+        
+        function showError(message) {
+            const errorMsg = document.getElementById("error-msg");
+            errorMsg.textContent = message;
+            errorMsg.classList.add("show");
+            
+            setTimeout(() => {
+                errorMsg.classList.remove("show");
+            }, 3000);
+        }
+        
+        function isAuthenticated() {
+            const authData = localStorage.getItem(SESSION_KEY);
+            if (!authData) return false;
+            
+            try {
+                const data = JSON.parse(authData);
+                const now = Date.now();
+                
+                if (now - data.timestamp > SESSION_TIMEOUT) {
+                    localStorage.removeItem(SESSION_KEY);
+                    return false;
+                }
+                
+                return data.authenticated === true;
+            } catch (e) {
+                return false;
+            }
+        }
+        
+        function showDashboard() {
+            document.getElementById("login-screen").classList.add("hidden");
+            document.getElementById("dashboard").classList.add("visible");
+        }
+        
+        function showLoginScreen() {
+            document.getElementById("login-screen").classList.remove("hidden");
+            document.getElementById("dashboard").classList.remove("visible");
+        }
+        
+        // ════════════════════════════════════════════
+        // ФУНКЦИИ ВКЛАДОК
+        // ════════════════════════════════════════════
+        
+        function switchTab(tabName) {
+            // Скрываем все вкладки
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Убираем активный класс с кнопок
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Показываем выбранную вкладку
+            document.getElementById(tabName).classList.add('active');
+            
+            // Добавляем активный класс кнопке
+            event.target.classList.add('active');
+        }
+        
+        // ════════════════════════════════════════════
+        // ЗАГРУЗКА И ОТОБРАЖЕНИЕ ДАННЫХ
+        // ════════════════════════════════════════════
+        
+        async function loadDashboardData() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                
+                renderOverview(data);
+                renderSips(data);
+                renderNotes(data);
+                renderTeam(data);
+                renderSuppliers(data);
+                renderProblems(data);
+                
+                updateLastUpdated(data._meta?.updated_at);
+            } catch (error) {
+                console.error('Ошибка загрузки данных:', error);
+            }
+        }
+        
+        function renderOverview(data) {
+            const stats = document.getElementById("overview-stats");
+            
+            const freeSips = Object.values(data.sips || {}).filter(s => !s.assigned_to && !s.multisip).length;
+            const busySips = Object.values(data.sips || {}).filter(s => s.assigned_to && !s.multisip).length;
+            const multiSips = Object.values(data.sips || {}).filter(s => s.multisip).length;
+            const openProblems = Object.values(data.problems || {}).filter(p => p.status === 'open').length;
+            const closedProblems = Object.values(data.problems || {}).filter(p => p.status === 'closed').length;
+            const notes = Object.keys(data.notes || {}).length;
+            
+            const avgRating = data.ratings?.length > 0 
+                ? (data.ratings.reduce((sum, r) => sum + r.rating, 0) / data.ratings.length).toFixed(1)
+                : 'N/A';
+            
+            stats.innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-label">🟢 Свободных SIP</div>
+                    <div class="stat-value">${freeSips}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">🔴 Занятых SIP</div>
+                    <div class="stat-value">${busySips}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">🔀 Мультисип</div>
+                    <div class="stat-value">${multiSips}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">🚨 Открытых проблем</div>
+                    <div class="stat-value">${openProblems}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">✅ Закрытых проблем</div>
+                    <div class="stat-value">${closedProblems}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">📝 Примечаний</div>
+                    <div class="stat-value">${notes}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">⭐ Средняя оценка</div>
+                    <div class="stat-value">${avgRating}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">🏢 Поставщиков</div>
+                    <div class="stat-value">${Object.keys(data.suppliers || {}).length}</div>
+                </div>
+            `;
+        }
+        
+        function renderSips(data) {
+            const table = document.getElementById("sips-table");
+            
+            const sipsArray = Object.values(data.sips || {}).sort((a, b) => 
+                (a.number || '').localeCompare(b.number || '')
+            );
+            
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>📞 Номер</th>
+                            <th>🏢 Поставщик</th>
+                            <th>Тип</th>
+                            <th>Статус</th>
+                            <th>За кем</th>
+                            <th>Категория</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            sipsArray.forEach(sip => {
+                const supplier = data.suppliers?.[sip.supplier_id];
+                const status = sip.assigned_to ? '🔴 Занят' : '🟢 Свободен';
+                const type = sip.multisip ? '🔀 Мульти' : '📞 Обычный';
+                const catIcon = {
+                    'холодка': '📞',
+                    'госы': '🏛',
+                    'входяшка': '📥'
+                }[sip.category] || '📞';
+                
+                html += `
+                    <tr>
+                        <td><strong>${sip.number}</strong></td>
+                        <td>${supplier?.name || '?'}</td>
+                        <td>${type}</td>
+                        <td>${status}</td>
+                        <td>${sip.assigned_to || '—'}</td>
+                        <td>${catIcon} ${sip.category}</td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            table.innerHTML = html;
+        }
+        
+        function renderNotes(data) {
+            const notesList = document.getElementById("notes-list");
+            
+            if (!data.notes || Object.keys(data.notes).length === 0) {
+                notesList.innerHTML = '<p style="color: #a0a0a0;">Примечания не найдены</p>';
+                return;
+            }
+            
+            let html = '';
+            
+            Object.values(data.notes).sort((a, b) => 
+                (b.last_active || 0) - (a.last_active || 0)
+            ).forEach(note => {
+                const lastActiveDate = new Date(note.last_active * 1000).toLocaleString('ru-RU');
+                const statusColor = note.problems_total <= 5 ? 'status-good' : 
+                                   note.problems_total <= 10 ? 'status-warn' : 'status-bad';
+                
+                html += `
+                    <div class="note-card">
+                        <h3>👤 ${note.display}</h3>
+                        <div class="note-stat">
+                            <span>📞 Текущие SIP:</span>
+                            <strong>${note.sip_numbers?.join(', ') || '—'}</strong>
+                        </div>
+                        <div class="note-stat">
+                            <span>🚨 Проблем всего:</span>
+                            <strong class="${statusColor}">${note.problems_total}</strong>
+                        </div>
+                        <div class="note-stat">
+                            <span>📅 Проблем сегодня:</span>
+                            <strong>${note.problems_today}</strong>
+                        </div>
+                        <div class="note-stat">
+                            <span>⏰ Последняя активность:</span>
+                            <strong>${lastActiveDate}</strong>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            notesList.innerHTML = html;
+        }
+        
+        function renderTeam(data) {
+            const table = document.getElementById("team-table");
+            
+            let teamData = {};
+            
+            // Собираем данные из проблем и примечаний
+            Object.values(data.problems || {}).forEach(problem => {
+                if (!teamData[problem.user_name]) {
+                    teamData[problem.user_name] = {
+                        name: problem.user_name,
+                        tg: problem.user_tg || '—',
+                        problems: 0,
+                        rating: 0
+                    };
+                }
+                teamData[problem.user_name].problems++;
+            });
+            
+            // Добавляем оценки
+            data.ratings?.forEach(rating => {
+                const userName = Object.values(data.problems || {})
+                    .find(p => p.user_id === rating.user_id)?.user_name;
+                if (userName && teamData[userName]) {
+                    teamData[userName].rating = Math.max(teamData[userName].rating, rating.rating);
+                }
+            });
+            
+            const teamArray = Object.values(teamData).sort((a, b) => a.problems - b.problems);
+            
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>👤 Имя</th>
+                            <th>@Username</th>
+                            <th>🚨 Проблем</th>
+                            <th>⭐ Оценка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            teamArray.forEach((member, index) => {
+                const stars = '⭐'.repeat(member.rating) + '☆'.repeat(5 - member.rating);
+                html += `
+                    <tr>
+                        <td><strong>${index + 1}. ${member.name}</strong></td>
+                        <td>@${member.tg}</td>
+                        <td>${member.problems}</td>
+                        <td>${stars}</td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            table.innerHTML = html;
+        }
+        
+        function renderSuppliers(data) {
+            const table = document.getElementById("suppliers-table");
+            
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>🏢 Поставщик</th>
+                            <th>📞 SIP</th>
+                            <th>🚨 Проблем</th>
+                            <th>📊 Индекс</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            const problemsBySup = {};
+            Object.values(data.problems || {}).forEach(p => {
+                problemsBySup[p.supplier_name] = (problemsBySup[p.supplier_name] || 0) + 1;
+            });
+            
+            Object.values(data.suppliers || {}).forEach(sup => {
+                const sipCount = Object.values(data.sips || {})
+                    .filter(s => s.supplier_id === sup.id).length;
+                const problemCount = problemsBySup[sup.name] || 0;
+                const index = sipCount > 0 ? (problemCount / sipCount).toFixed(2) : 0;
+                const status = index <= 0.8 ? '🟢' : index <= 1.2 ? '🟡' : '🔴';
+                
+                html += `
+                    <tr>
+                        <td><strong>${sup.name}</strong></td>
+                        <td>${sipCount}</td>
+                        <td>${problemCount}</td>
+                        <td>${status} ${index}</td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            table.innerHTML = html;
+        }
+        
+        function renderProblems(data) {
+            const table = document.getElementById("problems-table");
+            
+            const problemsArray = Object.values(data.problems || {})
+                .sort((a, b) => (b.created_at || 0) - (a.created_at || 0))
+                .slice(0, 50); // Последние 50
+            
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>👤 Пользователь</th>
+                            <th>📞 SIP</th>
+                            <th>🏢 Поставщик</th>
+                            <th>📝 Описание</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            problemsArray.forEach(problem => {
+                const status = problem.status === 'open' ? '🔴 Открыта' : '✅ Закрыта';
+                html += `
+                    <tr>
+                        <td>#${problem.id}</td>
+                        <td>${problem.display_name}</td>
+                        <td>${problem.sip_number}</td>
+                        <td>${problem.supplier_name}</td>
+                        <td>${problem.text?.substring(0, 50)}...</td>
+                        <td>${status}</td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            table.innerHTML = html;
+        }
+        
+        function updateLastUpdated(timestamp) {
+            document.getElementById("last-updated").textContent = 
+                `Обновлено: ${timestamp || 'N/A'}`;
+        }
+        
+        // ════════════════════════════════════════════
+        // ИНИЦИАЛИЗАЦИЯ
+        // ════════════════════════════════════════════
+        
+        window.addEventListener('load', () => {
+            if (isAuthenticated()) {
+                showDashboard();
+                loadDashboardData();
+            } else {
+                showLoginScreen();
+                setTimeout(() => {
+                    document.getElementById("password").focus();
+                }, 100);
+            }
+        });
+        
+        document.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const password = document.getElementById("password");
+                if (password && document.activeElement === password) {
+                    handleLogin();
+                }
+            }
+        });
+        
+        // Автообновление каждые 30 секунд
+        setInterval(() => {
+            if (isAuthenticated()) {
+                loadDashboardData();
+            }
+        }, 30000);
+    </script>
 </body>
 </html>
