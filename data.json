@@ -130,8 +130,8 @@
       "id": "52",
       "supplier_id": "7",
       "number": "123220",
-      "assigned_to": null,
-      "category": "холодка"
+      "assigned_to": "Саня",
+      "category": "входяшка"
     },
     "53": {
       "id": "53",
@@ -961,12 +961,13 @@
     "саня": {
       "display": "саня",
       "sip_ids": [
-        "99"
+        "99",
+        "52"
       ],
       "problems_total": 0,
       "problems_today": 0,
       "problems_day_ts": 1774040400,
-      "last_active": 1774082839
+      "last_active": 1774082889
     },
     "елена": {
       "display": "елена",
@@ -1001,8 +1002,8 @@
   },
   "user_last_sip": {},
   "_meta": {
-    "updated_at": "21.03.2026 11:48:13",
-    "updated_ts": 1774082893,
+    "updated_at": "21.03.2026 11:48:29",
+    "updated_ts": 1774082909,
     "version": "7.0"
   }
 }
