@@ -1020,9 +1020,10 @@
       "sip_number": "10113207",
       "supplier_name": "джин",
       "text": "пипец",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774113689,
       "chinim_done": true,
+      "closed_at": 1774114104,
       "display_name": "Bruno Santiago"
     },
     "42": {
@@ -1355,8 +1356,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:28:42",
-    "updated_ts": 1774114122,
+    "updated_at": "21.03.2026 20:28:58",
+    "updated_ts": 1774114138,
     "version": "8.0"
   }
 }
