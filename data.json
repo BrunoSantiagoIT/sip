@@ -792,7 +792,7 @@
       "supplier_name": "Test",
       "text": "умираю помогите",
       "status": "closed",
-      "closed_at": 1774112256,
+      "closed_at": 1774112264,
       "display_name": "Bruno Santiago"
     },
     "19": {
@@ -1289,8 +1289,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 19:59:08",
-    "updated_ts": 1774112348,
+    "updated_at": "21.03.2026 19:59:24",
+    "updated_ts": 1774112364,
     "version": "8.0"
   }
 }
