@@ -580,7 +580,7 @@
       "id": "106",
       "supplier_id": "8",
       "number": "1235",
-      "assigned_to": "алексей",
+      "assigned_to": null,
       "category": "входяшка",
       "multisip": false
     },
@@ -1335,14 +1335,14 @@
     },
     {
       "display": "алексей",
-      "sip_count": 1,
+      "sip_count": 0,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1774107517,
+      "last_active": 1774119852,
       "category_breakdown": {
         "холодка": 0,
         "госы": 0,
-        "входяшка": 1
+        "входяшка": 0
       }
     },
     {
@@ -1395,8 +1395,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 22:04:25",
-    "updated_ts": 1774119865,
+    "updated_at": "21.03.2026 22:04:42",
+    "updated_ts": 1774119882,
     "version": "8.0"
   }
 }
