@@ -1039,9 +1039,10 @@
       "sip_number": "123222",
       "supplier_name": "хотабыч",
       "text": "Грустно",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774114006,
       "chinim_done": true,
+      "closed_at": 1774114093,
       "display_name": "⧉ 𝙈ΔRS"
     }
   },
@@ -1354,8 +1355,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:28:09",
-    "updated_ts": 1774114089,
+    "updated_at": "21.03.2026 20:28:25",
+    "updated_ts": 1774114105,
     "version": "8.0"
   }
 }
