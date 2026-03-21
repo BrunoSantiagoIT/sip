@@ -260,7 +260,7 @@
       "id": "66",
       "supplier_id": "5",
       "number": "1316",
-      "assigned_to": null,
+      "assigned_to": "геша",
       "category": "холодка",
       "multisip": false
     },
@@ -1346,12 +1346,12 @@
     },
     {
       "display": "геша",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1774111691,
+      "last_active": 1774114584,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
@@ -1382,8 +1382,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:36:18",
-    "updated_ts": 1774114578,
+    "updated_at": "21.03.2026 20:36:35",
+    "updated_ts": 1774114595,
     "version": "8.0"
   }
 }
