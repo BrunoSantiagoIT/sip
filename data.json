@@ -1023,12 +1023,21 @@
       "status": "open",
       "created_at": 1774113689,
       "display_name": "Bruno Santiago"
+    },
+    "42": {
+      "callsign": "",
+      "sip_number": "546352",
+      "supplier_name": "Alien",
+      "text": "Мне не приятно!",
+      "status": "open",
+      "created_at": 1774113752,
+      "display_name": "⧉ 𝙈ΔRS"
     }
   },
-  "problem_counter": 41,
+  "problem_counter": 42,
   "user_stats": {
     "8240409625": {
-      "messages_count": 35,
+      "messages_count": 36,
       "problems_count": 27,
       "sips_used": [
         {
@@ -1120,6 +1129,16 @@
           "supplier_name": "Alien"
         }
       ]
+    },
+    "7577059606": {
+      "messages_count": 0,
+      "problems_count": 1,
+      "sips_used": [
+        {
+          "number": "546352",
+          "supplier_name": "Alien"
+        }
+      ]
     }
   },
   "custom_buttons": [],
@@ -1165,6 +1184,12 @@
       "number": "10113207",
       "supplier_name": "джин",
       "supplier_id": "4"
+    },
+    "7577059606": {
+      "sip_id": "99",
+      "number": "546352",
+      "supplier_name": "Alien",
+      "supplier_id": "9"
     }
   },
   "notes_stats": [
@@ -1314,8 +1339,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:22:02",
-    "updated_ts": 1774113722,
+    "updated_at": "21.03.2026 20:22:32",
+    "updated_ts": 1774113752,
     "version": "8.0"
   }
 }
