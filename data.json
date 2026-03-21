@@ -1045,9 +1045,18 @@
       "chinim_done": true,
       "closed_at": 1774114093,
       "display_name": "⧉ 𝙈ΔRS"
+    },
+    "44": {
+      "callsign": "",
+      "sip_number": "3202",
+      "supplier_name": "хотабыч",
+      "text": "Кира ауу",
+      "status": "open",
+      "created_at": 1774114149,
+      "display_name": "⧉ 𝙈ΔRS"
     }
   },
-  "problem_counter": 43,
+  "problem_counter": 44,
   "user_stats": {
     "8240409625": {
       "messages_count": 36,
@@ -1145,7 +1154,7 @@
     },
     "7577059606": {
       "messages_count": 4,
-      "problems_count": 2,
+      "problems_count": 3,
       "sips_used": [
         {
           "number": "546352",
@@ -1153,6 +1162,10 @@
         },
         {
           "number": "123222",
+          "supplier_name": "хотабыч"
+        },
+        {
+          "number": "3202",
           "supplier_name": "хотабыч"
         }
       ]
@@ -1203,8 +1216,8 @@
       "supplier_id": "4"
     },
     "7577059606": {
-      "sip_id": "54",
-      "number": "123222",
+      "sip_id": "34",
+      "number": "3202",
       "supplier_name": "хотабыч",
       "supplier_id": "7"
     }
@@ -1232,6 +1245,18 @@
         "холодка": 0,
         "госы": 0,
         "входяшка": 1
+      }
+    },
+    {
+      "display": "настя",
+      "sip_count": 1,
+      "problems_total": 1,
+      "problems_today": 1,
+      "last_active": 1774114149,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
       }
     },
     {
@@ -1356,8 +1381,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:29:15",
-    "updated_ts": 1774114155,
+    "updated_at": "21.03.2026 20:29:31",
+    "updated_ts": 1774114171,
     "version": "8.0"
   }
 }
