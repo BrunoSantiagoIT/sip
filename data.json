@@ -124,8 +124,8 @@
       "id": "49",
       "supplier_id": "5",
       "number": "4302",
-      "assigned_to": null,
-      "category": "холодка",
+      "assigned_to": "кира",
+      "category": "госы",
       "multisip": false
     },
     "50": {
@@ -1188,13 +1188,13 @@
     },
     {
       "display": "кира",
-      "sip_count": 2,
+      "sip_count": 3,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1774107448,
+      "last_active": 1774107482,
       "category_breakdown": {
         "холодка": 3,
-        "госы": 0,
+        "госы": 1,
         "входяшка": 0
       }
     },
@@ -1212,8 +1212,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 18:37:53",
-    "updated_ts": 1774107473,
+    "updated_at": "21.03.2026 18:38:09",
+    "updated_ts": 1774107489,
     "version": "8.0"
   }
 }
