@@ -193,8 +193,8 @@
       "id": "61",
       "supplier_id": "6",
       "number": "2030",
-      "assigned_to": null,
-      "category": "холодка"
+      "assigned_to": "жека",
+      "category": "госы"
     },
     "62": {
       "id": "62",
@@ -987,12 +987,22 @@
       "problems_today": 0,
       "problems_day_ts": 1774040400,
       "last_active": 1774082868
+    },
+    "жека": {
+      "display": "жека",
+      "sip_ids": [
+        "61"
+      ],
+      "problems_total": 0,
+      "problems_today": 0,
+      "problems_day_ts": 1774040400,
+      "last_active": 1774082880
     }
   },
   "user_last_sip": {},
   "_meta": {
-    "updated_at": "21.03.2026 11:47:56",
-    "updated_ts": 1774082876,
+    "updated_at": "21.03.2026 11:48:13",
+    "updated_ts": 1774082893,
     "version": "7.0"
   }
 }
