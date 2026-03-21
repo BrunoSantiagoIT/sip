@@ -10,7 +10,8 @@
       "id": "35",
       "supplier_id": "7",
       "number": "3213",
-      "assigned_to": null
+      "assigned_to": "саня",
+      "category": "входяшка"
     },
     "36": {
       "id": "36",
@@ -855,8 +856,8 @@
   "poll_counter": 1,
   "chinim_enabled": true,
   "_meta": {
-    "updated_at": "21.03.2026 10:33:17",
-    "updated_ts": 1774078397,
+    "updated_at": "21.03.2026 10:33:34",
+    "updated_ts": 1774078414,
     "version": "7.0"
   }
 }
