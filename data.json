@@ -837,8 +837,9 @@
       "sip_number": "1243",
       "supplier_name": "Test",
       "text": "мне грустно",
-      "status": "open",
+      "status": "closed",
       "created_at": 1773936503,
+      "closed_at": 1774109702,
       "display_name": "Bruno Santiago"
     },
     "25": {
@@ -1240,8 +1241,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 18:41:48",
-    "updated_ts": 1774107708,
+    "updated_at": "21.03.2026 19:15:02",
+    "updated_ts": 1774109702,
     "version": "8.0"
   }
 }
