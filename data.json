@@ -898,8 +898,9 @@
       "sip_number": "104",
       "supplier_name": "ахитектор",
       "text": "pizda",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774008020,
+      "closed_at": 1774111595,
       "display_name": "Mr Robot"
     },
     "31": {
@@ -1243,8 +1244,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 19:46:25",
-    "updated_ts": 1774111585,
+    "updated_at": "21.03.2026 19:46:42",
+    "updated_ts": 1774111602,
     "version": "8.0"
   }
 }
