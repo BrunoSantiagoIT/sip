@@ -1141,7 +1141,7 @@
       ]
     },
     "7577059606": {
-      "messages_count": 2,
+      "messages_count": 1,
       "problems_count": 2,
       "sips_used": [
         {
@@ -1353,8 +1353,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:27:03",
-    "updated_ts": 1774114023,
+    "updated_at": "21.03.2026 20:27:19",
+    "updated_ts": 1774114039,
     "version": "8.0"
   }
 }
