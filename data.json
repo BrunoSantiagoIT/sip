@@ -236,7 +236,7 @@
       "id": "63",
       "supplier_id": "6",
       "number": "3030",
-      "assigned_to": null,
+      "assigned_to": "гера",
       "category": "холодка",
       "multisip": false
     },
@@ -1197,11 +1197,23 @@
         "госы": 0,
         "входяшка": 0
       }
+    },
+    {
+      "display": "гера",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774107433,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 18:37:18",
-    "updated_ts": 1774107438,
+    "updated_at": "21.03.2026 18:37:36",
+    "updated_ts": 1774107456,
     "version": "8.0"
   }
 }
