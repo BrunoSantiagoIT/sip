@@ -95,8 +95,8 @@
       "id": "47",
       "supplier_id": "5",
       "number": "1307",
-      "assigned_to": null,
-      "category": "холодка"
+      "assigned_to": "Ира",
+      "category": "входяшка"
     },
     "48": {
       "id": "48",
@@ -946,11 +946,22 @@
   },
   "poll_counter": 1,
   "chinim_enabled": true,
-  "notes": {},
+  "notes": {
+    "ира": {
+      "display": "Ира",
+      "sip_ids": [
+        "47"
+      ],
+      "problems_total": 0,
+      "problems_today": 0,
+      "problems_day_ts": 1774040400,
+      "last_active": 1774082619
+    }
+  },
   "user_last_sip": {},
   "_meta": {
-    "updated_at": "21.03.2026 11:43:12",
-    "updated_ts": 1774082592,
+    "updated_at": "21.03.2026 11:43:39",
+    "updated_ts": 1774082619,
     "version": "7.0"
   }
 }
