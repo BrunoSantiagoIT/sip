@@ -164,8 +164,8 @@
       "id": "54",
       "supplier_id": "7",
       "number": "123222",
-      "assigned_to": null,
-      "category": "холодка",
+      "assigned_to": "вика",
+      "category": "входяшка",
       "multisip": false
     },
     "55": {
@@ -1209,11 +1209,23 @@
         "госы": 0,
         "входяшка": 0
       }
+    },
+    {
+      "display": "вика",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774107490,
+      "category_breakdown": {
+        "холодка": 0,
+        "госы": 0,
+        "входяшка": 1
+      }
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 18:38:09",
-    "updated_ts": 1774107489,
+    "updated_at": "21.03.2026 18:38:25",
+    "updated_ts": 1774107505,
     "version": "8.0"
   }
 }
