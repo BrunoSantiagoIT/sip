@@ -1009,8 +1009,9 @@
       "sip_number": "3202",
       "supplier_name": "хотабыч",
       "text": "Азазаз",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774034229,
+      "closed_at": 1774113470,
       "display_name": "Bruno Santiago"
     }
   },
@@ -1292,8 +1293,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:18:03",
-    "updated_ts": 1774113483,
+    "updated_at": "21.03.2026 20:18:20",
+    "updated_ts": 1774113500,
     "version": "8.0"
   }
 }
