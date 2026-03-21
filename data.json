@@ -641,7 +641,8 @@
         "overlay",
         "kokoshnik",
         "йцукен",
-        "саня"
+        "саня",
+        "игорь"
       ]
     }
   },
@@ -1286,10 +1287,10 @@
     },
     {
       "display": "игорь",
-      "sip_count": 3,
+      "sip_count": 4,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1774113572,
+      "last_active": 1774114616,
       "category_breakdown": {
         "холодка": 3,
         "госы": 0,
@@ -1382,8 +1383,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:36:51",
-    "updated_ts": 1774114611,
+    "updated_at": "21.03.2026 20:37:07",
+    "updated_ts": 1774114627,
     "version": "8.0"
   }
 }
