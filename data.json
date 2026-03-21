@@ -1033,9 +1033,18 @@
       "status": "open",
       "created_at": 1774113752,
       "display_name": "⧉ 𝙈ΔRS"
+    },
+    "43": {
+      "callsign": "",
+      "sip_number": "123222",
+      "supplier_name": "хотабыч",
+      "text": "Грустно",
+      "status": "open",
+      "created_at": 1774114006,
+      "display_name": "⧉ 𝙈ΔRS"
     }
   },
-  "problem_counter": 42,
+  "problem_counter": 43,
   "user_stats": {
     "8240409625": {
       "messages_count": 36,
@@ -1133,11 +1142,15 @@
     },
     "7577059606": {
       "messages_count": 1,
-      "problems_count": 1,
+      "problems_count": 2,
       "sips_used": [
         {
           "number": "546352",
           "supplier_name": "Alien"
+        },
+        {
+          "number": "123222",
+          "supplier_name": "хотабыч"
         }
       ]
     }
@@ -1187,10 +1200,10 @@
       "supplier_id": "4"
     },
     "7577059606": {
-      "sip_id": "99",
-      "number": "546352",
-      "supplier_name": "Alien",
-      "supplier_id": "9"
+      "sip_id": "54",
+      "number": "123222",
+      "supplier_name": "хотабыч",
+      "supplier_id": "7"
     }
   },
   "notes_stats": [
@@ -1202,6 +1215,18 @@
       "last_active": 1774113689,
       "category_breakdown": {
         "холодка": 3,
+        "госы": 0,
+        "входяшка": 1
+      }
+    },
+    {
+      "display": "вика",
+      "sip_count": 1,
+      "problems_total": 1,
+      "problems_today": 1,
+      "last_active": 1774114006,
+      "category_breakdown": {
+        "холодка": 0,
         "госы": 0,
         "входяшка": 1
       }
@@ -1279,18 +1304,6 @@
       }
     },
     {
-      "display": "вика",
-      "sip_count": 1,
-      "problems_total": 0,
-      "problems_today": 0,
-      "last_active": 1774107490,
-      "category_breakdown": {
-        "холодка": 0,
-        "госы": 0,
-        "входяшка": 1
-      }
-    },
-    {
       "display": "алексей",
       "sip_count": 1,
       "problems_total": 0,
@@ -1340,8 +1353,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:26:11",
-    "updated_ts": 1774113971,
+    "updated_at": "21.03.2026 20:26:46",
+    "updated_ts": 1774114006,
     "version": "8.0"
   }
 }
