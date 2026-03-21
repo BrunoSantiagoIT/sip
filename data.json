@@ -68,7 +68,7 @@
       "id": "42",
       "supplier_id": "4",
       "number": "10113207",
-      "assigned_to": null,
+      "assigned_to": "Ира",
       "category": "холодка",
       "multisip": false
     },
@@ -1022,12 +1022,13 @@
     "ира": {
       "display": "Ира",
       "sip_ids": [
-        "47"
+        "47",
+        "42"
       ],
       "problems_total": 0,
       "problems_today": 0,
       "problems_day_ts": 1774040400,
-      "last_active": 1774082619
+      "last_active": 1774087848
     },
     "саня": {
       "display": "саня",
@@ -1083,8 +1084,8 @@
   },
   "user_last_sip": {},
   "_meta": {
-    "updated_at": "21.03.2026 13:10:39",
-    "updated_ts": 1774087839,
+    "updated_at": "21.03.2026 13:10:55",
+    "updated_ts": 1774087855,
     "version": "7.0"
   }
 }
