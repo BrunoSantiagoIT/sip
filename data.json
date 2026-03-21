@@ -938,8 +938,9 @@
       "sip_number": "107",
       "supplier_name": "ахитектор",
       "text": "qq",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774011688,
+      "closed_at": 1774112453,
       "display_name": "Mr Robot"
     },
     "34": {
@@ -1290,8 +1291,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:01:03",
-    "updated_ts": 1774112463,
+    "updated_at": "21.03.2026 20:01:19",
+    "updated_ts": 1774112479,
     "version": "8.0"
   }
 }
