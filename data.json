@@ -791,7 +791,8 @@
       "sip_number": "123213.1231",
       "supplier_name": "Test",
       "text": "умираю помогите",
-      "status": "open",
+      "status": "closed",
+      "closed_at": 1774112256,
       "display_name": "Bruno Santiago"
     },
     "19": {
@@ -1288,8 +1289,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 19:57:46",
-    "updated_ts": 1774112266,
+    "updated_at": "21.03.2026 19:58:02",
+    "updated_ts": 1774112282,
     "version": "8.0"
   }
 }
