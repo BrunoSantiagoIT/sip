@@ -39,8 +39,7 @@ function updateOverview() {
     const suppliers = globalData.suppliers || {};
     const problems = globalData.problems || {};
     const ratings = globalData.ratings || [];
-    const users = globalData.users || [];
-    const notes = globalData.notes || {};
+    const notesStats = globalData.notes_stats || [];
 
     // Подсчеты
     const totalSips = Object.keys(sips).length;
@@ -66,7 +65,7 @@ function updateOverview() {
     document.getElementById('openProblems').textContent = openProblems;
     document.getElementById('closedProblems').textContent = closedProblems;
     document.getElementById('closeRate').textContent = closeRate + '%';
-    document.getElementById('totalUsers').textContent = users.length;
+    document.getElementById('totalUsers').textContent = notesStats.length; // работников (примечания)
     document.getElementById('avgRating').textContent = avgRating + ' ⭐';
     document.getElementById('totalRatings').textContent = ratings.length;
     document.getElementById('totalSuppliers').textContent = Object.keys(suppliers).length;
@@ -247,26 +246,26 @@ function getCategoryIcon(category) {
 
 // ════════════════════════════════════════ NOTES/TEAM ════════════════════════════════════════
 function updateNotesList() {
-    const notes = globalData.notes || {};
+    // Бот экспортирует notes_stats (массив), а не notes (объект) — github_sync убирает notes
+    const notesList = globalData.notes_stats || [];
     const sips = globalData.sips || {};
     const suppliers = globalData.suppliers || {};
     let html = '';
 
-    Object.entries(notes).forEach(([key, note]) => {
-        if (!note || !note.display) return; // ✅ Защита от undefined
+    notesList.forEach((note) => {
+        if (!note || !note.display) return; // Защита от undefined
 
-        // ✅ ИСПРАВЛЕНО: Переместить ВНУТРЬ цикла
         const lastActive = note.last_active 
             ? new Date(note.last_active * 1000).toLocaleString('ru-RU')
             : 'никогда';
-        
-        const currentSips = (note.sip_ids || []).filter(sid => {
-            const sip = sips[sid];
-            return sip && sip.assigned_to && sip.assigned_to.toLowerCase() === note.display.toLowerCase();
-        }).map(sid => {
-            const sip = sips[sid];
+
+        // Текущие SIP — ищем по assigned_to (notes_stats не содержит sip_ids)
+        const displayLower = (note.display || '').toLowerCase();
+        const currentSips = Object.entries(sips).filter(([sid, sip]) => {
+            return sip && sip.assigned_to && sip.assigned_to.toLowerCase() === displayLower;
+        }).map(([sid, sip]) => {
             const sup = suppliers[sip.supplier_id] || {};
-            const catIcon = getCategoryIcon(sip.category);
+            const catIcon = getCategoryIcon(sip.category || 'холодка');
             return `<span class="sip-tag" title="${sup.name}">${sip.number} ${catIcon}</span>`;
         }).join('');
 
