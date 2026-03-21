@@ -200,7 +200,7 @@
       "id": "62",
       "supplier_id": "6",
       "number": "3029",
-      "assigned_to": null,
+      "assigned_to": "кира",
       "category": "холодка"
     },
     "63": {
@@ -998,12 +998,22 @@
       "problems_today": 0,
       "problems_day_ts": 1774040400,
       "last_active": 1774082880
+    },
+    "кира": {
+      "display": "кира",
+      "sip_ids": [
+        "62"
+      ],
+      "problems_total": 0,
+      "problems_today": 0,
+      "problems_day_ts": 1774040400,
+      "last_active": 1774085978
     }
   },
   "user_last_sip": {},
   "_meta": {
-    "updated_at": "21.03.2026 12:39:26",
-    "updated_ts": 1774085966,
+    "updated_at": "21.03.2026 12:39:42",
+    "updated_ts": 1774085982,
     "version": "7.0"
   }
 }
