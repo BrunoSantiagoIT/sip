@@ -875,8 +875,9 @@
       "sip_number": "133223",
       "supplier_name": "джин",
       "text": "pizda",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774007899,
+      "closed_at": 1774107658,
       "display_name": "Mr Robot"
     },
     "29": {
@@ -1238,8 +1239,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 18:40:21",
-    "updated_ts": 1774107621,
+    "updated_at": "21.03.2026 18:40:59",
+    "updated_ts": 1774107659,
     "version": "8.0"
   }
 }
