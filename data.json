@@ -292,8 +292,8 @@
       "id": "70",
       "supplier_id": "6",
       "number": "5009",
-      "assigned_to": null,
-      "category": "холодка",
+      "assigned_to": "жека",
+      "category": "госы",
       "multisip": false
     },
     "71": {
@@ -596,7 +596,9 @@
       "id": "108",
       "supplier_id": "6",
       "number": "кирочка",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -1190,13 +1192,13 @@
     },
     {
       "display": "жека",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1774082880,
+      "last_active": 1774112231,
       "category_breakdown": {
         "холодка": 0,
-        "госы": 1,
+        "госы": 2,
         "входяшка": 0
       }
     },
@@ -1274,8 +1276,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 19:57:13",
-    "updated_ts": 1774112233,
+    "updated_at": "21.03.2026 19:57:29",
+    "updated_ts": 1774112249,
     "version": "8.0"
   }
 }
