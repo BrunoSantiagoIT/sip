@@ -172,8 +172,8 @@
       "id": "55",
       "supplier_id": "7",
       "number": "123223",
-      "assigned_to": null,
-      "category": "холодка",
+      "assigned_to": "Елена",
+      "category": "госы",
       "multisip": false
     },
     "56": {
@@ -1152,13 +1152,13 @@
     },
     {
       "display": "елена",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1774082860,
+      "last_active": 1774107506,
       "category_breakdown": {
         "холодка": 0,
-        "госы": 0,
+        "госы": 1,
         "входяшка": 1
       }
     },
@@ -1224,8 +1224,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 18:38:25",
-    "updated_ts": 1774107505,
+    "updated_at": "21.03.2026 18:38:42",
+    "updated_ts": 1774107522,
     "version": "8.0"
   }
 }
