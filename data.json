@@ -4,7 +4,8 @@
       "id": "34",
       "supplier_id": "7",
       "number": "3202",
-      "assigned_to": "настя"
+      "assigned_to": "настя",
+      "category": "холодка"
     },
     "35": {
       "id": "35",
@@ -17,19 +18,22 @@
       "id": "36",
       "supplier_id": "4",
       "number": "10113201",
-      "assigned_to": "ауфер"
+      "assigned_to": "ауфер",
+      "category": "холодка"
     },
     "37": {
       "id": "37",
       "supplier_id": "4",
       "number": "10113202",
-      "assigned_to": "qera"
+      "assigned_to": "qera",
+      "category": "холодка"
     },
     "38": {
       "id": "38",
       "supplier_id": "4",
       "number": "10113203",
-      "assigned_to": "loka"
+      "assigned_to": "loka",
+      "category": "холодка"
     },
     "39": {
       "id": "39",
@@ -49,25 +53,29 @@
       "id": "41",
       "supplier_id": "4",
       "number": "10113206",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "42": {
       "id": "42",
       "supplier_id": "4",
       "number": "10113207",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "43": {
       "id": "43",
       "supplier_id": "5",
       "number": "1225",
-      "assigned_to": "коля"
+      "assigned_to": "коля",
+      "category": "холодка"
     },
     "44": {
       "id": "44",
       "supplier_id": "5",
       "number": "1301",
-      "assigned_to": "женя"
+      "assigned_to": "женя",
+      "category": "холодка"
     },
     "45": {
       "id": "45",
@@ -87,19 +95,22 @@
       "id": "47",
       "supplier_id": "5",
       "number": "1307",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "48": {
       "id": "48",
       "supplier_id": "5",
       "number": "4301",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "49": {
       "id": "49",
       "supplier_id": "5",
       "number": "4302",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "50": {
       "id": "50",
@@ -112,55 +123,64 @@
       "id": "51",
       "supplier_id": "7",
       "number": "123219",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "52": {
       "id": "52",
       "supplier_id": "7",
       "number": "123220",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "53": {
       "id": "53",
       "supplier_id": "7",
       "number": "123221",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "54": {
       "id": "54",
       "supplier_id": "7",
       "number": "123222",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "55": {
       "id": "55",
       "supplier_id": "7",
       "number": "123223",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "56": {
       "id": "56",
       "supplier_id": "7",
       "number": "123224",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "57": {
       "id": "57",
       "supplier_id": "6",
       "number": "2026",
-      "assigned_to": "гена"
+      "assigned_to": "гена",
+      "category": "холодка"
     },
     "58": {
       "id": "58",
       "supplier_id": "6",
       "number": "2027",
-      "assigned_to": "ира"
+      "assigned_to": "ира",
+      "category": "холодка"
     },
     "59": {
       "id": "59",
       "supplier_id": "6",
       "number": "2028",
-      "assigned_to": ".22"
+      "assigned_to": ".22",
+      "category": "холодка"
     },
     "60": {
       "id": "60",
@@ -173,265 +193,309 @@
       "id": "61",
       "supplier_id": "6",
       "number": "2030",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "62": {
       "id": "62",
       "supplier_id": "6",
       "number": "3029",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "63": {
       "id": "63",
       "supplier_id": "6",
       "number": "3030",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "64": {
       "id": "64",
       "supplier_id": "5",
       "number": "1226",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "65": {
       "id": "65",
       "supplier_id": "5",
       "number": "1315",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "66": {
       "id": "66",
       "supplier_id": "5",
       "number": "1316",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "67": {
       "id": "67",
       "supplier_id": "5",
       "number": "1317",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "68": {
       "id": "68",
       "supplier_id": "5",
       "number": "1319",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "69": {
       "id": "69",
       "supplier_id": "6",
       "number": "5008",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "70": {
       "id": "70",
       "supplier_id": "6",
       "number": "5009",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "71": {
       "id": "71",
       "supplier_id": "6",
       "number": "5010",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "72": {
       "id": "72",
       "supplier_id": "6",
       "number": "5011",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "73": {
       "id": "73",
       "supplier_id": "6",
       "number": "5012",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "74": {
       "id": "74",
       "supplier_id": "4",
       "number": "10123227",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "75": {
       "id": "75",
       "supplier_id": "4",
       "number": "10123228",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "76": {
       "id": "76",
       "supplier_id": "4",
       "number": "10123229",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "77": {
       "id": "77",
       "supplier_id": "4",
       "number": "10123230",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "78": {
       "id": "78",
       "supplier_id": "4",
       "number": "10123231",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "79": {
       "id": "79",
       "supplier_id": "4",
       "number": "10123232",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "80": {
       "id": "80",
       "supplier_id": "4",
       "number": "133216",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "81": {
       "id": "81",
       "supplier_id": "4",
       "number": "133217",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "82": {
       "id": "82",
       "supplier_id": "4",
       "number": "133218",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "83": {
       "id": "83",
       "supplier_id": "4",
       "number": "133219",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "84": {
       "id": "84",
       "supplier_id": "4",
       "number": "133220",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "85": {
       "id": "85",
       "supplier_id": "4",
       "number": "133221",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "86": {
       "id": "86",
       "supplier_id": "4",
       "number": "133222",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "87": {
       "id": "87",
       "supplier_id": "4",
       "number": "133223",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "88": {
       "id": "88",
       "supplier_id": "4",
       "number": "133224",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "89": {
       "id": "89",
       "supplier_id": "5",
       "number": "101",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "90": {
       "id": "90",
       "supplier_id": "5",
       "number": "102",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "91": {
       "id": "91",
       "supplier_id": "5",
       "number": "103",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "92": {
       "id": "92",
       "supplier_id": "5",
       "number": "104",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "93": {
       "id": "93",
       "supplier_id": "5",
       "number": "105",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "94": {
       "id": "94",
       "supplier_id": "5",
       "number": "106",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "95": {
       "id": "95",
       "supplier_id": "5",
       "number": "107",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "96": {
       "id": "96",
       "supplier_id": "5",
       "number": "108",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "97": {
       "id": "97",
       "supplier_id": "5",
       "number": "109",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "98": {
       "id": "98",
       "supplier_id": "8",
       "number": "1231314",
-      "assigned_to": "кира"
+      "assigned_to": "кира",
+      "category": "холодка"
     },
     "99": {
       "id": "99",
       "supplier_id": "9",
       "number": "546352",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "100": {
       "id": "100",
       "supplier_id": "4",
       "number": "1223",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "101": {
       "id": "101",
       "supplier_id": "4",
       "number": "1232.21313",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "102": {
       "id": "102",
       "supplier_id": "4",
       "number": "113",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "103": {
       "id": "103",
       "supplier_id": "5",
       "number": "112",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     },
     "104": {
       "id": "104",
       "supplier_id": "6",
       "number": "113",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка"
     }
   },
   "suppliers": {
@@ -882,9 +946,11 @@
   },
   "poll_counter": 1,
   "chinim_enabled": true,
+  "notes": {},
+  "user_last_sip": {},
   "_meta": {
-    "updated_at": "21.03.2026 10:50:22",
-    "updated_ts": 1774079422,
+    "updated_at": "21.03.2026 11:42:31",
+    "updated_ts": 1774082551,
     "version": "7.0"
   }
 }
