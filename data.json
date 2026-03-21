@@ -775,7 +775,8 @@
       "sip_number": "ewfwef",
       "supplier_name": "Сигнал",
       "text": "пй",
-      "status": "open",
+      "status": "closed",
+      "closed_at": 1774112393,
       "display_name": "Bruno Santiago"
     },
     "17": {
@@ -1289,8 +1290,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 19:59:57",
-    "updated_ts": 1774112397,
+    "updated_at": "21.03.2026 20:00:14",
+    "updated_ts": 1774112414,
     "version": "8.0"
   }
 }
