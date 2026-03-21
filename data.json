@@ -1053,6 +1053,7 @@
       "text": "Кира ауу",
       "status": "open",
       "created_at": 1774114149,
+      "chinim_done": true,
       "display_name": "⧉ 𝙈ΔRS"
     }
   },
@@ -1153,7 +1154,7 @@
       ]
     },
     "7577059606": {
-      "messages_count": 4,
+      "messages_count": 5,
       "problems_count": 3,
       "sips_used": [
         {
@@ -1381,8 +1382,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:30:04",
-    "updated_ts": 1774114204,
+    "updated_at": "21.03.2026 20:30:21",
+    "updated_ts": 1774114221,
     "version": "8.0"
   }
 }
