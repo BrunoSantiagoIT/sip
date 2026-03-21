@@ -588,7 +588,9 @@
       "id": "107",
       "supplier_id": "5",
       "number": "21",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -909,8 +911,9 @@
       "sip_number": "123218",
       "supplier_name": "хотабыч",
       "text": "alaaka",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774008161,
+      "closed_at": 1774092279,
       "display_name": "Mr Robot"
     },
     "33": {
@@ -1196,8 +1199,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 14:24:06",
-    "updated_ts": 1774092246,
+    "updated_at": "21.03.2026 14:24:39",
+    "updated_ts": 1774092279,
     "version": "8.0"
   }
 }
