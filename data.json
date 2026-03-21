@@ -776,7 +776,7 @@
       "supplier_name": "Сигнал",
       "text": "пй",
       "status": "closed",
-      "closed_at": 1774112393,
+      "closed_at": 1774112397,
       "display_name": "Bruno Santiago"
     },
     "17": {
@@ -1290,8 +1290,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:00:14",
-    "updated_ts": 1774112414,
+    "updated_at": "21.03.2026 20:00:30",
+    "updated_ts": 1774112430,
     "version": "8.0"
   }
 }
