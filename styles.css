@@ -673,3 +673,57 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* ════════════════════════════════════════ STAT PERIOD ════════════════════════════════════════ */
+.stat-period {
+    display: block;
+    font-size: 0.72em;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+/* ════════════════════════════════════════ CHART HEADER / TOGGLE ════════════════════════════════════════ */
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chart-header h2 {
+    margin-bottom: 0;
+}
+
+.chart-toggle {
+    display: flex;
+    gap: 6px;
+}
+
+.chart-toggle-btn {
+    padding: 6px 12px;
+    border: 2px solid var(--border);
+    background: white;
+    color: var(--text-light);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.chart-toggle-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.chart-toggle-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* ════════════════════════════════════════ PROBLEM DATE ════════════════════════════════════════ */
+.problem-date {
+    font-size: 0.78em;
+    color: #aaa;
+    margin-top: 2px;
+}
