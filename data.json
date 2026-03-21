@@ -564,8 +564,8 @@
       "id": "104",
       "supplier_id": "6",
       "number": "113",
-      "assigned_to": null,
-      "category": "холодка",
+      "assigned_to": "артем",
+      "category": "госы",
       "multisip": false
     },
     "105": {
@@ -1380,11 +1380,23 @@
         "госы": 0,
         "входяшка": 0
       }
+    },
+    {
+      "display": "артем",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774119803,
+      "category_breakdown": {
+        "холодка": 0,
+        "госы": 1,
+        "входяшка": 0
+      }
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 22:03:07",
-    "updated_ts": 1774119787,
+    "updated_at": "21.03.2026 22:03:24",
+    "updated_ts": 1774119804,
     "version": "8.0"
   }
 }
