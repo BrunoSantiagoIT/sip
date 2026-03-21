@@ -1028,7 +1028,7 @@
   "problem_counter": 41,
   "user_stats": {
     "8240409625": {
-      "messages_count": 36,
+      "messages_count": 35,
       "problems_count": 27,
       "sips_used": [
         {
@@ -1314,8 +1314,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:21:46",
-    "updated_ts": 1774113706,
+    "updated_at": "21.03.2026 20:22:02",
+    "updated_ts": 1774113722,
     "version": "8.0"
   }
 }
