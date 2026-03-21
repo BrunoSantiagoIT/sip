@@ -537,7 +537,8 @@
         "ally",
         "overlay",
         "kokoshnik",
-        "йцукен"
+        "йцукен",
+        "саня"
       ]
     }
   },
@@ -956,12 +957,22 @@
       "problems_today": 0,
       "problems_day_ts": 1774040400,
       "last_active": 1774082619
+    },
+    "саня": {
+      "display": "саня",
+      "sip_ids": [
+        "99"
+      ],
+      "problems_total": 0,
+      "problems_today": 0,
+      "problems_day_ts": 1774040400,
+      "last_active": 1774082839
     }
   },
   "user_last_sip": {},
   "_meta": {
-    "updated_at": "21.03.2026 11:43:39",
-    "updated_ts": 1774082619,
+    "updated_at": "21.03.2026 11:47:19",
+    "updated_ts": 1774082839,
     "version": "7.0"
   }
 }
