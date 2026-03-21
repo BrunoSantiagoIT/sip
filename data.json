@@ -971,7 +971,7 @@
       "text": "12",
       "status": "closed",
       "created_at": 1774015628,
-      "closed_at": 1774091544,
+      "closed_at": 1774091571,
       "display_name": "Mr Robot"
     },
     "40": {
@@ -1190,8 +1190,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 14:13:06",
-    "updated_ts": 1774091586,
+    "updated_at": "21.03.2026 14:13:22",
+    "updated_ts": 1774091602,
     "version": "8.0"
   }
 }
