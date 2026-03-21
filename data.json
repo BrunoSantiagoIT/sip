@@ -784,7 +784,8 @@
       "sip_number": "пизда",
       "supplier_name": "—",
       "text": "пиздп",
-      "status": "open",
+      "status": "closed",
+      "closed_at": 1774113525,
       "display_name": "Bruno Santiago"
     },
     "18": {
@@ -1293,8 +1294,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:18:53",
-    "updated_ts": 1774113533,
+    "updated_at": "21.03.2026 20:19:09",
+    "updated_ts": 1774113549,
     "version": "8.0"
   }
 }
