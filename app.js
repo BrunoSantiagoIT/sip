@@ -1,7 +1,48 @@
 let globalData = {};
 let chartsInstances = {};
+let supplierChartMode = 'all';
 
-// Загрузка данных с GitHub
+// ════════════════════════════════════════ TIME UTILS (UTC+3) ════════════════════════════════════════
+
+function getTodayStartTs() {
+    const offsetMs = 3 * 60 * 60 * 1000;
+    const kyivMs = Date.now() + offsetMs;
+    const startOfDayKyivMs = kyivMs - (kyivMs % 86400000);
+    return Math.floor((startOfDayKyivMs - offsetMs) / 1000);
+}
+
+function getYesterdayStartTs() { return getTodayStartTs() - 86400; }
+
+function getWeekStartTs() {
+    const today = getTodayStartTs();
+    const dayDate = new Date((today + 3 * 3600) * 1000);
+    const jsDay = dayDate.getUTCDay(); // 0=Sun, 1=Mon ... 6=Sat
+    const daysSinceMonday = (jsDay + 6) % 7;
+    return today - daysSinceMonday * 86400;
+}
+
+function formatKyivDateTime(ts) {
+    if (!ts) return null;
+    const d = new Date((ts + 3 * 3600) * 1000);
+    const day = String(d.getUTCDate()).padStart(2, '0');
+    const mon = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const yr = d.getUTCFullYear();
+    const h = String(d.getUTCHours()).padStart(2, '0');
+    const m = String(d.getUTCMinutes()).padStart(2, '0');
+    return `${day}.${mon}.${yr} ${h}:${m}`;
+}
+
+function formatKyivDateShort(ts) {
+    if (!ts) return null;
+    const d = new Date((ts + 3 * 3600) * 1000);
+    const day = String(d.getUTCDate()).padStart(2, '0');
+    const mon = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const yr = d.getUTCFullYear();
+    return `${day}.${mon}.${yr}`;
+}
+
+// ════════════════════════════════════════ DATA LOAD ════════════════════════════════════════
+
 async function loadData() {
     try {
         const response = await fetch('https://raw.githubusercontent.com/BrunoSantiagoIT/sip/main/data.json');
@@ -15,7 +56,6 @@ async function loadData() {
     }
 }
 
-// Обновление времени последней синхронизации
 function updateLastUpdate() {
     const meta = globalData._meta;
     if (meta && meta.updated_at) {
@@ -24,7 +64,6 @@ function updateLastUpdate() {
     }
 }
 
-// Основная функция обновления дашборда
 function updateDashboard() {
     updateOverview();
     updateSipsList();
@@ -34,6 +73,7 @@ function updateDashboard() {
 }
 
 // ════════════════════════════════════════ OVERVIEW ════════════════════════════════════════
+
 function updateOverview() {
     const sips = globalData.sips || {};
     const suppliers = globalData.suppliers || {};
@@ -41,77 +81,72 @@ function updateOverview() {
     const ratings = globalData.ratings || [];
     const notesStats = globalData.notes_stats || [];
 
-    // Подсчеты
+    // SIP подсчёты
     const totalSips = Object.keys(sips).length;
     const freeSips = Object.values(sips).filter(s => !s.assigned_to && !s.multisip).length;
     const busySips = Object.values(sips).filter(s => s.assigned_to && !s.multisip).length;
     const multiSips = Object.values(suppliers).filter(s => s.multisip).length;
 
+    // Проблемы — базовые
     const totalProblems = Object.keys(problems).length;
     const openProblems = Object.values(problems).filter(p => p.status === 'open').length;
-    const closedProblems = Object.values(problems).filter(p => p.status === 'closed').length;
-    const closeRate = totalProblems > 0 ? Math.round((closedProblems / totalProblems) * 100) : 0;
 
-    const avgRating = ratings.length > 0 
-        ? (ratings.reduce((sum, r) => sum + r.rating, 0) / ratings.length).toFixed(1) 
+    // Временные границы UTC+3
+    const todayStart = getTodayStartTs();
+    const yesterdayStart = getYesterdayStartTs();
+    const weekStart = getWeekStartTs();
+
+    const todayProblems = Object.values(problems)
+        .filter(p => (p.created_at || 0) >= todayStart).length;
+
+    const yesterdayProblems = Object.values(problems)
+        .filter(p => { const ts = p.created_at || 0; return ts >= yesterdayStart && ts < todayStart; }).length;
+
+    const weekProblems = Object.values(problems)
+        .filter(p => (p.created_at || 0) >= weekStart).length;
+
+    // Оценки
+    const avgRating = ratings.length > 0
+        ? (ratings.reduce((sum, r) => sum + r.rating, 0) / ratings.length).toFixed(1)
         : '—';
 
-    // Обновление статистики
+    // Подписи периодов
+    const yesterdayDate = formatKyivDateShort(yesterdayStart + 43200);
+    const weekStartDate = formatKyivDateShort(weekStart + 43200);
+
+    // Обновление DOM
     document.getElementById('totalSips').textContent = totalSips;
     document.getElementById('freeSips').textContent = freeSips;
     document.getElementById('busySips').textContent = busySips;
     document.getElementById('multiSips').textContent = multiSips;
+
     document.getElementById('totalProblems').textContent = totalProblems;
+    document.getElementById('todayProblems').textContent = todayProblems;
     document.getElementById('openProblems').textContent = openProblems;
-    document.getElementById('closedProblems').textContent = closedProblems;
-    document.getElementById('closeRate').textContent = closeRate + '%';
-    document.getElementById('totalUsers').textContent = notesStats.length; // работников (примечания)
+    document.getElementById('yesterdayProblems').textContent = yesterdayProblems;
+    document.getElementById('weekProblems').textContent = weekProblems;
+
+    document.getElementById('totalUsers').textContent = notesStats.length;
     document.getElementById('avgRating').textContent = avgRating + ' ⭐';
     document.getElementById('totalRatings').textContent = ratings.length;
     document.getElementById('totalSuppliers').textContent = Object.keys(suppliers).length;
 
-    // Графики
+    // Динамические подписи периодов
+    const ylEl = document.getElementById('yesterdayLabel');
+    if (ylEl) ylEl.textContent = yesterdayDate || '—';
+    const wlEl = document.getElementById('weekLabel');
+    if (wlEl) wlEl.textContent = weekStartDate ? `с ${weekStartDate}` : '—';
+
     updateCharts();
     updateCategoryStats();
 }
 
 // ════════════════════════════════════════ CHARTS ════════════════════════════════════════
+
 function updateCharts() {
-    const problems = globalData.problems || {};
+    buildSuppliersChart(supplierChartMode);
+
     const suppliers = globalData.suppliers || {};
-
-    // График проблем по поставщикам
-    const suppliersData = {};
-    Object.values(problems).forEach(p => {
-        const name = p.supplier_name || '?';
-        suppliersData[name] = (suppliersData[name] || 0) + 1;
-    });
-
-    const suppliersCtx = document.getElementById('suppliersChart').getContext('2d');
-    if (chartsInstances.suppliers) chartsInstances.suppliers.destroy();
-    chartsInstances.suppliers = new Chart(suppliersCtx, {
-        type: 'bar',
-        data: {
-            labels: Object.keys(suppliersData),
-            datasets: [{
-                label: 'Количество проблем',
-                data: Object.values(suppliersData),
-                backgroundColor: 'rgba(244, 67, 54, 0.7)',
-                borderColor: 'rgba(244, 67, 54, 1)',
-                borderWidth: 1,
-                borderRadius: 6,
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: { legend: { display: false } },
-            scales: {
-                y: { beginAtZero: true, ticks: { stepSize: 1 } }
-            }
-        }
-    });
-
-    // График SIP
     const sipStats = {
         '🟢 Свободные': Object.values(globalData.sips || {}).filter(s => !s.assigned_to).length,
         '🔴 Занятые': Object.values(globalData.sips || {}).filter(s => s.assigned_to && !s.multisip).length,
@@ -140,7 +175,44 @@ function updateCharts() {
     });
 }
 
+function buildSuppliersChart(mode) {
+    const problems = globalData.problems || {};
+    const suppliersData = {};
+    const todayStart = getTodayStartTs();
+
+    Object.values(problems).forEach(p => {
+        if (mode === 'day' && (p.created_at || 0) < todayStart) return;
+        const name = p.supplier_name || '?';
+        suppliersData[name] = (suppliersData[name] || 0) + 1;
+    });
+
+    const suppliersCtx = document.getElementById('suppliersChart').getContext('2d');
+    if (chartsInstances.suppliers) chartsInstances.suppliers.destroy();
+    chartsInstances.suppliers = new Chart(suppliersCtx, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(suppliersData),
+            datasets: [{
+                label: 'Количество проблем',
+                data: Object.values(suppliersData),
+                backgroundColor: 'rgba(244, 67, 54, 0.7)',
+                borderColor: 'rgba(244, 67, 54, 1)',
+                borderWidth: 1,
+                borderRadius: 6,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: true, ticks: { stepSize: 1 } }
+            }
+        }
+    });
+}
+
 // ════════════════════════════════════════ CATEGORY STATS ════════════════════════════════════════
+
 function updateCategoryStats() {
     const sips = globalData.sips || {};
     const stats = {
@@ -172,6 +244,7 @@ function updateCategoryStats() {
 }
 
 // ════════════════════════════════════════ SIPS ════════════════════════════════════════
+
 function updateSipsList() {
     const sips = globalData.sips || {};
     const suppliers = globalData.suppliers || {};
@@ -200,7 +273,6 @@ function updateSipsList() {
 
     document.getElementById('sipsList').innerHTML = html;
 
-    // Фильтры
     document.getElementById('sipFilter').addEventListener('input', debounce((e) => {
         const query = e.target.value.toLowerCase();
         const status = document.getElementById('sipStatusFilter').value;
@@ -226,11 +298,11 @@ function filterSips(query, status, category) {
         const text = card.textContent.toLowerCase();
         const cardStatus = card.getAttribute('data-status');
         const cardCategory = card.getAttribute('data-category');
-        
+
         const matchesText = text.includes(query);
         const matchesStatus = status === 'all' || cardStatus === status;
         const matchesCategory = category === 'all' || cardCategory === category;
-        
+
         card.style.display = (matchesText && matchesStatus && matchesCategory) ? 'block' : 'none';
     });
 }
@@ -245,21 +317,20 @@ function getCategoryIcon(category) {
 }
 
 // ════════════════════════════════════════ NOTES/TEAM ════════════════════════════════════════
+
 function updateNotesList() {
-    // Бот экспортирует notes_stats (массив), а не notes (объект) — github_sync убирает notes
     const notesList = globalData.notes_stats || [];
     const sips = globalData.sips || {};
     const suppliers = globalData.suppliers || {};
     let html = '';
 
     notesList.forEach((note) => {
-        if (!note || !note.display) return; // Защита от undefined
+        if (!note || !note.display) return;
 
-        const lastActive = note.last_active 
+        const lastActive = note.last_active
             ? new Date(note.last_active * 1000).toLocaleString('ru-RU')
             : 'никогда';
 
-        // Текущие SIP — ищем по assigned_to (notes_stats не содержит sip_ids)
         const displayLower = (note.display || '').toLowerCase();
         const currentSips = Object.entries(sips).filter(([sid, sip]) => {
             return sip && sip.assigned_to && sip.assigned_to.toLowerCase() === displayLower;
@@ -292,7 +363,6 @@ function updateNotesList() {
 
     document.getElementById('notesList').innerHTML = html || '<p style="padding: 20px; text-align: center; color: #999;">📝 Нет данных о работниках</p>';
 
-    // Фильтры
     document.getElementById('notesFilter').addEventListener('input', debounce((e) => {
         const query = e.target.value.toLowerCase();
         filterNotes(query);
@@ -308,23 +378,27 @@ function filterNotes(query) {
 }
 
 // ════════════════════════════════════════ PROBLEMS ════════════════════════════════════════
+
 function updateProblemsList() {
     const problems = globalData.problems || {};
     let html = '';
 
     Object.entries(problems).reverse().forEach(([id, problem]) => {
         if (!problem) return;
-        
+
         const statusLabel = problem.status === 'open' ? '🔴 Открыта' : '✅ Закрыта';
         const statusClass = `status-${problem.status}`;
+        const createdDate = problem.created_at ? formatKyivDateTime(problem.created_at) : null;
+        const displayName = problem.display_name || problem.user_name || '?';
 
         html += `
             <div class="problem-item" data-status="${problem.status}">
                 <div class="problem-info">
-                    <h3>#${id} — ${problem.user_name || '?'}</h3>
+                    <h3>#${id} — ${displayName}</h3>
                     <div class="problem-meta">
                         <div>📞 ${problem.sip_number || '—'} | ${problem.supplier_name || '—'}</div>
                         <div>📝 ${(problem.text || '').substring(0, 100)}${(problem.text || '').length > 100 ? '...' : ''}</div>
+                        ${createdDate ? `<div class="problem-date">🕐 Создана: ${createdDate}</div>` : ''}
                     </div>
                 </div>
                 <span class="problem-status ${statusClass}">${statusLabel}</span>
@@ -334,7 +408,6 @@ function updateProblemsList() {
 
     document.getElementById('problemsList').innerHTML = html;
 
-    // Фильтры
     document.getElementById('problemFilter').addEventListener('input', debounce((e) => {
         const query = e.target.value.toLowerCase();
         const status = document.getElementById('problemStatusFilter').value;
@@ -357,6 +430,7 @@ function filterProblems(query, status) {
 }
 
 // ════════════════════════════════════════ SUPPLIERS ════════════════════════════════════════
+
 function updateSuppliersList() {
     const suppliers = globalData.suppliers || {};
     const sips = globalData.sips || {};
@@ -365,11 +439,11 @@ function updateSuppliersList() {
     let html = '';
     Object.values(suppliers).forEach(supplier => {
         if (!supplier) return;
-        
+
         const sipCount = Object.values(sips).filter(s => s.supplier_id === supplier.id).length;
         const problemCount = Object.values(problems).filter(p => p.supplier_name === supplier.name).length;
         const healthIndex = sipCount > 0 ? (problemCount / sipCount).toFixed(2) : 0;
-        
+
         let healthColor = healthIndex < 0.8 ? '#4CAF50' : (healthIndex <= 1.2 ? '#FF9800' : '#F44336');
 
         html += `
@@ -386,7 +460,7 @@ function updateSuppliersList() {
                     </div>
                     <div class="supplier-stat" style="grid-column: 1/-1;">
                         <div class="supplier-stat-value" style="color: ${healthColor};">${healthIndex}</div>
-                        <div class="supplier-stat-label">Индекс (п/S)</div>
+                        <div class="supplier-stat-label">Индекс (п/S) — за всё время</div>
                     </div>
                 </div>
             </div>
@@ -405,6 +479,7 @@ function updateSuppliersList() {
 }
 
 // ════════════════════════════════════════ TABS ════════════════════════════════════════
+
 document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -416,6 +491,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 });
 
 // ════════════════════════════════════════ DEBOUNCE ════════════════════════════════════════
+
 function debounce(fn, delay) {
     let timeout;
     return function(...args) {
@@ -424,9 +500,23 @@ function debounce(fn, delay) {
     };
 }
 
-// ════════════════════════════════════════ ПЕРВОНАЧАЛЬНАЯ ЗАГРУЗКА ════════════════════════════════════════
+// ════════════════════════════════════════ INIT ════════════════════════════════════════
+
 window.addEventListener('load', () => {
     loadData();
-    // Автообновление каждые 15 секунд (вместо 30)
     setInterval(loadData, 15000);
+
+    document.getElementById('supplierChartAllBtn').addEventListener('click', () => {
+        supplierChartMode = 'all';
+        document.getElementById('supplierChartAllBtn').classList.add('active');
+        document.getElementById('supplierChartDayBtn').classList.remove('active');
+        buildSuppliersChart('all');
+    });
+
+    document.getElementById('supplierChartDayBtn').addEventListener('click', () => {
+        supplierChartMode = 'day';
+        document.getElementById('supplierChartDayBtn').classList.add('active');
+        document.getElementById('supplierChartAllBtn').classList.remove('active');
+        buildSuppliersChart('day');
+    });
 });
