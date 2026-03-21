@@ -1014,13 +1014,22 @@
       "created_at": 1774034229,
       "closed_at": 1774113470,
       "display_name": "Bruno Santiago"
+    },
+    "41": {
+      "callsign": "",
+      "sip_number": "10113207",
+      "supplier_name": "джин",
+      "text": "пипец",
+      "status": "open",
+      "created_at": 1774113689,
+      "display_name": "Bruno Santiago"
     }
   },
-  "problem_counter": 40,
+  "problem_counter": 41,
   "user_stats": {
     "8240409625": {
       "messages_count": 35,
-      "problems_count": 26,
+      "problems_count": 27,
       "sips_used": [
         {
           "number": "213",
@@ -1053,6 +1062,10 @@
         {
           "number": "3202",
           "supplier_name": "хотабыч"
+        },
+        {
+          "number": "10113207",
+          "supplier_name": "джин"
         }
       ]
     },
@@ -1146,14 +1159,21 @@
   },
   "poll_counter": 1,
   "chinim_enabled": true,
-  "user_last_sip": {},
+  "user_last_sip": {
+    "8240409625": {
+      "sip_id": "42",
+      "number": "10113207",
+      "supplier_name": "джин",
+      "supplier_id": "4"
+    }
+  },
   "notes_stats": [
     {
       "display": "Ира",
       "sip_count": 3,
-      "problems_total": 0,
-      "problems_today": 0,
-      "last_active": 1774113539,
+      "problems_total": 1,
+      "problems_today": 1,
+      "last_active": 1774113689,
       "category_breakdown": {
         "холодка": 3,
         "госы": 0,
@@ -1294,8 +1314,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:19:58",
-    "updated_ts": 1774113598,
+    "updated_at": "21.03.2026 20:21:29",
+    "updated_ts": 1774113689,
     "version": "8.0"
   }
 }
