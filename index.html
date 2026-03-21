@@ -63,18 +63,27 @@
                         <div class="stat-item">
                             <span class="stat-label">Всего</span>
                             <span class="stat-value" id="totalProblems">0</span>
+                            <span class="stat-period">за всё время</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">📅 За день</span>
+                            <span class="stat-value" id="todayProblems">0</span>
+                            <span class="stat-period">сброс в 00:00</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-label">🔴 Открыто</span>
                             <span class="stat-value bad" id="openProblems">0</span>
+                            <span class="stat-period">сейчас</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">✅ Закрыто</span>
-                            <span class="stat-value good" id="closedProblems">0</span>
+                            <span class="stat-label">📆 За вчера</span>
+                            <span class="stat-value" id="yesterdayProblems">0</span>
+                            <span class="stat-period" id="yesterdayLabel">—</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">% Решено</span>
-                            <span class="stat-value" id="closeRate">0%</span>
+                            <span class="stat-label">📊 За неделю</span>
+                            <span class="stat-value" id="weekProblems">0</span>
+                            <span class="stat-period" id="weekLabel">—</span>
                         </div>
                     </div>
                 </div>
@@ -106,7 +115,13 @@
             <!-- Charts Section -->
             <div class="grid-2">
                 <div class="card">
-                    <h2>📈 Проблемы по поставщикам</h2>
+                    <div class="chart-header">
+                        <h2>📈 Проблемы по поставщикам</h2>
+                        <div class="chart-toggle">
+                            <button class="chart-toggle-btn active" id="supplierChartAllBtn">За всё время</button>
+                            <button class="chart-toggle-btn" id="supplierChartDayBtn">За день</button>
+                        </div>
+                    </div>
                     <canvas id="suppliersChart"></canvas>
                 </div>
                 <div class="card">
