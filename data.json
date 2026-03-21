@@ -986,15 +986,93 @@
   "user_stats": {
     "8240409625": {
       "messages_count": 35,
-      "problems_count": 26
+      "problems_count": 26,
+      "sips_used": [
+        {
+          "number": "213",
+          "supplier_name": "Сигнал"
+        },
+        {
+          "number": "123213.1231",
+          "supplier_name": "Test"
+        },
+        {
+          "number": "12113",
+          "supplier_name": "бРУНО"
+        },
+        {
+          "number": "234",
+          "supplier_name": "Сигнал"
+        },
+        {
+          "number": "ewfwef",
+          "supplier_name": "Сигнал"
+        },
+        {
+          "number": "пизда",
+          "supplier_name": "—"
+        },
+        {
+          "number": "1243",
+          "supplier_name": "Test"
+        },
+        {
+          "number": "3202",
+          "supplier_name": "хотабыч"
+        }
+      ]
     },
     "1847396592": {
       "messages_count": 1,
-      "problems_count": 1
+      "problems_count": 1,
+      "sips_used": [
+        {
+          "number": "213",
+          "supplier_name": "Сигнал"
+        }
+      ]
     },
     "8364789204": {
       "messages_count": 13,
-      "problems_count": 13
+      "problems_count": 13,
+      "sips_used": [
+        {
+          "number": "1243",
+          "supplier_name": "Test"
+        },
+        {
+          "number": "133223",
+          "supplier_name": "джин"
+        },
+        {
+          "number": "133219",
+          "supplier_name": "джин"
+        },
+        {
+          "number": "104",
+          "supplier_name": "ахитектор"
+        },
+        {
+          "number": "133221",
+          "supplier_name": "джин"
+        },
+        {
+          "number": "123218",
+          "supplier_name": "хотабыч"
+        },
+        {
+          "number": "107",
+          "supplier_name": "ахитектор"
+        },
+        {
+          "number": "3202",
+          "supplier_name": "хотабыч"
+        },
+        {
+          "number": "546352",
+          "supplier_name": "Alien"
+        }
+      ]
     }
   },
   "custom_buttons": [],
@@ -1034,75 +1112,84 @@
   },
   "poll_counter": 1,
   "chinim_enabled": true,
-  "notes": {
-    "ира": {
-      "display": "Ира",
-      "sip_ids": [
-        "47",
-        "42"
-      ],
-      "problems_total": 0,
-      "problems_today": 0,
-      "problems_day_ts": 1774040400,
-      "last_active": 1774087848
-    },
-    "саня": {
-      "display": "саня",
-      "sip_ids": [
-        "99",
-        "52"
-      ],
-      "problems_total": 0,
-      "problems_today": 0,
-      "problems_day_ts": 1774040400,
-      "last_active": 1774082889
-    },
-    "елена": {
-      "display": "елена",
-      "sip_ids": [
-        "41"
-      ],
-      "problems_total": 0,
-      "problems_today": 0,
-      "problems_day_ts": 1774040400,
-      "last_active": 1774082860
-    },
-    "игорь": {
-      "display": "игорь",
-      "sip_ids": [
-        "51",
-        "48"
-      ],
-      "problems_total": 0,
-      "problems_today": 0,
-      "problems_day_ts": 1774040400,
-      "last_active": 1774087855
-    },
-    "жека": {
-      "display": "жека",
-      "sip_ids": [
-        "61"
-      ],
-      "problems_total": 0,
-      "problems_today": 0,
-      "problems_day_ts": 1774040400,
-      "last_active": 1774082880
-    },
-    "кира": {
-      "display": "кира",
-      "sip_ids": [
-        "62"
-      ],
-      "problems_total": 0,
-      "problems_today": 0,
-      "problems_day_ts": 1774040400,
-      "last_active": 1774085978
-    }
-  },
   "user_last_sip": {},
+  "notes_stats": [
+    {
+      "display": "Ира",
+      "sip_count": 2,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774087848,
+      "category_breakdown": {
+        "холодка": 2,
+        "госы": 0,
+        "входяшка": 1
+      }
+    },
+    {
+      "display": "саня",
+      "sip_count": 2,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774082889,
+      "category_breakdown": {
+        "холодка": 0,
+        "госы": 0,
+        "входяшка": 2
+      }
+    },
+    {
+      "display": "елена",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774082860,
+      "category_breakdown": {
+        "холодка": 0,
+        "госы": 0,
+        "входяшка": 1
+      }
+    },
+    {
+      "display": "игорь",
+      "sip_count": 2,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774087855,
+      "category_breakdown": {
+        "холодка": 2,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "жека",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774082880,
+      "category_breakdown": {
+        "холодка": 0,
+        "госы": 1,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "кира",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774085978,
+      "category_breakdown": {
+        "холодка": 2,
+        "госы": 0,
+        "входяшка": 0
+      }
+    }
+  ],
   "_meta": {
-    "updated_at": "21.03.2026 13:11:54",
-    "updated_ts": 1774087914,
-    "version": "7.0"
+    "updated_at": "21.03.2026 14:11:18",
+    "updated_ts": 1774091478,
+    "version": "8.0"
   }
 }
