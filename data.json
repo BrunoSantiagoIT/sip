@@ -180,7 +180,7 @@
       "id": "56",
       "supplier_id": "7",
       "number": "123224",
-      "assigned_to": null,
+      "assigned_to": "геша",
       "category": "холодка",
       "multisip": false
     },
@@ -1241,11 +1241,23 @@
         "госы": 0,
         "входяшка": 1
       }
+    },
+    {
+      "display": "геша",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774111691,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 19:46:58",
-    "updated_ts": 1774111618,
+    "updated_at": "21.03.2026 19:48:11",
+    "updated_ts": 1774111691,
     "version": "8.0"
   }
 }
