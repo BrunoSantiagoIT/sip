@@ -942,8 +942,9 @@
       "sip_number": "546352",
       "supplier_name": "Alien",
       "text": "quqareky",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774014617,
+      "closed_at": 1774107581,
       "display_name": "Mr Robot"
     },
     "36": {
@@ -1237,8 +1238,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 18:39:48",
-    "updated_ts": 1774107588,
+    "updated_at": "21.03.2026 18:40:04",
+    "updated_ts": 1774107604,
     "version": "8.0"
   }
 }
