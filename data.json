@@ -407,6 +407,12 @@
       "supplier_id": "4",
       "number": "1223",
       "assigned_to": null
+    },
+    "101": {
+      "id": "101",
+      "supplier_id": "4",
+      "number": "1232.21313",
+      "assigned_to": null
     }
   },
   "suppliers": {
@@ -453,7 +459,7 @@
     }
   },
   "supplier_counter": 9,
-  "sip_counter": 100,
+  "sip_counter": 101,
   "workers": {},
   "problems": {
     "1": {
@@ -858,8 +864,8 @@
   "poll_counter": 1,
   "chinim_enabled": true,
   "_meta": {
-    "updated_at": "21.03.2026 10:36:44",
-    "updated_ts": 1774078604,
+    "updated_at": "21.03.2026 10:37:22",
+    "updated_ts": 1774078642,
     "version": "7.0"
   }
 }
