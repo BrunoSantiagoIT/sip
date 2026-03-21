@@ -1173,7 +1173,7 @@
       "label": "🤩 Очень хорошая"
     }
   ],
-  "autofix_mode": "this_bot",
+  "autofix_mode": "second_bot",
   "polls": {
     "1": {
       "id": "1",
@@ -1356,8 +1356,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:28:58",
-    "updated_ts": 1774114138,
+    "updated_at": "21.03.2026 20:29:15",
+    "updated_ts": 1774114155,
     "version": "8.0"
   }
 }
