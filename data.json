@@ -921,8 +921,9 @@
       "sip_number": "3202",
       "supplier_name": "хотабыч",
       "text": "[eq",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774013369,
+      "closed_at": 1774091537,
       "display_name": "Mr Robot"
     },
     "35": {
@@ -1188,8 +1189,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 14:11:34",
-    "updated_ts": 1774091494,
+    "updated_at": "21.03.2026 14:12:17",
+    "updated_ts": 1774091537,
     "version": "8.0"
   }
 }
