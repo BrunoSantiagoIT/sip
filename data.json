@@ -567,6 +567,12 @@
       "assigned_to": null,
       "category": "холодка",
       "multisip": false
+    },
+    "105": {
+      "id": "105",
+      "supplier_id": "4",
+      "number": "21",
+      "assigned_to": null
     }
   },
   "suppliers": {
@@ -614,7 +620,7 @@
     }
   },
   "supplier_counter": 9,
-  "sip_counter": 104,
+  "sip_counter": 105,
   "workers": {},
   "problems": {
     "1": {
@@ -1085,8 +1091,8 @@
   },
   "user_last_sip": {},
   "_meta": {
-    "updated_at": "21.03.2026 13:11:11",
-    "updated_ts": 1774087871,
+    "updated_at": "21.03.2026 13:11:28",
+    "updated_ts": 1774087888,
     "version": "7.0"
   }
 }
