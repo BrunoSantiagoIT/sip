@@ -252,7 +252,7 @@
       "id": "65",
       "supplier_id": "5",
       "number": "1315",
-      "assigned_to": null,
+      "assigned_to": "игорь",
       "category": "холодка",
       "multisip": false
     },
@@ -1186,12 +1186,12 @@
     },
     {
       "display": "игорь",
-      "sip_count": 2,
+      "sip_count": 3,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1774087855,
+      "last_active": 1774113572,
       "category_breakdown": {
-        "холодка": 2,
+        "холодка": 3,
         "госы": 0,
         "входяшка": 0
       }
@@ -1294,8 +1294,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:19:42",
-    "updated_ts": 1774113582,
+    "updated_at": "21.03.2026 20:19:58",
+    "updated_ts": 1774113598,
     "version": "8.0"
   }
 }
