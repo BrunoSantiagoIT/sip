@@ -42,7 +42,8 @@
       "id": "40",
       "supplier_id": "4",
       "number": "10113205",
-      "assigned_to": null
+      "assigned_to": "алеша",
+      "category": "госы"
     },
     "41": {
       "id": "41",
@@ -864,8 +865,8 @@
   "poll_counter": 1,
   "chinim_enabled": true,
   "_meta": {
-    "updated_at": "21.03.2026 10:37:22",
-    "updated_ts": 1774078642,
+    "updated_at": "21.03.2026 10:42:08",
+    "updated_ts": 1774078928,
     "version": "7.0"
   }
 }
