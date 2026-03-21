@@ -1041,6 +1041,7 @@
       "text": "Грустно",
       "status": "open",
       "created_at": 1774114006,
+      "chinim_done": true,
       "display_name": "⧉ 𝙈ΔRS"
     }
   },
@@ -1141,7 +1142,7 @@
       ]
     },
     "7577059606": {
-      "messages_count": 1,
+      "messages_count": 2,
       "problems_count": 2,
       "sips_used": [
         {
@@ -1353,8 +1354,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 20:27:19",
-    "updated_ts": 1774114039,
+    "updated_at": "21.03.2026 20:27:36",
+    "updated_ts": 1774114056,
     "version": "8.0"
   }
 }
