@@ -73,9 +73,10 @@ function updateOverview() {
 
     // Графики
     updateCharts();
+    updateCategoryStats();
 }
 
-// Графики
+// ════════════════════════════════════════ CHARTS ════════════════════════════════════════
 function updateCharts() {
     const problems = globalData.problems || {};
     const suppliers = globalData.suppliers || {};
@@ -140,6 +141,37 @@ function updateCharts() {
     });
 }
 
+// ════════════════════════════════════════ CATEGORY STATS ════════════════════════════════════════
+function updateCategoryStats() {
+    const sips = globalData.sips || {};
+    const stats = {
+        '📞 Холодка': Object.values(sips).filter(s => !s.category || s.category === 'холодка').length,
+        '🏛 Госы': Object.values(sips).filter(s => s.category === 'госы').length,
+        '📥 Входяшка': Object.values(sips).filter(s => s.category === 'входяшка').length,
+    };
+
+    let html = '';
+    for (const [label, count] of Object.entries(stats)) {
+        const total = Object.keys(sips).length || 1;
+        const pct = Math.round((count / total) * 100);
+        html += `
+            <div class="category-stat">
+                <div class="category-label">${label}</div>
+                <div class="category-value">${count}</div>
+                <div class="category-bar">
+                    <div class="category-bar-fill" style="width: ${pct}%; background: ${
+                        label.includes('Холодка') ? '#FF9800' :
+                        label.includes('Госы') ? '#673AB7' : '#00BCD4'
+                    }"></div>
+                </div>
+                <div class="category-pct">${pct}%</div>
+            </div>
+        `;
+    }
+
+    document.getElementById('categoryStats').innerHTML = html;
+}
+
 // ════════════════════════════════════════ SIPS ════════════════════════════════════════
 function updateSipsList() {
     const sips = globalData.sips || {};
@@ -151,16 +183,17 @@ function updateSipsList() {
         const status = !sip.assigned_to ? 'free' : (sip.multisip ? 'multi' : 'busy');
         const statusLabel = !sip.assigned_to ? '🟢 Свободен' : (sip.multisip ? '🔀 Мультисип' : `🔴 ${sip.assigned_to}`);
         const statusClass = `status-${status}`;
+        const category = sip.category || 'холодка';
 
         html += `
-            <div class="sip-card" data-status="${status}">
+            <div class="sip-card" data-status="${status}" data-category="${category}">
                 <div class="sip-header">
                     <span class="sip-number">${sip.number}</span>
                     <span class="sip-status ${statusClass}">${statusLabel}</span>
                 </div>
                 <div class="sip-info">
                     <div><span class="info-label">Поставщик:</span> ${sup.name || '?'}</div>
-                    <div><span class="info-label">Категория:</span> ${sip.category || 'холодка'}</div>
+                    <div><span class="info-label">Категория:</span> ${getCategoryIcon(category)} ${category}</div>
                 </div>
             </div>
         `;
@@ -169,25 +202,47 @@ function updateSipsList() {
     document.getElementById('sipsList').innerHTML = html;
 
     // Фильтры
-    document.getElementById('sipFilter').addEventListener('input', (e) => {
+    document.getElementById('sipFilter').addEventListener('input', debounce((e) => {
         const query = e.target.value.toLowerCase();
         const status = document.getElementById('sipStatusFilter').value;
-        filterSips(query, status);
-    });
+        const category = document.getElementById('sipCategoryFilter').value;
+        filterSips(query, status, category);
+    }, 300));
 
     document.getElementById('sipStatusFilter').addEventListener('change', (e) => {
         const query = document.getElementById('sipFilter').value.toLowerCase();
-        filterSips(query, e.target.value);
+        const category = document.getElementById('sipCategoryFilter').value;
+        filterSips(query, e.target.value, category);
+    });
+
+    document.getElementById('sipCategoryFilter').addEventListener('change', (e) => {
+        const query = document.getElementById('sipFilter').value.toLowerCase();
+        const status = document.getElementById('sipStatusFilter').value;
+        filterSips(query, status, e.target.value);
     });
 }
 
-function filterSips(query, status) {
+function filterSips(query, status, category) {
     document.querySelectorAll('.sip-card').forEach(card => {
         const text = card.textContent.toLowerCase();
         const cardStatus = card.getAttribute('data-status');
-        const matches = text.includes(query) && (status === 'all' || cardStatus === status);
-        card.style.display = matches ? 'block' : 'none';
+        const cardCategory = card.getAttribute('data-category');
+        
+        const matchesText = text.includes(query);
+        const matchesStatus = status === 'all' || cardStatus === status;
+        const matchesCategory = category === 'all' || cardCategory === category;
+        
+        card.style.display = (matchesText && matchesStatus && matchesCategory) ? 'block' : 'none';
     });
+}
+
+function getCategoryIcon(category) {
+    const icons = {
+        'холодка': '📞',
+        'госы': '🏛',
+        'входяшка': '📥'
+    };
+    return icons[category] || '📞';
 }
 
 // ════════════════════════════════════════ NOTES/TEAM ════════════════════════════════════════
@@ -198,36 +253,40 @@ function updateNotesList() {
     let html = '';
 
     Object.entries(notes).forEach(([key, note]) => {
-        // Текущие активные SIP
-        const currentSips = note.sip_ids.filter(sid => {
+        if (!note || !note.display) return; // ✅ Защита от undefined
+
+        // ✅ ИСПРАВЛЕНО: Переместить ВНУТРЬ цикла
+        const lastActive = note.last_active 
+            ? new Date(note.last_active * 1000).toLocaleString('ru-RU')
+            : 'никогда';
+        
+        const currentSips = (note.sip_ids || []).filter(sid => {
             const sip = sips[sid];
             return sip && sip.assigned_to && sip.assigned_to.toLowerCase() === note.display.toLowerCase();
         }).map(sid => {
             const sip = sips[sid];
             const sup = suppliers[sip.supplier_id] || {};
-            return `<span class="sip-tag">${sip.number}</span>`;
+            const catIcon = getCategoryIcon(sip.category);
+            return `<span class="sip-tag" title="${sup.name}">${sip.number} ${catIcon}</span>`;
         }).join('');
-
-        // Время последней активности
-        const lastActive = new Date(note.last_active * 1000).toLocaleString('ru-RU');
 
         html += `
             <div class="note-card" data-name="${note.display.toLowerCase()}">
                 <div class="note-header">
                     <span class="note-name">👤 ${note.display}</span>
-                    <span class="note-updated">🕐 ${lastActive}</span>
+                    <span class="note-updated" title="Время последней активности">🕐 ${lastActive}</span>
                 </div>
                 <div class="note-stats">
                     <div class="note-stat">
-                        <div class="note-stat-value">${note.problems_total}</div>
+                        <div class="note-stat-value">${note.problems_total || 0}</div>
                         <div class="note-stat-label">Всего проблем</div>
                     </div>
                     <div class="note-stat">
-                        <div class="note-stat-value">${note.problems_today}</div>
+                        <div class="note-stat-value">${note.problems_today || 0}</div>
                         <div class="note-stat-label">Сегодня</div>
                     </div>
                 </div>
-                ${currentSips ? `<div class="note-sips"><div class="note-sips-label">📱 Текущие SIP:</div>${currentSips}</div>` : ''}
+                ${currentSips ? `<div class="note-sips"><div class="note-sips-label">📱 Текущие SIP:</div>${currentSips}</div>` : '<div class="note-sips-empty">📱 Нет текущих SIP</div>'}
             </div>
         `;
     });
@@ -235,10 +294,10 @@ function updateNotesList() {
     document.getElementById('notesList').innerHTML = html || '<p style="padding: 20px; text-align: center; color: #999;">📝 Нет данных о работниках</p>';
 
     // Фильтры
-    document.getElementById('notesFilter').addEventListener('input', (e) => {
+    document.getElementById('notesFilter').addEventListener('input', debounce((e) => {
         const query = e.target.value.toLowerCase();
         filterNotes(query);
-    });
+    }, 300));
 }
 
 function filterNotes(query) {
@@ -255,16 +314,18 @@ function updateProblemsList() {
     let html = '';
 
     Object.entries(problems).reverse().forEach(([id, problem]) => {
+        if (!problem) return;
+        
         const statusLabel = problem.status === 'open' ? '🔴 Открыта' : '✅ Закрыта';
         const statusClass = `status-${problem.status}`;
 
         html += `
             <div class="problem-item" data-status="${problem.status}">
                 <div class="problem-info">
-                    <h3>#${id} — ${problem.user_name}</h3>
+                    <h3>#${id} — ${problem.user_name || '?'}</h3>
                     <div class="problem-meta">
-                        <div>📞 ${problem.sip_number} | ${problem.supplier_name}</div>
-                        <div>📝 ${problem.text.substring(0, 100)}${problem.text.length > 100 ? '...' : ''}</div>
+                        <div>📞 ${problem.sip_number || '—'} | ${problem.supplier_name || '—'}</div>
+                        <div>📝 ${(problem.text || '').substring(0, 100)}${(problem.text || '').length > 100 ? '...' : ''}</div>
                     </div>
                 </div>
                 <span class="problem-status ${statusClass}">${statusLabel}</span>
@@ -275,11 +336,11 @@ function updateProblemsList() {
     document.getElementById('problemsList').innerHTML = html;
 
     // Фильтры
-    document.getElementById('problemFilter').addEventListener('input', (e) => {
+    document.getElementById('problemFilter').addEventListener('input', debounce((e) => {
         const query = e.target.value.toLowerCase();
         const status = document.getElementById('problemStatusFilter').value;
         filterProblems(query, status);
-    });
+    }, 300));
 
     document.getElementById('problemStatusFilter').addEventListener('change', (e) => {
         const query = document.getElementById('problemFilter').value.toLowerCase();
@@ -304,13 +365,17 @@ function updateSuppliersList() {
 
     let html = '';
     Object.values(suppliers).forEach(supplier => {
+        if (!supplier) return;
+        
         const sipCount = Object.values(sips).filter(s => s.supplier_id === supplier.id).length;
         const problemCount = Object.values(problems).filter(p => p.supplier_name === supplier.name).length;
         const healthIndex = sipCount > 0 ? (problemCount / sipCount).toFixed(2) : 0;
+        
+        let healthColor = healthIndex < 0.8 ? '#4CAF50' : (healthIndex <= 1.2 ? '#FF9800' : '#F44336');
 
         html += `
-            <div class="supplier-card" data-name="${supplier.name.toLowerCase()}">
-                <div class="supplier-name">🏢 ${supplier.name}</div>
+            <div class="supplier-card" data-name="${(supplier.name || '').toLowerCase()}">
+                <div class="supplier-name">🏢 ${supplier.name || '?'}</div>
                 <div class="supplier-stats">
                     <div class="supplier-stat">
                         <div class="supplier-stat-value">${sipCount}</div>
@@ -321,8 +386,8 @@ function updateSuppliersList() {
                         <div class="supplier-stat-label">Проблем</div>
                     </div>
                     <div class="supplier-stat" style="grid-column: 1/-1;">
-                        <div class="supplier-stat-value">${healthIndex}</div>
-                        <div class="supplier-stat-label">Индекс (проблем/SIP)</div>
+                        <div class="supplier-stat-value" style="color: ${healthColor};">${healthIndex}</div>
+                        <div class="supplier-stat-label">Индекс (п/S)</div>
                     </div>
                 </div>
             </div>
@@ -331,13 +396,13 @@ function updateSuppliersList() {
 
     document.getElementById('suppliersList').innerHTML = html;
 
-    document.getElementById('supplierFilter').addEventListener('input', (e) => {
+    document.getElementById('supplierFilter').addEventListener('input', debounce((e) => {
         const query = e.target.value.toLowerCase();
         document.querySelectorAll('.supplier-card').forEach(card => {
             const name = card.getAttribute('data-name');
             card.style.display = name.includes(query) ? 'block' : 'none';
         });
-    });
+    }, 300));
 }
 
 // ════════════════════════════════════════ TABS ════════════════════════════════════════
@@ -351,9 +416,18 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     });
 });
 
-// Первоначальная загрузка
+// ════════════════════════════════════════ DEBOUNCE ════════════════════════════════════════
+function debounce(fn, delay) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => fn(...args), delay);
+    };
+}
+
+// ════════════════════════════════════════ ПЕРВОНАЧАЛЬНАЯ ЗАГРУЗКА ════════════════════════════════════════
 window.addEventListener('load', () => {
     loadData();
-    // Автообновление каждые 30 секунд
-    setInterval(loadData, 30000);
+    // Автообновление каждые 15 секунд (вместо 30)
+    setInterval(loadData, 15000);
 });
