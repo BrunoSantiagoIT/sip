@@ -791,7 +791,8 @@
       "sip_number": "123213.1231",
       "supplier_name": "Test",
       "text": "тест 3",
-      "status": "open",
+      "status": "closed",
+      "closed_at": 1774109709,
       "display_name": "Bruno Santiago"
     },
     "20": {
@@ -1241,8 +1242,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.03.2026 19:15:21",
-    "updated_ts": 1774109721,
+    "updated_at": "21.03.2026 19:15:37",
+    "updated_ts": 1774109737,
     "version": "8.0"
   }
 }
