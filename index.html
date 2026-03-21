@@ -4,500 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIP Dashboard</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: #333;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .header {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 2.5em;
-            color: #2a5298;
-            margin-bottom: 10px;
-        }
-        .header p {
-            color: #666;
-            font-size: 1.1em;
-        }
-        .tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        .tab-btn {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            background: rgba(255,255,255,0.3);
-            color: white;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        .tab-btn.active {
-            background: white;
-            color: #2a5298;
-        }
-        .tab-btn:hover {
-            background: rgba(255,255,255,0.5);
-        }
-        .tab-content {
-            display: none;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .card.green {
-            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-        }
-        .card.red {
-            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
-        }
-        .card.orange {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        .card h3 {
-            font-size: 0.9em;
-            opacity: 0.9;
-            margin-bottom: 10px;
-        }
-        .card .value {
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        .card .label {
-            font-size: 0.85em;
-            opacity: 0.8;
-            margin-top: 5px;
-        }
-        .notes-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .note-card {
-            background: white;
-            border-left: 5px solid #667eea;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .note-card.critical {
-            border-left-color: #f45c43;
-            background: #fff5f5;
-        }
-        .note-card.warning {
-            border-left-color: #f5a623;
-            background: #fffbf0;
-        }
-        .note-card.good {
-            border-left-color: #38ef7d;
-            background: #f0fdf4;
-        }
-        .note-card h4 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .note-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin: 15px 0;
-            font-size: 0.9em;
-        }
-        .stat-item {
-            padding: 10px;
-            background: rgba(0,0,0,0.05);
-            border-radius: 4px;
-        }
-        .stat-item strong {
-            display: block;
-            color: #667eea;
-            margin-bottom: 5px;
-        }
-        .stat-item .value {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .category-breakdown {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-            font-size: 0.85em;
-        }
-        .category-badge {
-            padding: 4px 8px;
-            border-radius: 12px;
-            background: rgba(0,0,0,0.1);
-            flex: 1;
-            text-align: center;
-        }
-        .category-badge.cold { background: #e3f2fd; color: #1976d2; }
-        .category-badge.gov { background: #f3e5f5; color: #7b1fa2; }
-        .category-badge.incoming { background: #e0f2f1; color: #00796b; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background: #667eea;
-            color: white;
-            font-weight: 600;
-        }
-        tr:hover {
-            background: #f5f5f5;
-        }
-        .loading {
-            text-align: center;
-            padding: 40px;
-            font-size: 1.2em;
-            color: #666;
-        }
-        .error {
-            background: #f45c43;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        .last-update {
-            text-align: center;
-            color: #999;
-            font-size: 0.9em;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230F3460' width='100' height='100'/><text x='50' y='60' font-size='60' fill='white' text-anchor='middle'>📞</text></svg>">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>📞 SIP Dashboard</h1>
-            <p>Система управления SIP-аккаунтами и мониторинга качества связи</p>
-        </div>
-
-        <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab('overview')">📊 Обзор</button>
-            <button class="tab-btn" onclick="switchTab('notes')">📝 Примечания</button>
-            <button class="tab-btn" onclick="switchTab('sips')">📞 SIP</button>
-            <button class="tab-btn" onclick="switchTab('problems')">🚨 Проблемы</button>
-            <button class="tab-btn" onclick="switchTab('ratings')">⭐ Оценки</button>
-        </div>
-
-        <!-- OVERVIEW TAB -->
-        <div id="overview" class="tab-content active">
-            <div class="cards-grid" id="overviewCards">
-                <div class="loading">⏳ Загрузка данных...</div>
-            </div>
-        </div>
-
-        <!-- NOTES TAB -->
-        <div id="notes" class="tab-content">
-            <h2>📝 Статистика по примечаниям (Работники)</h2>
-            <div class="notes-container" id="notesContainer">
-                <div class="loading">⏳ Загрузка данных...</div>
-            </div>
-        </div>
-
-        <!-- SIPS TAB -->
-        <div id="sips" class="tab-content">
-            <h2>📞 SIP-аккаунты</h2>
-            <div id="sipsContainer">
-                <div class="loading">⏳ Загрузка данных...</div>
-            </div>
-        </div>
-
-        <!-- PROBLEMS TAB -->
-        <div id="problems" class="tab-content">
-            <h2>🚨 Проблемы с телефонией</h2>
-            <div id="problemsContainer">
-                <div class="loading">⏳ Загрузка данных...</div>
-            </div>
-        </div>
-
-        <!-- RATINGS TAB -->
-        <div id="ratings" class="tab-content">
-            <h2>⭐ Оценки качества связи</h2>
-            <div id="ratingsContainer">
-                <div class="loading">⏳ Загрузка данных...</div>
-            </div>
-        </div>
-
-        <div class="last-update">
-            <p id="lastUpdate">Обновлено: -</p>
-        </div>
-    </div>
-
-    <script>
-        const DATA_URL = 'https://raw.githubusercontent.com/BrunoSantiagoIT/sip/main/data.json';
-        let dashboardData = null;
-
-        // Загрузка данных
-        async function loadData() {
-            try {
-                const response = await fetch(DATA_URL);
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                dashboardData = await response.json();
-                updateDashboard();
-                updateLastUpdate();
-            } catch (error) {
-                console.error('Ошибка загрузки:', error);
-                document.getElementById('overview').innerHTML = 
-                    `<div class="error">❌ Ошибка загрузки данных: ${error.message}</div>`;
-            }
-        }
-
-        function updateLastUpdate() {
-            if (dashboardData._meta) {
-                document.getElementById('lastUpdate').textContent = 
-                    `📅 Обновлено: ${dashboardData._meta.updated_at}`;
-            }
-        }
-
-        // Переключение вкладок
-        function switchTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        // Обновление дашборда
-        function updateDashboard() {
-            updateOverview();
-            updateNotes();
-            updateSIPs();
-            updateProblems();
-            updateRatings();
-        }
-
-        function updateOverview() {
-            const d = dashboardData;
-            const free = Object.values(d.sips || {}).filter(s => !s.assigned_to && !s.multisip).length;
-            const busy = Object.values(d.sips || {}).filter(s => s.assigned_to && !s.multisip).length;
-            const openProblems = Object.values(d.problems || {}).filter(p => p.status === 'open').length;
-            const closedProblems = Object.values(d.problems || {}).filter(p => p.status === 'closed').length;
-            const avgRating = d.ratings && d.ratings.length > 0 
-                ? (d.ratings.reduce((sum, r) => sum + r.rating, 0) / d.ratings.length).toFixed(1)
-                : '-';
-
-            const html = `
-                <div class="card green">
-                    <h3>🟢 Свободных SIP</h3>
-                    <div class="value">${free}</div>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📞 SIP Dashboard</h1>
+                <div class="header-info">
+                    <span id="lastUpdate">Последнее обновление: —</span>
+                    <span class="status-indicator" id="syncStatus">🔄 Синхронизация...</span>
                 </div>
-                <div class="card red">
-                    <h3>🔴 Занятых SIP</h3>
-                    <div class="value">${busy}</div>
-                </div>
-                <div class="card orange">
-                    <h3>🚨 Открытых проблем</h3>
-                    <div class="value">${openProblems}</div>
-                </div>
+            </div>
+        </header>
+
+        <!-- Tabs Navigation -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="overview">📊 Обзор</button>
+            <button class="tab-btn" data-tab="sips">📱 SIP Аккаунты</button>
+            <button class="tab-btn" data-tab="team">👥 Команда</button>
+            <button class="tab-btn" data-tab="problems">🚨 Проблемы</button>
+            <button class="tab-btn" data-tab="suppliers">🏢 Поставщики</button>
+        </nav>
+
+        <!-- 📊 OVERVIEW TAB -->
+        <section id="overview" class="tab-content active">
+            <div class="grid-3">
+                <!-- SIP Block -->
                 <div class="card">
-                    <h3>✅ Закрытых проблем</h3>
-                    <div class="value">${closedProblems}</div>
-                </div>
-                <div class="card">
-                    <h3>⭐ Средняя оценка</h3>
-                    <div class="value">${avgRating}</div>
-                </div>
-                <div class="card">
-                    <h3>👥 Пользователей</h3>
-                    <div class="value">${(d.users || []).length}</div>
-                </div>
-            `;
-            document.getElementById('overviewCards').innerHTML = html;
-        }
-
-        function updateNotes() {
-            const notes = dashboardData.notes_stats || [];
-            if (notes.length === 0) {
-                document.getElementById('notesContainer').innerHTML = '<p>Нет примечаний</p>';
-                return;
-            }
-
-            const html = notes.map(note => {
-                const status = note.problems_today > 5 ? 'critical' : 
-                              note.problems_today > 2 ? 'warning' : 'good';
-                const lastActiveDate = new Date(note.last_active * 1000).toLocaleString('ru-RU');
-                
-                return `
-                    <div class="note-card ${status}">
-                        <h4>👤 ${note.display}</h4>
-                        <div class="note-stats">
-                            <div class="stat-item">
-                                <strong>📞 SIP</strong>
-                                <div class="value">${note.sip_count}</div>
-                            </div>
-                            <div class="stat-item">
-                                <strong>🚨 Сегодня</strong>
-                                <div class="value">${note.problems_today}</div>
-                            </div>
-                            <div class="stat-item">
-                                <strong>📊 Всего</strong>
-                                <div class="value">${note.problems_total}</div>
-                            </div>
-                            <div class="stat-item">
-                                <strong>⏰ Активность</strong>
-                                <div class="value">${lastActiveDate}</div>
-                            </div>
+                    <h2>📱 SIP Аккаунты</h2>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">Всего</span>
+                            <span class="stat-value" id="totalSips">0</span>
                         </div>
-                        <div class="category-breakdown">
-                            <div class="category-badge cold">
-                                <strong>📞</strong> ${note.category_breakdown.холодка}
-                            </div>
-                            <div class="category-badge gov">
-                                <strong>🏛</strong> ${note.category_breakdown.госы}
-                            </div>
-                            <div class="category-badge incoming">
-                                <strong>📥</strong> ${note.category_breakdown.входяшка}
-                            </div>
+                        <div class="stat-item">
+                            <span class="stat-label">🟢 Свободно</span>
+                            <span class="stat-value good" id="freeSips">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">🔴 Занято</span>
+                            <span class="stat-value bad" id="busySips">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">🔀 Мульти</span>
+                            <span class="stat-value warn" id="multiSips">0</span>
                         </div>
                     </div>
-                `;
-            }).join('');
-            
-            document.getElementById('notesContainer').innerHTML = html;
-        }
+                </div>
 
-        function updateSIPs() {
-            const sips = Object.values(dashboardData.sips || {});
-            if (sips.length === 0) {
-                document.getElementById('sipsContainer').innerHTML = '<p>Нет SIP</p>';
-                return;
-            }
+                <!-- Problems Block -->
+                <div class="card">
+                    <h2>🚨 Проблемы</h2>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">Всего</span>
+                            <span class="stat-value" id="totalProblems">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">🔴 Открыто</span>
+                            <span class="stat-value bad" id="openProblems">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">✅ Закрыто</span>
+                            <span class="stat-value good" id="closedProblems">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">% Решено</span>
+                            <span class="stat-value" id="closeRate">0%</span>
+                        </div>
+                    </div>
+                </div>
 
-            const suppliers = dashboardData.suppliers || {};
-            let html = '<table><thead><tr><th>Номер</th><th>Поставщик</th><th>Статус</th><th>Назначение</th></tr></thead><tbody>';
-            
-            sips.forEach(sip => {
-                const sup = suppliers[sip.supplier_id] || {};
-                const status = sip.assigned_to ? '🔴 Занят' : '🟢 Свободен';
-                html += `<tr>
-                    <td><code>${sip.number}</code></td>
-                    <td>${sup.name || '?'}</td>
-                    <td>${status}</td>
-                    <td>${sip.assigned_to || '-'}</td>
-                </tr>`;
-            });
-            html += '</tbody></table>';
-            document.getElementById('sipsContainer').innerHTML = html;
-        }
+                <!-- Team & Quality Block -->
+                <div class="card">
+                    <h2>👥 Команда & Качество</h2>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">Работников</span>
+                            <span class="stat-value" id="totalUsers">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">⭐ Среднее</span>
+                            <span class="stat-value" id="avgRating">—</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Оценок</span>
+                            <span class="stat-value" id="totalRatings">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Поставщиков</span>
+                            <span class="stat-value" id="totalSuppliers">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        function updateProblems() {
-            const problems = Object.values(dashboardData.problems || {});
-            const open = problems.filter(p => p.status === 'open');
-            const closed = problems.filter(p => p.status === 'closed').slice(0, 10);
+            <!-- Charts Section -->
+            <div class="grid-2">
+                <div class="card">
+                    <h2>📈 Проблемы по поставщикам</h2>
+                    <canvas id="suppliersChart"></canvas>
+                </div>
+                <div class="card">
+                    <h2>📊 SIP распределение</h2>
+                    <canvas id="sipChart"></canvas>
+                </div>
+            </div>
+        </section>
 
-            let html = '<h3>🟢 Открытые проблемы</h3>';
-            if (open.length === 0) {
-                html += '<p>✅ Нет открытых проблем</p>';
-            } else {
-                html += '<table><thead><tr><th>#</th><th>Работник</th><th>SIP</th><th>Поставщик</th></tr></thead><tbody>';
-                open.forEach(p => {
-                    html += `<tr><td>${p.user_id}</td><td>${p.display_name}</td><td><code>${p.sip_number}</code></td><td>${p.supplier_name}</td></tr>`;
-                });
-                html += '</tbody></table>';
-            }
+        <!-- 📱 SIP ACCOUNTS TAB -->
+        <section id="sips" class="tab-content">
+            <div class="filter-section">
+                <input type="text" id="sipFilter" placeholder="🔍 Поиск по номеру SIP или поставщику..." class="search-input">
+                <select id="sipStatusFilter" class="filter-select">
+                    <option value="all">Все SIP</option>
+                    <option value="free">🟢 Свободные</option>
+                    <option value="busy">🔴 Занятые</option>
+                    <option value="multi">🔀 Мультисип</option>
+                </select>
+            </div>
+            <div id="sipsList" class="sips-grid"></div>
+        </section>
 
-            html += '<h3>🔴 Последние закрытые проблемы</h3>';
-            if (closed.length === 0) {
-                html += '<p>Нет закрытых проблем</p>';
-            } else {
-                html += '<table><thead><tr><th>#</th><th>Работник</th><th>SIP</th><th>Поставщик</th></tr></thead><tbody>';
-                closed.forEach(p => {
-                    html += `<tr><td>${p.user_id}</td><td>${p.display_name}</td><td><code>${p.sip_number}</code></td><td>${p.supplier_name}</td></tr>`;
-                });
-                html += '</tbody></table>';
-            }
+        <!-- 👥 TEAM TAB (NOTES/КОМАНДА) -->
+        <section id="team" class="tab-content">
+            <div class="filter-section">
+                <input type="text" id="notesFilter" placeholder="🔍 Поиск по имени работника..." class="search-input">
+                <select id="notesPeriodFilter" class="filter-select">
+                    <option value="all">За всё время</option>
+                    <option value="today">Сегодня</option>
+                    <option value="week">Неделя</option>
+                    <option value="month">Месяц</option>
+                </select>
+            </div>
+            <div id="notesList" class="notes-grid"></div>
+        </section>
 
-            document.getElementById('problemsContainer').innerHTML = html;
-        }
+        <!-- 🚨 PROBLEMS TAB -->
+        <section id="problems" class="tab-content">
+            <div class="filter-section">
+                <input type="text" id="problemFilter" placeholder="🔍 Поиск по номеру проблемы или работнику..." class="search-input">
+                <select id="problemStatusFilter" class="filter-select">
+                    <option value="all">Все проблемы</option>
+                    <option value="open">🔴 Открытые</option>
+                    <option value="closed">✅ Закрытые</option>
+                </select>
+            </div>
+            <div id="problemsList" class="problems-list"></div>
+        </section>
 
-        function updateRatings() {
-            const ratings = dashboardData.ratings || [];
-            if (ratings.length === 0) {
-                document.getElementById('ratingsContainer').innerHTML = '<p>Нет оценок</p>';
-                return;
-            }
+        <!-- 🏢 SUPPLIERS TAB -->
+        <section id="suppliers" class="tab-content">
+            <div class="filter-section">
+                <input type="text" id="supplierFilter" placeholder="🔍 Поиск по названию поставщика..." class="search-input">
+            </div>
+            <div id="suppliersList" class="suppliers-grid"></div>
+        </section>
+    </div>
 
-            const avg = (ratings.reduce((sum, r) => sum + r.rating, 0) / ratings.length).toFixed(1);
-            const counts = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0};
-            ratings.forEach(r => counts[r.rating]++);
-
-            let html = `
-                <h3>Статистика оценок</h3>
-                <table>
-                    <tr>
-                        <th>Оценка</th>
-                        <td colspan="4">
-                            <strong>Средняя:</strong> ${avg} ⭐ | 
-                            <strong>Всего:</strong> ${ratings.length}
-                        </td>
-                    </tr>
-                </table>
-                <table>
-                    <thead><tr><th>Оценка</th><th>Количество</th><th>Процент</th></tr></thead>
-                    <tbody>
-            `;
-
-            for (let i = 5; i >= 1; i--) {
-                const cnt = counts[i];
-                const pct = ((cnt / ratings.length) * 100).toFixed(1);
-                const stars = '⭐'.repeat(i);
-                html += `<tr><td>${stars}</td><td>${cnt}</td><td>${pct}%</td></tr>`;
-            }
-
-            html += '</tbody></table>';
-            document.getElementById('ratingsContainer').innerHTML = html;
-        }
-
-        // Загружаем при загрузке страницы
-        loadData();
-        
-        // Обновляем каждые 30 секунд
-        setInterval(loadData, 30000);
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
