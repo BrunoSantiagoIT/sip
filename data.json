@@ -1065,13 +1065,22 @@
       "created_at": 1774114149,
       "chinim_done": true,
       "display_name": "⧉ 𝙈ΔRS"
+    },
+    "45": {
+      "callsign": "",
+      "sip_number": "10113201",
+      "supplier_name": "джин",
+      "text": "аааа",
+      "status": "open",
+      "created_at": 1774475955,
+      "display_name": "Bruno Santiago"
     }
   },
-  "problem_counter": 44,
+  "problem_counter": 45,
   "user_stats": {
     "8240409625": {
-      "messages_count": 36,
-      "problems_count": 27,
+      "messages_count": 37,
+      "problems_count": 28,
       "sips_used": [
         {
           "number": "213",
@@ -1107,6 +1116,10 @@
         },
         {
           "number": "10113207",
+          "supplier_name": "джин"
+        },
+        {
+          "number": "10113201",
           "supplier_name": "джин"
         }
       ]
@@ -1221,8 +1234,8 @@
   "chinim_enabled": true,
   "user_last_sip": {
     "8240409625": {
-      "sip_id": "42",
-      "number": "10113207",
+      "sip_id": "36",
+      "number": "10113201",
       "supplier_name": "джин",
       "supplier_id": "4"
     },
@@ -1264,6 +1277,18 @@
       "problems_total": 1,
       "problems_today": 0,
       "last_active": 1774114149,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "ауфер",
+      "sip_count": 1,
+      "problems_total": 1,
+      "problems_today": 1,
+      "last_active": 1774475955,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -1404,8 +1429,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "26.03.2026 00:57:39",
-    "updated_ts": 1774475859,
+    "updated_at": "26.03.2026 00:59:16",
+    "updated_ts": 1774475956,
     "version": "8.0"
   }
 }
