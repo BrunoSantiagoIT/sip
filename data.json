@@ -1074,13 +1074,22 @@
       "status": "open",
       "created_at": 1774475955,
       "display_name": "Bruno Santiago"
+    },
+    "46": {
+      "callsign": "",
+      "sip_number": "10113202",
+      "supplier_name": "джин",
+      "text": "ахахах проблема огромная там",
+      "status": "open",
+      "created_at": 1774476455,
+      "display_name": "Bruno Santiago"
     }
   },
-  "problem_counter": 45,
+  "problem_counter": 46,
   "user_stats": {
     "8240409625": {
-      "messages_count": 38,
-      "problems_count": 28,
+      "messages_count": 39,
+      "problems_count": 29,
       "sips_used": [
         {
           "number": "213",
@@ -1120,6 +1129,10 @@
         },
         {
           "number": "10113201",
+          "supplier_name": "джин"
+        },
+        {
+          "number": "10113202",
           "supplier_name": "джин"
         }
       ]
@@ -1234,8 +1247,8 @@
   "chinim_enabled": true,
   "user_last_sip": {
     "8240409625": {
-      "sip_id": "36",
-      "number": "10113201",
+      "sip_id": "37",
+      "number": "10113202",
       "supplier_name": "джин",
       "supplier_id": "4"
     },
@@ -1289,6 +1302,18 @@
       "problems_total": 1,
       "problems_today": 1,
       "last_active": 1774475955,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "qera",
+      "sip_count": 1,
+      "problems_total": 1,
+      "problems_today": 1,
+      "last_active": 1774476455,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -1429,8 +1454,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "26.03.2026 01:03:36",
-    "updated_ts": 1774476216,
+    "updated_at": "26.03.2026 02:07:23",
+    "updated_ts": 1774480043,
     "version": "8.0"
   }
 }
