@@ -1101,11 +1101,12 @@
       "sip_number": "123221",
       "supplier_name": "хотабыч",
       "text": "ау",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774480089,
       "source": "launcher",
       "launcher_uid": "2mrVHCZUXJTqM1fmf3k4yMJUbYH3",
       "launcher_workspace": "founder_office",
+      "closed_at": 1774480143,
       "display_name": "Mars"
     }
   },
@@ -1478,8 +1479,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "26.03.2026 02:08:59",
-    "updated_ts": 1774480139,
+    "updated_at": "26.03.2026 02:09:18",
+    "updated_ts": 1774480158,
     "version": "8.0"
   }
 }
