@@ -1061,9 +1061,10 @@
       "sip_number": "3202",
       "supplier_name": "хотабыч",
       "text": "Кира ауу",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774114149,
       "chinim_done": true,
+      "closed_at": 1774505109,
       "display_name": "⧉ 𝙈ΔRS"
     },
     "45": {
@@ -1509,8 +1510,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "26.03.2026 09:04:18",
-    "updated_ts": 1774505058,
+    "updated_at": "26.03.2026 09:05:09",
+    "updated_ts": 1774505109,
     "version": "8.0"
   }
 }
