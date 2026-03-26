@@ -1236,11 +1236,12 @@
       "sip_number": "3202",
       "supplier_name": "бродяга",
       "text": "азазаза",
-      "status": "open",
+      "status": "closed",
       "created_at": 1774541744,
       "source": "launcher",
       "launcher_uid": "2mrVHCZUXJTqM1fmf3k4yMJUbYH3",
       "launcher_workspace": "founder_office",
+      "closed_at": 1774541758,
       "display_name": "Mars"
     }
   },
@@ -1619,8 +1620,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "26.03.2026 19:16:11",
-    "updated_ts": 1774541771,
+    "updated_at": "26.03.2026 19:16:28",
+    "updated_ts": 1774541788,
     "version": "8.0"
   }
 }
