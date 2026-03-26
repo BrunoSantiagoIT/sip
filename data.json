@@ -1133,9 +1133,21 @@
       "launcher_uid": "2mrVHCZUXJTqM1fmf3k4yMJUbYH3",
       "launcher_workspace": "founder_office",
       "display_name": "Mars"
+    },
+    "51": {
+      "callsign": "",
+      "sip_number": "3202",
+      "supplier_name": "бродяга",
+      "text": "вызов не может быть установлен",
+      "status": "open",
+      "created_at": 1774505304,
+      "source": "launcher",
+      "launcher_uid": "2mrVHCZUXJTqM1fmf3k4yMJUbYH3",
+      "launcher_workspace": "founder_office",
+      "display_name": "Mars"
     }
   },
-  "problem_counter": 50,
+  "problem_counter": 51,
   "user_stats": {
     "8240409625": {
       "messages_count": 39,
@@ -1510,8 +1522,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "26.03.2026 09:05:26",
-    "updated_ts": 1774505126,
+    "updated_at": "26.03.2026 09:08:24",
+    "updated_ts": 1774505304,
     "version": "8.0"
   }
 }
