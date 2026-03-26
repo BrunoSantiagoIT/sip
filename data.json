@@ -1206,9 +1206,21 @@
       "launcher_uid": "2mrVHCZUXJTqM1fmf3k4yMJUbYH3",
       "launcher_workspace": "founder_office",
       "display_name": "Mars"
+    },
+    "57": {
+      "callsign": "",
+      "sip_number": "1101",
+      "supplier_name": "хотабыч",
+      "text": "каупеуркрке",
+      "status": "open",
+      "created_at": 1774538332,
+      "source": "launcher",
+      "launcher_uid": "2mrVHCZUXJTqM1fmf3k4yMJUbYH3",
+      "launcher_workspace": "founder_office",
+      "display_name": "Mars"
     }
   },
-  "problem_counter": 56,
+  "problem_counter": 57,
   "user_stats": {
     "8240409625": {
       "messages_count": 39,
@@ -1583,8 +1595,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "26.03.2026 17:47:58",
-    "updated_ts": 1774536478,
+    "updated_at": "26.03.2026 18:18:54",
+    "updated_ts": 1774538334,
     "version": "8.0"
   }
 }
