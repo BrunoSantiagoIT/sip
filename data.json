@@ -1384,9 +1384,21 @@
       "launcher_uid": "2mrVHCZUXJTqM1fmf3k4yMJUbYH3",
       "launcher_workspace": "founder_office",
       "display_name": "Mars"
+    },
+    "71": {
+      "callsign": "",
+      "sip_number": "1315",
+      "supplier_name": "ахитектор",
+      "text": "пиздец случился у меня аоаооаоа",
+      "status": "open",
+      "created_at": 1774604879,
+      "source": "launcher",
+      "launcher_uid": "2mrVHCZUXJTqM1fmf3k4yMJUbYH3",
+      "launcher_workspace": "founder_office",
+      "display_name": "Mars"
     }
   },
-  "problem_counter": 70,
+  "problem_counter": 71,
   "user_stats": {
     "8240409625": {
       "messages_count": 39,
@@ -1761,8 +1773,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "27.03.2026 12:44:53",
-    "updated_ts": 1774604693,
+    "updated_at": "27.03.2026 12:48:00",
+    "updated_ts": 1774604880,
     "version": "8.0"
   }
 }
