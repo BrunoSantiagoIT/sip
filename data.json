@@ -1358,6 +1358,7 @@
       "source": "launcher",
       "launcher_uid": "2mrVHCZUXJTqM1fmf3k4yMJUbYH3",
       "launcher_workspace": "founder_office",
+      "chinim_done": true,
       "display_name": "Mars"
     },
     "69": {
@@ -1748,8 +1749,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "27.03.2026 10:41:31",
-    "updated_ts": 1774597291,
+    "updated_at": "27.03.2026 10:53:03",
+    "updated_ts": 1774597983,
     "version": "8.0"
   }
 }
