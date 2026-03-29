@@ -1,8 +1,24 @@
 {
-  "sips": {},
-  "suppliers": {},
-  "supplier_counter": 0,
-  "sip_counter": 0,
+  "sips": {
+    "1": {
+      "id": "1",
+      "supplier_id": "1",
+      "number": "4",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    }
+  },
+  "suppliers": {
+    "1": {
+      "id": "1",
+      "name": "kkk",
+      "multisip": false,
+      "multisip_workers": []
+    }
+  },
+  "supplier_counter": 1,
+  "sip_counter": 1,
   "problems": {},
   "problem_counter": 0,
   "user_stats": {},
@@ -22,8 +38,8 @@
   "workers": {},
   "notes_stats": [],
   "_meta": {
-    "updated_at": "29.03.2026 16:10:30",
-    "updated_ts": 1774789830,
+    "updated_at": "29.03.2026 16:12:14",
+    "updated_ts": 1774789934,
     "version": "8.0"
   }
 }
