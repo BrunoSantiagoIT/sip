@@ -143,9 +143,13 @@
       "name": "евро госы",
       "multisip": false,
       "multisip_workers": []
+    },
+    "6": {
+      "id": "6",
+      "name": "ВИННЕР ЧЕРНАЯ"
     }
   },
-  "supplier_counter": 5,
+  "supplier_counter": 6,
   "sip_counter": 14,
   "problems": {},
   "problem_counter": 0,
@@ -299,8 +303,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "30.03.2026 12:30:03",
-    "updated_ts": 1774863003,
+    "updated_at": "30.03.2026 14:16:13",
+    "updated_ts": 1774869373,
     "version": "8.0"
   }
 }
