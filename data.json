@@ -1,7 +1,12 @@
 {
   "sips": {},
-  "suppliers": {},
-  "supplier_counter": 0,
+  "suppliers": {
+    "1": {
+      "id": "1",
+      "name": "PBX"
+    }
+  },
+  "supplier_counter": 1,
   "sip_counter": 0,
   "problems": {},
   "problem_counter": 0,
@@ -22,8 +27,8 @@
   "workers": {},
   "notes_stats": [],
   "_meta": {
-    "updated_at": "30.03.2026 07:59:48",
-    "updated_ts": 1774846788,
+    "updated_at": "30.03.2026 08:59:51",
+    "updated_ts": 1774850391,
     "version": "8.0"
   }
 }
