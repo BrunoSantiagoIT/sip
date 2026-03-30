@@ -1,13 +1,152 @@
 {
-  "sips": {},
+  "sips": {
+    "1": {
+      "id": "1",
+      "supplier_id": "1",
+      "number": "271001",
+      "assigned_to": "1",
+      "category": "холодка",
+      "multisip": false
+    },
+    "2": {
+      "id": "2",
+      "supplier_id": "1",
+      "number": "271002",
+      "assigned_to": "2",
+      "category": "холодка",
+      "multisip": false
+    },
+    "3": {
+      "id": "3",
+      "supplier_id": "1",
+      "number": "271003",
+      "assigned_to": "3",
+      "category": "холодка",
+      "multisip": false
+    },
+    "4": {
+      "id": "4",
+      "supplier_id": "1",
+      "number": "271004",
+      "assigned_to": "4",
+      "category": "холодка",
+      "multisip": false
+    },
+    "5": {
+      "id": "5",
+      "supplier_id": "1",
+      "number": "271005",
+      "assigned_to": "5",
+      "category": "холодка",
+      "multisip": false
+    },
+    "6": {
+      "id": "6",
+      "supplier_id": "2",
+      "number": "127",
+      "assigned_to": "6",
+      "category": "холодка",
+      "multisip": false
+    },
+    "7": {
+      "id": "7",
+      "supplier_id": "2",
+      "number": "128",
+      "assigned_to": "7",
+      "category": "холодка",
+      "multisip": false
+    },
+    "8": {
+      "id": "8",
+      "supplier_id": "2",
+      "number": "129",
+      "assigned_to": "8",
+      "category": "холодка",
+      "multisip": false
+    },
+    "9": {
+      "id": "9",
+      "supplier_id": "2",
+      "number": "130",
+      "assigned_to": "9",
+      "category": "холодка",
+      "multisip": false
+    },
+    "10": {
+      "id": "10",
+      "supplier_id": "2",
+      "number": "131",
+      "assigned_to": "10",
+      "category": "холодка",
+      "multisip": false
+    },
+    "11": {
+      "id": "11",
+      "supplier_id": "2",
+      "number": "132",
+      "assigned_to": "11",
+      "category": "холодка",
+      "multisip": false
+    },
+    "12": {
+      "id": "12",
+      "supplier_id": "3",
+      "number": "10482",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": true
+    },
+    "13": {
+      "id": "13",
+      "supplier_id": "5",
+      "number": "5001",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "14": {
+      "id": "14",
+      "supplier_id": "5",
+      "number": "5002",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    }
+  },
   "suppliers": {
     "1": {
       "id": "1",
-      "name": "PBX"
+      "name": "PBX",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "2": {
+      "id": "2",
+      "name": "Пикассо",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "3": {
+      "id": "3",
+      "name": "Визард",
+      "multisip": true,
+      "multisip_workers": []
+    },
+    "4": {
+      "id": "4",
+      "name": "ЛЮМА ГОСЫ",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "5": {
+      "id": "5",
+      "name": "евро госы",
+      "multisip": false,
+      "multisip_workers": []
     }
   },
-  "supplier_counter": 1,
-  "sip_counter": 0,
+  "supplier_counter": 5,
+  "sip_counter": 14,
   "problems": {},
   "problem_counter": 0,
   "user_stats": {},
@@ -25,10 +164,143 @@
   "poll_counter": 0,
   "user_last_sip": {},
   "workers": {},
-  "notes_stats": [],
+  "notes_stats": [
+    {
+      "display": "1",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774848399,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "2",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774848998,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "3",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774849071,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "4",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774849119,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "5",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774849169,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "6",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774849223,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "7",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774849277,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "8",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774849335,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "9",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774849407,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "10",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774849482,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "11",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1774849553,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    }
+  ],
   "_meta": {
-    "updated_at": "30.03.2026 08:59:51",
-    "updated_ts": 1774850391,
+    "updated_at": "30.03.2026 10:30:00",
+    "updated_ts": 1774855800,
     "version": "8.0"
   }
 }
