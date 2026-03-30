@@ -111,6 +111,12 @@
       "assigned_to": null,
       "category": "холодка",
       "multisip": false
+    },
+    "15": {
+      "id": "15",
+      "supplier_id": "6",
+      "number": "Bruno_santia",
+      "assigned_to": null
     }
   },
   "suppliers": {
@@ -146,11 +152,13 @@
     },
     "6": {
       "id": "6",
-      "name": "ВИННЕР ЧЕРНАЯ"
+      "name": "ВИННЕР ЧЕРНАЯ",
+      "multisip": false,
+      "multisip_workers": []
     }
   },
   "supplier_counter": 6,
-  "sip_counter": 14,
+  "sip_counter": 15,
   "problems": {},
   "problem_counter": 0,
   "user_stats": {},
@@ -303,8 +311,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "30.03.2026 14:16:13",
-    "updated_ts": 1774869373,
+    "updated_at": "30.03.2026 15:16:15",
+    "updated_ts": 1774872975,
     "version": "8.0"
   }
 }
