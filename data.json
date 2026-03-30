@@ -163,9 +163,30 @@
   },
   "supplier_counter": 6,
   "sip_counter": 15,
-  "problems": {},
-  "problem_counter": 0,
-  "user_stats": {},
+  "problems": {
+    "1": {
+      "callsign": "",
+      "sip_number": "Bruno_santia",
+      "supplier_name": "ВИННЕР ЧЕРНАЯ",
+      "text": "Недозвон",
+      "status": "open",
+      "created_at": 1774879013,
+      "display_name": "Bumer"
+    }
+  },
+  "problem_counter": 1,
+  "user_stats": {
+    "7470144848": {
+      "messages_count": 1,
+      "problems_count": 1,
+      "sips_used": [
+        {
+          "number": "Bruno_santia",
+          "supplier_name": "ВИННЕР ЧЕРНАЯ"
+        }
+      ]
+    }
+  },
   "custom_buttons": [],
   "custom_btn_counter": 0,
   "it_stats": {
@@ -178,7 +199,14 @@
   "chinim_enabled": true,
   "polls": {},
   "poll_counter": 0,
-  "user_last_sip": {},
+  "user_last_sip": {
+    "7470144848": {
+      "sip_id": "15",
+      "number": "Bruno_santia",
+      "supplier_name": "ВИННЕР ЧЕРНАЯ",
+      "supplier_id": "6"
+    }
+  },
   "workers": {},
   "notes_stats": [
     {
@@ -315,8 +343,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "30.03.2026 16:30:00",
-    "updated_ts": 1774877400,
+    "updated_at": "30.03.2026 17:08:04",
+    "updated_ts": 1774879684,
     "version": "8.0"
   }
 }
