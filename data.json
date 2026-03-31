@@ -113,10 +113,10 @@
   "notes_stats": [
     {
       "display": "1",
-      "sip_count": 2,
+      "sip_count": 3,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1774945495,
+      "last_active": 1774946937,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -137,8 +137,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "31.03.2026 12:30:03",
-    "updated_ts": 1774949403,
+    "updated_at": "31.03.2026 14:30:00",
+    "updated_ts": 1774956600,
     "version": "8.0"
   }
 }
