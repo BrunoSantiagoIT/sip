@@ -15,6 +15,22 @@
       "assigned_to": "2",
       "category": "холодка",
       "multisip": false
+    },
+    "18": {
+      "id": "18",
+      "supplier_id": "6",
+      "number": "Bruno_santia",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "19": {
+      "id": "19",
+      "supplier_id": "3",
+      "number": "10482",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -28,7 +44,9 @@
       "id": "3",
       "name": "Визард",
       "multisip": true,
-      "multisip_workers": []
+      "multisip_workers": [
+        "1"
+      ]
     },
     "4": {
       "id": "4",
@@ -58,7 +76,7 @@
     }
   },
   "supplier_counter": 7,
-  "sip_counter": 17,
+  "sip_counter": 19,
   "problems": {
     "1": {
       "callsign": "",
@@ -95,10 +113,10 @@
   "notes_stats": [
     {
       "display": "1",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1774931622,
+      "last_active": 1774945495,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -119,8 +137,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "31.03.2026 11:30:01",
-    "updated_ts": 1774945801,
+    "updated_at": "31.03.2026 12:30:03",
+    "updated_ts": 1774949403,
     "version": "8.0"
   }
 }
