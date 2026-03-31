@@ -40,54 +40,6 @@
       "category": "холодка",
       "multisip": false
     },
-    "6": {
-      "id": "6",
-      "supplier_id": "2",
-      "number": "127",
-      "assigned_to": "6",
-      "category": "холодка",
-      "multisip": false
-    },
-    "7": {
-      "id": "7",
-      "supplier_id": "2",
-      "number": "128",
-      "assigned_to": "7",
-      "category": "холодка",
-      "multisip": false
-    },
-    "8": {
-      "id": "8",
-      "supplier_id": "2",
-      "number": "129",
-      "assigned_to": "8",
-      "category": "холодка",
-      "multisip": false
-    },
-    "9": {
-      "id": "9",
-      "supplier_id": "2",
-      "number": "130",
-      "assigned_to": "9",
-      "category": "холодка",
-      "multisip": false
-    },
-    "10": {
-      "id": "10",
-      "supplier_id": "2",
-      "number": "131",
-      "assigned_to": "10",
-      "category": "холодка",
-      "multisip": false
-    },
-    "11": {
-      "id": "11",
-      "supplier_id": "2",
-      "number": "132",
-      "assigned_to": "11",
-      "category": "холодка",
-      "multisip": false
-    },
     "12": {
       "id": "12",
       "supplier_id": "3",
@@ -125,12 +77,6 @@
     "1": {
       "id": "1",
       "name": "PBX",
-      "multisip": false,
-      "multisip_workers": []
-    },
-    "2": {
-      "id": "2",
-      "name": "Пикассо",
       "multisip": false,
       "multisip_workers": []
     },
@@ -276,7 +222,7 @@
       "problems_today": 0,
       "last_active": 1774849223,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -288,7 +234,7 @@
       "problems_today": 0,
       "last_active": 1774849277,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -300,7 +246,7 @@
       "problems_today": 0,
       "last_active": 1774849335,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -312,7 +258,7 @@
       "problems_today": 0,
       "last_active": 1774849407,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -324,7 +270,7 @@
       "problems_today": 0,
       "last_active": 1774849482,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -336,15 +282,15 @@
       "problems_today": 0,
       "last_active": 1774849553,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "31.03.2026 07:18:36",
-    "updated_ts": 1774930716,
+    "updated_at": "31.03.2026 08:18:37",
+    "updated_ts": 1774934317,
     "version": "8.0"
   }
 }
