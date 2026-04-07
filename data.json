@@ -146,14 +146,34 @@
       "status": "open",
       "created_at": 1774879013,
       "display_name": "Bumer"
+    },
+    "2": {
+      "callsign": "",
+      "sip_number": "22201",
+      "supplier_name": "ASTRA",
+      "text": "re",
+      "status": "closed",
+      "created_at": 1775566649,
+      "closed_at": 1775566685,
+      "display_name": "Bruno Santiago"
     }
   },
-  "problem_counter": 1,
+  "problem_counter": 2,
   "user_stats": {
     "7470144848": {
       "messages_count": 1,
       "problems_count": 1,
       "sips_used": []
+    },
+    "8240409625": {
+      "messages_count": 2,
+      "problems_count": 1,
+      "sips_used": [
+        {
+          "number": "22201",
+          "supplier_name": "ASTRA"
+        }
+      ]
     }
   },
   "custom_buttons": [],
@@ -168,9 +188,28 @@
   "chinim_enabled": true,
   "polls": {},
   "poll_counter": 0,
-  "user_last_sip": {},
+  "user_last_sip": {
+    "8240409625": {
+      "sip_id": "29",
+      "number": "22201",
+      "supplier_name": "ASTRA",
+      "supplier_id": "14"
+    }
+  },
   "workers": {},
   "notes_stats": [
+    {
+      "display": "Вова Ганж 5 пк",
+      "sip_count": 1,
+      "problems_total": 1,
+      "problems_today": 1,
+      "last_active": 1775566649,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
     {
       "display": "1",
       "sip_count": 3,
@@ -244,18 +283,6 @@
       }
     },
     {
-      "display": "Вова Ганж 5 пк",
-      "sip_count": 1,
-      "problems_total": 0,
-      "problems_today": 0,
-      "last_active": 1775552650,
-      "category_breakdown": {
-        "холодка": 1,
-        "госы": 0,
-        "входяшка": 0
-      }
-    },
-    {
       "display": "юля",
       "sip_count": 2,
       "problems_total": 0,
@@ -281,8 +308,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "07.04.2026 16:38:48",
-    "updated_ts": 1775569128,
+    "updated_at": "07.04.2026 17:38:49",
+    "updated_ts": 1775572729,
     "version": "8.0"
   }
 }
