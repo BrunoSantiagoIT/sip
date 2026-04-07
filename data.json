@@ -4,16 +4,16 @@
       "id": "20",
       "supplier_id": "8",
       "number": "123213",
-      "assigned_to": null,
-      "category": "холодка",
+      "assigned_to": "соня доводка",
+      "category": "госы",
       "multisip": false
     },
     "21": {
       "id": "21",
       "supplier_id": "8",
       "number": "133214",
-      "assigned_to": null,
-      "category": "холодка",
+      "assigned_to": "юля",
+      "category": "госы",
       "multisip": false
     },
     "22": {
@@ -216,11 +216,23 @@
         "госы": 0,
         "входяшка": 0
       }
+    },
+    {
+      "display": "юля",
+      "sip_count": 2,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1775544241,
+      "category_breakdown": {
+        "холодка": 0,
+        "госы": 1,
+        "входяшка": 0
+      }
     }
   ],
   "_meta": {
-    "updated_at": "07.04.2026 10:27:41",
-    "updated_ts": 1775546861,
+    "updated_at": "07.04.2026 10:45:26",
+    "updated_ts": 1775547926,
     "version": "8.0"
   }
 }
