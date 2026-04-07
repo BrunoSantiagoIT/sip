@@ -60,14 +60,6 @@
       "id": "27",
       "supplier_id": "11",
       "number": "3018",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "28": {
-      "id": "28",
-      "supplier_id": "13",
-      "number": "271001",
       "assigned_to": "Вова Ганж 5 пк",
       "category": "холодка",
       "multisip": false
@@ -103,16 +95,10 @@
       "name": "АБМАСАДОР",
       "multisip": false,
       "multisip_workers": []
-    },
-    "13": {
-      "id": "13",
-      "name": "PBX",
-      "multisip": false,
-      "multisip_workers": []
     }
   },
-  "supplier_counter": 13,
-  "sip_counter": 28,
+  "supplier_counter": 12,
+  "sip_counter": 27,
   "problems": {
     "1": {
       "callsign": "",
@@ -224,7 +210,7 @@
       "sip_count": 1,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775548490,
+      "last_active": 1775537966,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -245,8 +231,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "07.04.2026 10:54:56",
-    "updated_ts": 1775548496,
+    "updated_at": "07.04.2026 11:27:43",
+    "updated_ts": 1775550463,
     "version": "8.0"
   }
 }
