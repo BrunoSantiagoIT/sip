@@ -60,7 +60,39 @@
       "id": "27",
       "supplier_id": "11",
       "number": "3018",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "28": {
+      "id": "28",
+      "supplier_id": "13",
+      "number": "271001",
       "assigned_to": "Вова Ганж 5 пк",
+      "category": "холодка",
+      "multisip": false
+    },
+    "29": {
+      "id": "29",
+      "supplier_id": "14",
+      "number": "22201",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "30": {
+      "id": "30",
+      "supplier_id": "14",
+      "number": "22202",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "31": {
+      "id": "31",
+      "supplier_id": "14",
+      "number": "22203",
+      "assigned_to": null,
       "category": "холодка",
       "multisip": false
     }
@@ -78,12 +110,6 @@
       "multisip": false,
       "multisip_workers": []
     },
-    "10": {
-      "id": "10",
-      "name": "Пикассо",
-      "multisip": false,
-      "multisip_workers": []
-    },
     "11": {
       "id": "11",
       "name": "Маз",
@@ -95,10 +121,22 @@
       "name": "АБМАСАДОР",
       "multisip": false,
       "multisip_workers": []
+    },
+    "13": {
+      "id": "13",
+      "name": "PBX",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "14": {
+      "id": "14",
+      "name": "ASTRA",
+      "multisip": false,
+      "multisip_workers": []
     }
   },
-  "supplier_counter": 12,
-  "sip_counter": 27,
+  "supplier_counter": 14,
+  "sip_counter": 31,
   "problems": {
     "1": {
       "callsign": "",
@@ -210,7 +248,7 @@
       "sip_count": 1,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775537966,
+      "last_active": 1775548490,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -231,8 +269,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "07.04.2026 11:27:43",
-    "updated_ts": 1775550463,
+    "updated_at": "07.04.2026 12:27:44",
+    "updated_ts": 1775554064,
     "version": "8.0"
   }
 }
