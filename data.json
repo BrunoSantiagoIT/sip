@@ -76,7 +76,7 @@
       "id": "29",
       "supplier_id": "14",
       "number": "22201",
-      "assigned_to": "Вова Ганж 5 пк",
+      "assigned_to": null,
       "category": "холодка",
       "multisip": false
     },
@@ -84,7 +84,7 @@
       "id": "30",
       "supplier_id": "14",
       "number": "22202",
-      "assigned_to": null,
+      "assigned_to": "Вова Ганж 5 пк",
       "category": "холодка",
       "multisip": false
     },
@@ -203,7 +203,7 @@
       "sip_count": 1,
       "problems_total": 1,
       "problems_today": 1,
-      "last_active": 1775566649,
+      "last_active": 1775569547,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -308,8 +308,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "07.04.2026 17:38:49",
-    "updated_ts": 1775572729,
+    "updated_at": "07.04.2026 18:38:50",
+    "updated_ts": 1775576330,
     "version": "8.0"
   }
 }
