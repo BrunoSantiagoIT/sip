@@ -52,17 +52,7 @@
       "id": "32",
       "supplier_id": "15",
       "number": "40685",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "33": {
-      "id": "33",
-      "supplier_id": "15",
-      "number": "40686",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
+      "assigned_to": null
     }
   },
   "suppliers": {
@@ -116,7 +106,7 @@
     }
   },
   "supplier_counter": 16,
-  "sip_counter": 33,
+  "sip_counter": 32,
   "problems": {
     "1": {
       "callsign": "",
@@ -288,8 +278,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "08.04.2026 07:45:46",
-    "updated_ts": 1775623546,
+    "updated_at": "08.04.2026 08:25:13",
+    "updated_ts": 1775625913,
     "version": "8.0"
   }
 }
