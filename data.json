@@ -4,7 +4,7 @@
       "id": "20",
       "supplier_id": "8",
       "number": "123213",
-      "assigned_to": "соня доводка",
+      "assigned_to": null,
       "category": "госы",
       "multisip": false
     },
@@ -12,7 +12,7 @@
       "id": "21",
       "supplier_id": "8",
       "number": "133214",
-      "assigned_to": "юля",
+      "assigned_to": null,
       "category": "госы",
       "multisip": false
     },
@@ -21,46 +21,6 @@
       "supplier_id": "8",
       "number": "133232",
       "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "23": {
-      "id": "23",
-      "supplier_id": "9",
-      "number": "5001",
-      "assigned_to": "ВХОД СОНЯ",
-      "category": "холодка",
-      "multisip": false
-    },
-    "24": {
-      "id": "24",
-      "supplier_id": "9",
-      "number": "6001",
-      "assigned_to": "АЙВЕН ВХОД",
-      "category": "холодка",
-      "multisip": false
-    },
-    "26": {
-      "id": "26",
-      "supplier_id": "11",
-      "number": "3017",
-      "assigned_to": "юля 3 пк",
-      "category": "холодка",
-      "multisip": false
-    },
-    "27": {
-      "id": "27",
-      "supplier_id": "11",
-      "number": "3018",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "28": {
-      "id": "28",
-      "supplier_id": "13",
-      "number": "271001",
-      "assigned_to": "1111",
       "category": "холодка",
       "multisip": false
     },
@@ -125,9 +85,21 @@
       "name": "ASTRA",
       "multisip": false,
       "multisip_workers": []
+    },
+    "15": {
+      "id": "15",
+      "name": "LUMA",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "16": {
+      "id": "16",
+      "name": "Bert",
+      "multisip": false,
+      "multisip_workers": []
     }
   },
-  "supplier_counter": 14,
+  "supplier_counter": 16,
   "sip_counter": 31,
   "problems": {
     "1": {
@@ -228,24 +200,24 @@
     },
     {
       "display": "ВХОД СОНЯ",
-      "sip_count": 1,
+      "sip_count": 0,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775537199,
+      "last_active": 1775582588,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     },
     {
       "display": "АЙВЕН ВХОД",
-      "sip_count": 1,
+      "sip_count": 0,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775537308,
+      "last_active": 1775582591,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -257,7 +229,7 @@
       "problems_today": 0,
       "last_active": 1775537813,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -276,13 +248,13 @@
     },
     {
       "display": "юля",
-      "sip_count": 2,
+      "sip_count": 1,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775544241,
+      "last_active": 1775582579,
       "category_breakdown": {
         "холодка": 0,
-        "госы": 1,
+        "госы": 0,
         "входяшка": 0
       }
     },
@@ -293,15 +265,15 @@
       "problems_today": 0,
       "last_active": 1775552722,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "07.04.2026 21:22:24",
-    "updated_ts": 1775586144,
+    "updated_at": "08.04.2026 07:25:11",
+    "updated_ts": 1775622311,
     "version": "8.0"
   }
 }
