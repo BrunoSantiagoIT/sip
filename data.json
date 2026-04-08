@@ -55,6 +55,14 @@
       "assigned_to": "Вова Ганж 5 пк",
       "category": "холодка",
       "multisip": false
+    },
+    "35": {
+      "id": "35",
+      "supplier_id": "14",
+      "number": "19214",
+      "assigned_to": "йосып 4 пк",
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -108,7 +116,7 @@
     }
   },
   "supplier_counter": 16,
-  "sip_counter": 34,
+  "sip_counter": 35,
   "problems": {
     "1": {
       "callsign": "",
@@ -244,12 +252,12 @@
     },
     {
       "display": "йосып 4 пк",
-      "sip_count": 2,
+      "sip_count": 3,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775624442,
+      "last_active": 1775644845,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
@@ -304,8 +312,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "08.04.2026 14:01:56",
-    "updated_ts": 1775646116,
+    "updated_at": "08.04.2026 15:01:57",
+    "updated_ts": 1775649717,
     "version": "8.0"
   }
 }
