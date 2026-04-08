@@ -16,14 +16,6 @@
       "category": "холодка",
       "multisip": false
     },
-    "29": {
-      "id": "29",
-      "supplier_id": "14",
-      "number": "22201",
-      "assigned_to": "йосып 4",
-      "category": "холодка",
-      "multisip": false
-    },
     "30": {
       "id": "30",
       "supplier_id": "14",
@@ -312,8 +304,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "08.04.2026 13:01:53",
-    "updated_ts": 1775642513,
+    "updated_at": "08.04.2026 14:01:56",
+    "updated_ts": 1775646116,
     "version": "8.0"
   }
 }
