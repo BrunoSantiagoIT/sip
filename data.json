@@ -12,7 +12,7 @@
       "id": "22",
       "supplier_id": "8",
       "number": "133232",
-      "assigned_to": "ДОВОДКА СОНЯ",
+      "assigned_to": null,
       "category": "холодка",
       "multisip": false
     },
@@ -300,20 +300,20 @@
     },
     {
       "display": "ДОВОДКА СОНЯ",
-      "sip_count": 1,
+      "sip_count": 0,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775624557,
+      "last_active": 1775629014,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "08.04.2026 09:16:46",
-    "updated_ts": 1775629006,
+    "updated_at": "08.04.2026 10:16:47",
+    "updated_ts": 1775632607,
     "version": "8.0"
   }
 }
