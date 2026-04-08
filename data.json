@@ -4,23 +4,15 @@
       "id": "20",
       "supplier_id": "8",
       "number": "123213",
-      "assigned_to": null,
-      "category": "госы",
-      "multisip": false
-    },
-    "21": {
-      "id": "21",
-      "supplier_id": "8",
-      "number": "133214",
-      "assigned_to": null,
-      "category": "госы",
+      "assigned_to": "Вова Ганж 5 пк",
+      "category": "холодка",
       "multisip": false
     },
     "22": {
       "id": "22",
       "supplier_id": "8",
       "number": "133232",
-      "assigned_to": null,
+      "assigned_to": "ДОВОДКА СОНЯ",
       "category": "холодка",
       "multisip": false
     },
@@ -28,7 +20,7 @@
       "id": "29",
       "supplier_id": "14",
       "number": "22201",
-      "assigned_to": null,
+      "assigned_to": "закрыв 1",
       "category": "холодка",
       "multisip": false
     },
@@ -36,7 +28,7 @@
       "id": "30",
       "supplier_id": "14",
       "number": "22202",
-      "assigned_to": "Вова Ганж 5 пк",
+      "assigned_to": "АЙВЕН ВХОД",
       "category": "холодка",
       "multisip": false
     },
@@ -44,7 +36,7 @@
       "id": "31",
       "supplier_id": "14",
       "number": "22203",
-      "assigned_to": null,
+      "assigned_to": "ВХОД СОНЯ",
       "category": "холодка",
       "multisip": false
     },
@@ -52,7 +44,25 @@
       "id": "32",
       "supplier_id": "15",
       "number": "40685",
-      "assigned_to": null
+      "assigned_to": "юля 3 пк",
+      "category": "холодка",
+      "multisip": false
+    },
+    "33": {
+      "id": "33",
+      "supplier_id": "15",
+      "number": "40686",
+      "assigned_to": "йосып 4 пк",
+      "category": "холодка",
+      "multisip": false
+    },
+    "34": {
+      "id": "34",
+      "supplier_id": "16",
+      "number": "2001",
+      "assigned_to": "Вова Ганж 5 пк",
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -106,7 +116,7 @@
     }
   },
   "supplier_counter": 16,
-  "sip_counter": 32,
+  "sip_counter": 34,
   "problems": {
     "1": {
       "callsign": "",
@@ -170,12 +180,12 @@
   "notes_stats": [
     {
       "display": "Вова Ганж 5 пк",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 1,
-      "problems_today": 1,
-      "last_active": 1775569547,
+      "problems_today": 0,
+      "last_active": 1775624679,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
@@ -206,48 +216,48 @@
     },
     {
       "display": "ВХОД СОНЯ",
-      "sip_count": 0,
+      "sip_count": 1,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775582588,
+      "last_active": 1775624179,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
     },
     {
       "display": "АЙВЕН ВХОД",
-      "sip_count": 0,
+      "sip_count": 1,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775582591,
+      "last_active": 1775624300,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
     },
     {
       "display": "юля 3 пк",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775537813,
+      "last_active": 1775624396,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
     },
     {
       "display": "йосып 4 пк",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775537888,
+      "last_active": 1775624442,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -275,11 +285,35 @@
         "госы": 0,
         "входяшка": 0
       }
+    },
+    {
+      "display": "закрыв 1",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1775623758,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "ДОВОДКА СОНЯ",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1775624557,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
     }
   ],
   "_meta": {
-    "updated_at": "08.04.2026 08:25:13",
-    "updated_ts": 1775625913,
+    "updated_at": "08.04.2026 08:40:59",
+    "updated_ts": 1775626859,
     "version": "8.0"
   }
 }
