@@ -76,7 +76,8 @@
       "id": "9",
       "name": "Long",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "11": {
       "id": "11",
@@ -313,8 +314,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "08.04.2026 23:31:11",
-    "updated_ts": 1775680271,
+    "updated_at": "09.04.2026 00:31:12",
+    "updated_ts": 1775683872,
     "version": "8.0"
   }
 }
