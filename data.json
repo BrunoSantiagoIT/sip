@@ -88,7 +88,8 @@
       "id": "12",
       "name": "АБМАСАДОР",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "13": {
       "id": "13",
@@ -312,8 +313,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "08.04.2026 22:03:35",
-    "updated_ts": 1775675015,
+    "updated_at": "08.04.2026 23:31:11",
+    "updated_ts": 1775680271,
     "version": "8.0"
   }
 }
