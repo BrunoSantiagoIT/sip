@@ -23,38 +23,6 @@
       "assigned_to": "йосып 4 пк",
       "category": "холодка",
       "multisip": false
-    },
-    "36": {
-      "id": "36",
-      "supplier_id": "15",
-      "number": "40686",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "37": {
-      "id": "37",
-      "supplier_id": "17",
-      "number": "113205",
-      "assigned_to": "юля",
-      "category": "холодка",
-      "multisip": false
-    },
-    "38": {
-      "id": "38",
-      "supplier_id": "16",
-      "number": "1008",
-      "assigned_to": "ДОВОДКА СОНЯ",
-      "category": "холодка",
-      "multisip": false
-    },
-    "39": {
-      "id": "39",
-      "supplier_id": "16",
-      "number": "1009",
-      "assigned_to": "юля",
-      "category": "холодка",
-      "multisip": false
     }
   },
   "suppliers": {
@@ -103,7 +71,8 @@
       "id": "15",
       "name": "LUMA",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "16": {
       "id": "16",
@@ -115,10 +84,23 @@
       "id": "17",
       "name": "Morgan",
       "multisip": false,
+      "multisip_workers": [],
+      "archived": true
+    },
+    "18": {
+      "id": "18",
+      "name": "КГБ",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "19": {
+      "id": "19",
+      "name": "ЦРУ",
+      "multisip": false,
       "multisip_workers": []
     }
   },
-  "supplier_counter": 17,
+  "supplier_counter": 19,
   "sip_counter": 39,
   "problems": {
     "1": {
@@ -272,7 +254,7 @@
       "problems_today": 0,
       "last_active": 1775715924,
       "category_breakdown": {
-        "холодка": 2,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -308,15 +290,15 @@
       "problems_today": 0,
       "last_active": 1775714411,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "09.04.2026 22:56:17",
-    "updated_ts": 1775764577,
+    "updated_at": "10.04.2026 00:00:05",
+    "updated_ts": 1775768405,
     "version": "8.0"
   }
 }
