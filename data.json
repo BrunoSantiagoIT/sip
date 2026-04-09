@@ -32,14 +32,6 @@
       "category": "холодка",
       "multisip": false
     },
-    "32": {
-      "id": "32",
-      "supplier_id": "15",
-      "number": "40685",
-      "assigned_to": "юля 3 пк",
-      "category": "холодка",
-      "multisip": false
-    },
     "33": {
       "id": "33",
       "supplier_id": "15",
@@ -70,7 +62,8 @@
       "id": "8",
       "name": "ЗАЗА",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "9": {
       "id": "9",
@@ -83,7 +76,8 @@
       "id": "11",
       "name": "Маз",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "12": {
       "id": "12",
@@ -96,7 +90,8 @@
       "id": "13",
       "name": "PBX",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "14": {
       "id": "14",
@@ -115,9 +110,15 @@
       "name": "Bert",
       "multisip": false,
       "multisip_workers": []
+    },
+    "17": {
+      "id": "17",
+      "name": "Morgan",
+      "multisip": false,
+      "multisip_workers": []
     }
   },
-  "supplier_counter": 16,
+  "supplier_counter": 17,
   "sip_counter": 35,
   "problems": {
     "1": {
@@ -247,7 +248,7 @@
       "problems_today": 0,
       "last_active": 1775624396,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -314,8 +315,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "09.04.2026 00:31:12",
-    "updated_ts": 1775683872,
+    "updated_at": "09.04.2026 07:44:04",
+    "updated_ts": 1775709844,
     "version": "8.0"
   }
 }
