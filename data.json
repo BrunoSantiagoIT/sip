@@ -39,6 +39,22 @@
       "assigned_to": "юля",
       "category": "холодка",
       "multisip": false
+    },
+    "38": {
+      "id": "38",
+      "supplier_id": "16",
+      "number": "1008",
+      "assigned_to": "ДОВОДКА СОНЯ",
+      "category": "холодка",
+      "multisip": false
+    },
+    "39": {
+      "id": "39",
+      "supplier_id": "16",
+      "number": "1009",
+      "assigned_to": "юля",
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -103,7 +119,7 @@
     }
   },
   "supplier_counter": 17,
-  "sip_counter": 37,
+  "sip_counter": 39,
   "problems": {
     "1": {
       "callsign": "",
@@ -251,12 +267,12 @@
     },
     {
       "display": "юля",
-      "sip_count": 3,
+      "sip_count": 4,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775710598,
+      "last_active": 1775715924,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
@@ -287,20 +303,20 @@
     },
     {
       "display": "ДОВОДКА СОНЯ",
-      "sip_count": 0,
+      "sip_count": 1,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775629014,
+      "last_active": 1775714411,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "09.04.2026 09:44:06",
-    "updated_ts": 1775717046,
+    "updated_at": "09.04.2026 10:44:07",
+    "updated_ts": 1775720647,
     "version": "8.0"
   }
 }
