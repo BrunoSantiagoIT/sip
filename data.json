@@ -180,7 +180,14 @@
     "total_suppliers_ever": 0,
     "suppliers_history": []
   },
-  "ratings": [],
+  "ratings": [
+    {
+      "user_id": 7474036403,
+      "user_name": "­",
+      "rating": 1,
+      "label": "😡 Очень плохая"
+    }
+  ],
   "autofix_mode": "off",
   "chinim_enabled": true,
   "polls": {},
@@ -341,8 +348,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "10.04.2026 17:30:01",
-    "updated_ts": 1775831401,
+    "updated_at": "10.04.2026 18:30:02",
+    "updated_ts": 1775835002,
     "version": "8.0"
   }
 }
