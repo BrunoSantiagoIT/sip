@@ -110,7 +110,8 @@
       "id": "16",
       "name": "Bert",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "17": {
       "id": "17",
@@ -348,8 +349,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "10.04.2026 23:07:09",
-    "updated_ts": 1775851629,
+    "updated_at": "11.04.2026 00:07:10",
+    "updated_ts": 1775855230,
     "version": "8.0"
   }
 }
