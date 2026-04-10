@@ -28,7 +28,33 @@
       "id": "40",
       "supplier_id": "18",
       "number": "2016",
-      "assigned_to": null
+      "assigned_to": "юля",
+      "category": "холодка",
+      "multisip": false
+    },
+    "41": {
+      "id": "41",
+      "supplier_id": "18",
+      "number": "2017",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "42": {
+      "id": "42",
+      "supplier_id": "19",
+      "number": "5001",
+      "assigned_to": "юля",
+      "category": "холодка",
+      "multisip": false
+    },
+    "43": {
+      "id": "43",
+      "supplier_id": "16",
+      "number": "2006",
+      "assigned_to": "Вова Ганж 5 пк",
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -107,7 +133,7 @@
     }
   },
   "supplier_counter": 19,
-  "sip_counter": 40,
+  "sip_counter": 43,
   "problems": {
     "1": {
       "callsign": "",
@@ -171,12 +197,12 @@
   "notes_stats": [
     {
       "display": "Вова Ганж 5 пк",
-      "sip_count": 2,
+      "sip_count": 3,
       "problems_total": 1,
       "problems_today": 0,
-      "last_active": 1775760983,
+      "last_active": 1775797546,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -255,12 +281,12 @@
     },
     {
       "display": "юля",
-      "sip_count": 4,
+      "sip_count": 6,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775715924,
+      "last_active": 1775797587,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
@@ -303,8 +329,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "10.04.2026 08:52:00",
-    "updated_ts": 1775800320,
+    "updated_at": "10.04.2026 09:52:01",
+    "updated_ts": 1775803921,
     "version": "8.0"
   }
 }
