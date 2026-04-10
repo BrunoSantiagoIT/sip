@@ -23,6 +23,12 @@
       "assigned_to": "йосып 4 пк",
       "category": "холодка",
       "multisip": false
+    },
+    "40": {
+      "id": "40",
+      "supplier_id": "18",
+      "number": "2016",
+      "assigned_to": null
     }
   },
   "suppliers": {
@@ -101,7 +107,7 @@
     }
   },
   "supplier_counter": 19,
-  "sip_counter": 39,
+  "sip_counter": 40,
   "problems": {
     "1": {
       "callsign": "",
@@ -297,8 +303,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "10.04.2026 07:52:00",
-    "updated_ts": 1775796720,
+    "updated_at": "10.04.2026 08:52:00",
+    "updated_ts": 1775800320,
     "version": "8.0"
   }
 }
