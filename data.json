@@ -32,14 +32,6 @@
       "category": "холодка",
       "multisip": false
     },
-    "43": {
-      "id": "43",
-      "supplier_id": "16",
-      "number": "2006",
-      "assigned_to": "Вова Ганж 5 пк",
-      "category": "холодка",
-      "multisip": false
-    },
     "44": {
       "id": "44",
       "supplier_id": "14",
@@ -53,6 +45,30 @@
       "supplier_id": "14",
       "number": "19223",
       "assigned_to": "ВХОД СОНЯ",
+      "category": "холодка",
+      "multisip": false
+    },
+    "46": {
+      "id": "46",
+      "supplier_id": "18",
+      "number": "1023",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "47": {
+      "id": "47",
+      "supplier_id": "19",
+      "number": "5003",
+      "assigned_to": "юля",
+      "category": "холодка",
+      "multisip": false
+    },
+    "48": {
+      "id": "48",
+      "supplier_id": "19",
+      "number": "6001",
+      "assigned_to": "Вова Ганж 5 пк",
       "category": "холодка",
       "multisip": false
     }
@@ -134,7 +150,7 @@
     }
   },
   "supplier_counter": 19,
-  "sip_counter": 45,
+  "sip_counter": 48,
   "problems": {
     "1": {
       "callsign": "",
@@ -205,10 +221,10 @@
   "notes_stats": [
     {
       "display": "Вова Ганж 5 пк",
-      "sip_count": 4,
+      "sip_count": 5,
       "problems_total": 1,
       "problems_today": 0,
-      "last_active": 1775822324,
+      "last_active": 1775886984,
       "category_breakdown": {
         "холодка": 2,
         "госы": 0,
@@ -289,12 +305,12 @@
     },
     {
       "display": "юля",
-      "sip_count": 6,
+      "sip_count": 7,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1775797587,
+      "last_active": 1775886883,
       "category_breakdown": {
-        "холодка": 2,
+        "холодка": 3,
         "госы": 0,
         "входяшка": 0
       }
@@ -349,8 +365,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "11.04.2026 09:30:00",
-    "updated_ts": 1775889000,
+    "updated_at": "11.04.2026 10:30:01",
+    "updated_ts": 1775892601,
     "version": "8.0"
   }
 }
