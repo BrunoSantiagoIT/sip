@@ -20,7 +20,7 @@
       "id": "54",
       "supplier_id": "20",
       "number": "12421",
-      "assigned_to": "АЙВЕН ВХОД",
+      "assigned_to": "СОНЯ ВХОД",
       "category": "холодка",
       "multisip": false
     },
@@ -257,7 +257,7 @@
       "problems_today": 0,
       "last_active": 1776151649,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -360,8 +360,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "14.04.2026 12:04:39",
-    "updated_ts": 1776157479,
+    "updated_at": "14.04.2026 13:04:45",
+    "updated_ts": 1776161085,
     "version": "8.0"
   }
 }
