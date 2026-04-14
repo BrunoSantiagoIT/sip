@@ -1,46 +1,5 @@
 {
-  "sips": {
-    "49": {
-      "id": "49",
-      "supplier_id": "19",
-      "number": "5001",
-      "assigned_to": "Юля",
-      "category": "холодка",
-      "multisip": false
-    },
-    "50": {
-      "id": "50",
-      "supplier_id": "19",
-      "number": "6001",
-      "assigned_to": "Ганж",
-      "category": "холодка",
-      "multisip": false
-    },
-    "54": {
-      "id": "54",
-      "supplier_id": "20",
-      "number": "12421",
-      "assigned_to": "CОНЯ ДОВОДКА",
-      "category": "холодка",
-      "multisip": false
-    },
-    "56": {
-      "id": "56",
-      "supplier_id": "18",
-      "number": "1022",
-      "assigned_to": "Йосып",
-      "category": "холодка",
-      "multisip": false
-    },
-    "57": {
-      "id": "57",
-      "supplier_id": "18",
-      "number": "1023",
-      "assigned_to": "АЙВЕН ВХОД",
-      "category": "холодка",
-      "multisip": false
-    }
-  },
+  "sips": {},
   "suppliers": {
     "8": {
       "id": "8",
@@ -95,15 +54,13 @@
       "id": "16",
       "name": "Bert",
       "multisip": false,
-      "multisip_workers": [],
-      "archived": true
+      "multisip_workers": []
     },
     "17": {
       "id": "17",
       "name": "Morgan",
       "multisip": false,
-      "multisip_workers": [],
-      "archived": true
+      "multisip_workers": []
     },
     "18": {
       "id": "18",
@@ -249,7 +206,7 @@
       "problems_today": 0,
       "last_active": 1776158128,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -285,7 +242,7 @@
       "problems_today": 0,
       "last_active": 1776141502,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -345,15 +302,15 @@
       "problems_today": 0,
       "last_active": 1776153336,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "14.04.2026 20:34:00",
-    "updated_ts": 1776188040,
+    "updated_at": "15.04.2026 00:00:05",
+    "updated_ts": 1776200405,
     "version": "8.0"
   }
 }
