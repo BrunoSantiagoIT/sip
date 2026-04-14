@@ -24,14 +24,6 @@
       "category": "холодка",
       "multisip": false
     },
-    "52": {
-      "id": "52",
-      "supplier_id": "16",
-      "number": "1007",
-      "assigned_to": "Йосып",
-      "category": "холодка",
-      "multisip": false
-    },
     "53": {
       "id": "53",
       "supplier_id": "16",
@@ -377,15 +369,15 @@
       "problems_today": 0,
       "last_active": 1776142516,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "14.04.2026 10:04:37",
-    "updated_ts": 1776150277,
+    "updated_at": "14.04.2026 11:04:38",
+    "updated_ts": 1776153878,
     "version": "8.0"
   }
 }
