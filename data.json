@@ -55,6 +55,22 @@
       "assigned_to": "ВХОД СОНЯ",
       "category": "холодка",
       "multisip": false
+    },
+    "56": {
+      "id": "56",
+      "supplier_id": "18",
+      "number": "1022",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "57": {
+      "id": "57",
+      "supplier_id": "18",
+      "number": "1023",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -97,7 +113,8 @@
       "id": "14",
       "name": "ASTRA",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "15": {
       "id": "15",
@@ -110,7 +127,8 @@
       "id": "16",
       "name": "Bert",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "17": {
       "id": "17",
@@ -139,7 +157,7 @@
     }
   },
   "supplier_counter": 20,
-  "sip_counter": 55,
+  "sip_counter": 57,
   "problems": {
     "1": {
       "callsign": "",
@@ -366,8 +384,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "14.04.2026 09:26:50",
-    "updated_ts": 1776148010,
+    "updated_at": "14.04.2026 10:04:37",
+    "updated_ts": 1776150277,
     "version": "8.0"
   }
 }
