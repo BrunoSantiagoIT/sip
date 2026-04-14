@@ -1,13 +1,5 @@
 {
   "sips": {
-    "35": {
-      "id": "35",
-      "supplier_id": "14",
-      "number": "19214",
-      "assigned_to": "йосып 4 пк",
-      "category": "холодка",
-      "multisip": false
-    },
     "40": {
       "id": "40",
       "supplier_id": "18",
@@ -298,7 +290,7 @@
       "problems_today": 0,
       "last_active": 1775644845,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -365,8 +357,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "14.04.2026 07:26:48",
-    "updated_ts": 1776140808,
+    "updated_at": "14.04.2026 08:26:49",
+    "updated_ts": 1776144409,
     "version": "8.0"
   }
 }
