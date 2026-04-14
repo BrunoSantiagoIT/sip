@@ -24,14 +24,6 @@
       "category": "холодка",
       "multisip": false
     },
-    "55": {
-      "id": "55",
-      "supplier_id": "18",
-      "number": "1024",
-      "assigned_to": "ВХОД СОНЯ",
-      "category": "холодка",
-      "multisip": false
-    },
     "56": {
       "id": "56",
       "supplier_id": "18",
@@ -245,7 +237,7 @@
       "problems_today": 0,
       "last_active": 1776144298,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -360,8 +352,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "14.04.2026 19:33:59",
-    "updated_ts": 1776184439,
+    "updated_at": "14.04.2026 20:34:00",
+    "updated_ts": 1776188040,
     "version": "8.0"
   }
 }
