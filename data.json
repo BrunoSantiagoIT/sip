@@ -1,5 +1,12 @@
 {
-  "sips": {},
+  "sips": {
+    "58": {
+      "id": "58",
+      "supplier_id": "18",
+      "number": "1024",
+      "assigned_to": null
+    }
+  },
   "suppliers": {
     "8": {
       "id": "8",
@@ -82,7 +89,7 @@
     }
   },
   "supplier_counter": 20,
-  "sip_counter": 57,
+  "sip_counter": 58,
   "problems": {
     "1": {
       "callsign": "",
@@ -309,8 +316,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "15.04.2026 07:25:06",
-    "updated_ts": 1776227106,
+    "updated_at": "15.04.2026 08:25:07",
+    "updated_ts": 1776230707,
     "version": "8.0"
   }
 }
