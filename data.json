@@ -1,58 +1,58 @@
 {
   "sips": {
-    "58": {
-      "id": "58",
-      "supplier_id": "18",
-      "number": "1024",
-      "assigned_to": "исход соня",
+    "65": {
+      "id": "65",
+      "supplier_id": "17",
+      "number": "113215",
+      "assigned_to": "Ганж",
       "category": "холодка",
       "multisip": false
     },
-    "59": {
-      "id": "59",
+    "66": {
+      "id": "66",
       "supplier_id": "18",
-      "number": "1023",
+      "number": "1030",
       "assigned_to": "АЙВЕН ВХОД",
       "category": "холодка",
       "multisip": false
     },
-    "60": {
-      "id": "60",
+    "68": {
+      "id": "68",
       "supplier_id": "18",
-      "number": "1022",
+      "number": "1031",
       "assigned_to": "ВХОД СОНЯ",
       "category": "холодка",
       "multisip": false
     },
-    "61": {
-      "id": "61",
+    "69": {
+      "id": "69",
       "supplier_id": "20",
-      "number": "12432",
-      "assigned_to": "Юля",
+      "number": "12330",
+      "assigned_to": "ЮЛЯ",
       "category": "холодка",
       "multisip": false
     },
-    "62": {
-      "id": "62",
+    "70": {
+      "id": "70",
       "supplier_id": "19",
-      "number": "5001",
+      "number": "5021",
       "assigned_to": "Йосып",
       "category": "холодка",
       "multisip": false
     },
-    "63": {
-      "id": "63",
-      "supplier_id": "17",
-      "number": "113218",
-      "assigned_to": "Вова Ганж 5 пк",
+    "71": {
+      "id": "71",
+      "supplier_id": "16",
+      "number": "1118",
+      "assigned_to": "Ганж",
       "category": "холодка",
       "multisip": false
     },
-    "64": {
-      "id": "64",
-      "supplier_id": "16",
-      "number": "1114",
-      "assigned_to": "Вова Ганж 5 пк",
+    "72": {
+      "id": "72",
+      "supplier_id": "18",
+      "number": "1032",
+      "assigned_to": "ВХОД 2 соня",
       "category": "холодка",
       "multisip": false
     }
@@ -139,7 +139,7 @@
     }
   },
   "supplier_counter": 20,
-  "sip_counter": 64,
+  "sip_counter": 72,
   "problems": {
     "1": {
       "callsign": "",
@@ -215,7 +215,7 @@
       "problems_today": 0,
       "last_active": 1776230506,
       "category_breakdown": {
-        "холодка": 2,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -246,10 +246,10 @@
     },
     {
       "display": "ВХОД СОНЯ",
-      "sip_count": 5,
+      "sip_count": 6,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776229024,
+      "last_active": 1776315198,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -258,10 +258,10 @@
     },
     {
       "display": "АЙВЕН ВХОД",
-      "sip_count": 5,
+      "sip_count": 6,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776228497,
+      "last_active": 1776315061,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -294,10 +294,10 @@
     },
     {
       "display": "юля",
-      "sip_count": 11,
+      "sip_count": 12,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776229482,
+      "last_active": 1776315844,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -354,10 +354,10 @@
     },
     {
       "display": "Йосып",
-      "sip_count": 3,
+      "sip_count": 5,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776229621,
+      "last_active": 1776316121,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -383,15 +383,39 @@
       "problems_today": 0,
       "last_active": 1776235291,
       "category_breakdown": {
+        "холодка": 0,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "ВХОД 2 соня",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1776315368,
+      "category_breakdown": {
         "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "Ганж",
+      "sip_count": 2,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1776317723,
+      "category_breakdown": {
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "16.04.2026 08:43:00",
-    "updated_ts": 1776318180,
+    "updated_at": "16.04.2026 09:43:01",
+    "updated_ts": 1776321781,
     "version": "8.0"
   }
 }
