@@ -47,6 +47,14 @@
       "assigned_to": "Ганж",
       "category": "холодка",
       "multisip": false
+    },
+    "79": {
+      "id": "79",
+      "supplier_id": "21",
+      "number": "1023",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -128,10 +136,16 @@
       "name": "Хотабыч",
       "multisip": false,
       "multisip_workers": []
+    },
+    "21": {
+      "id": "21",
+      "name": "Bender",
+      "multisip": false,
+      "multisip_workers": []
     }
   },
-  "supplier_counter": 20,
-  "sip_counter": 78,
+  "supplier_counter": 21,
+  "sip_counter": 79,
   "problems": {
     "1": {
       "callsign": "",
@@ -424,8 +438,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "17.04.2026 17:27:17",
-    "updated_ts": 1776436037,
+    "updated_at": "17.04.2026 18:30:00",
+    "updated_ts": 1776439800,
     "version": "8.0"
   }
 }
