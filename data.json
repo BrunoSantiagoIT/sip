@@ -28,7 +28,7 @@
       "id": "76",
       "supplier_id": "18",
       "number": "1032",
-      "assigned_to": null,
+      "assigned_to": "исход кгб соня",
       "category": "холодка",
       "multisip": false
     },
@@ -43,7 +43,7 @@
     "78": {
       "id": "78",
       "supplier_id": "16",
-      "number": "403",
+      "number": "1017",
       "assigned_to": "Ганж",
       "category": "холодка",
       "multisip": false
@@ -403,11 +403,23 @@
         "госы": 0,
         "входяшка": 0
       }
+    },
+    {
+      "display": "исход кгб соня",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1776404726,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
     }
   ],
   "_meta": {
-    "updated_at": "17.04.2026 09:27:08",
-    "updated_ts": 1776407228,
+    "updated_at": "17.04.2026 10:27:09",
+    "updated_ts": 1776410829,
     "version": "8.0"
   }
 }
