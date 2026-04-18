@@ -1,54 +1,5 @@
 {
-  "sips": {
-    "73": {
-      "id": "73",
-      "supplier_id": "17",
-      "number": "113215",
-      "assigned_to": "йосып",
-      "category": "холодка",
-      "multisip": false
-    },
-    "74": {
-      "id": "74",
-      "supplier_id": "18",
-      "number": "1030",
-      "assigned_to": "АЙВЕН ВХОД",
-      "category": "холодка",
-      "multisip": false
-    },
-    "75": {
-      "id": "75",
-      "supplier_id": "18",
-      "number": "1031",
-      "assigned_to": "ВХОД СОНЯ",
-      "category": "холодка",
-      "multisip": false
-    },
-    "76": {
-      "id": "76",
-      "supplier_id": "18",
-      "number": "1032",
-      "assigned_to": "fsb",
-      "category": "холодка",
-      "multisip": false
-    },
-    "77": {
-      "id": "77",
-      "supplier_id": "19",
-      "number": "6030",
-      "assigned_to": "юля",
-      "category": "холодка",
-      "multisip": false
-    },
-    "79": {
-      "id": "79",
-      "supplier_id": "21",
-      "number": "1023",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    }
-  },
+  "sips": {},
   "suppliers": {
     "8": {
       "id": "8",
@@ -109,7 +60,8 @@
       "id": "17",
       "name": "Morgan",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "18": {
       "id": "18",
@@ -121,7 +73,8 @@
       "id": "19",
       "name": "ЦРУ",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "20": {
       "id": "20",
@@ -133,10 +86,17 @@
       "id": "21",
       "name": "Bender",
       "multisip": false,
+      "multisip_workers": [],
+      "archived": true
+    },
+    "22": {
+      "id": "22",
+      "name": "cleopatra",
+      "multisip": false,
       "multisip_workers": []
     }
   },
-  "supplier_counter": 21,
+  "supplier_counter": 22,
   "sip_counter": 79,
   "problems": {
     "1": {
@@ -255,7 +215,7 @@
       "problems_today": 0,
       "last_active": 1776401169,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -267,7 +227,7 @@
       "problems_today": 0,
       "last_active": 1776401135,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -303,7 +263,7 @@
       "problems_today": 0,
       "last_active": 1776401489,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -363,7 +323,7 @@
       "problems_today": 0,
       "last_active": 1776401808,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -430,8 +390,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "18.04.2026 00:38:16",
-    "updated_ts": 1776461896,
+    "updated_at": "18.04.2026 08:30:00",
+    "updated_ts": 1776490200,
     "version": "8.0"
   }
 }
