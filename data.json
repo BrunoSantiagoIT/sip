@@ -4,7 +4,7 @@
       "id": "86",
       "supplier_id": "22",
       "number": "4010",
-      "assigned_to": null,
+      "assigned_to": "юля",
       "category": "холодка",
       "multisip": false
     },
@@ -12,7 +12,7 @@
       "id": "87",
       "supplier_id": "22",
       "number": "4011",
-      "assigned_to": null,
+      "assigned_to": "йосып",
       "category": "холодка",
       "multisip": false
     },
@@ -44,7 +44,7 @@
       "id": "91",
       "supplier_id": "16",
       "number": "1007",
-      "assigned_to": null,
+      "assigned_to": "Ганж",
       "category": "холодка",
       "multisip": false
     },
@@ -52,7 +52,9 @@
       "id": "92",
       "supplier_id": "20",
       "number": "12423",
-      "assigned_to": null
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -223,6 +225,12 @@
       "user_name": "­",
       "rating": 1,
       "label": "😡 Очень плохая"
+    },
+    {
+      "user_id": 7474036403,
+      "user_name": "­",
+      "rating": 1,
+      "label": "😡 Очень плохая"
     }
   ],
   "autofix_mode": "off",
@@ -325,12 +333,12 @@
     },
     {
       "display": "юля",
-      "sip_count": 15,
+      "sip_count": 16,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776492271,
+      "last_active": 1776661725,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -385,12 +393,12 @@
     },
     {
       "display": "Йосып",
-      "sip_count": 7,
+      "sip_count": 8,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776492406,
+      "last_active": 1776661774,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -433,12 +441,12 @@
     },
     {
       "display": "Ганж",
-      "sip_count": 4,
+      "sip_count": 5,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776492466,
+      "last_active": 1776661830,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -457,8 +465,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "20.04.2026 09:01:26",
-    "updated_ts": 1776664886,
+    "updated_at": "20.04.2026 10:01:27",
+    "updated_ts": 1776668487,
     "version": "8.0"
   }
 }
