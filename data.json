@@ -237,6 +237,12 @@
       "user_name": "­",
       "rating": 1,
       "label": "😡 Очень плохая"
+    },
+    {
+      "user_id": 7474036403,
+      "user_name": "­",
+      "rating": 2,
+      "label": "😞 Плохая"
     }
   ],
   "autofix_mode": "off",
@@ -471,8 +477,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "20.04.2026 15:01:34",
-    "updated_ts": 1776686494,
+    "updated_at": "20.04.2026 16:30:00",
+    "updated_ts": 1776691800,
     "version": "8.0"
   }
 }
