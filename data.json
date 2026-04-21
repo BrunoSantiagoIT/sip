@@ -1,62 +1,5 @@
 {
-  "sips": {
-    "86": {
-      "id": "86",
-      "supplier_id": "22",
-      "number": "4010",
-      "assigned_to": "юля",
-      "category": "холодка",
-      "multisip": false
-    },
-    "87": {
-      "id": "87",
-      "supplier_id": "22",
-      "number": "4011",
-      "assigned_to": "йосып",
-      "category": "холодка",
-      "multisip": false
-    },
-    "88": {
-      "id": "88",
-      "supplier_id": "18",
-      "number": "1030",
-      "assigned_to": "ВХОД СОНЯ",
-      "category": "холодка",
-      "multisip": false
-    },
-    "89": {
-      "id": "89",
-      "supplier_id": "18",
-      "number": "1031",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "90": {
-      "id": "90",
-      "supplier_id": "18",
-      "number": "1032",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "91": {
-      "id": "91",
-      "supplier_id": "16",
-      "number": "1007",
-      "assigned_to": "Ганж",
-      "category": "холодка",
-      "multisip": false
-    },
-    "92": {
-      "id": "92",
-      "supplier_id": "20",
-      "number": "12423",
-      "assigned_to": "йосып",
-      "category": "холодка",
-      "multisip": false
-    }
-  },
+  "sips": {},
   "suppliers": {
     "8": {
       "id": "8",
@@ -76,8 +19,7 @@
       "id": "11",
       "name": "Маз",
       "multisip": false,
-      "multisip_workers": [],
-      "archived": true
+      "multisip_workers": []
     },
     "12": {
       "id": "12",
@@ -124,7 +66,8 @@
       "id": "18",
       "name": "КГБ",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "19": {
       "id": "19",
@@ -151,9 +94,21 @@
       "name": "cleopatra",
       "multisip": false,
       "multisip_workers": []
+    },
+    "23": {
+      "id": "23",
+      "name": "Билли",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "24": {
+      "id": "24",
+      "name": "Прокурор",
+      "multisip": false,
+      "multisip_workers": []
     }
   },
-  "supplier_counter": 22,
+  "supplier_counter": 24,
   "sip_counter": 92,
   "problems": {
     "1": {
@@ -308,7 +263,7 @@
       "problems_today": 0,
       "last_active": 1776660311,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -356,7 +311,7 @@
       "problems_today": 0,
       "last_active": 1776661725,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -416,7 +371,7 @@
       "problems_today": 0,
       "last_active": 1776674840,
       "category_breakdown": {
-        "холодка": 2,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -464,7 +419,7 @@
       "problems_today": 0,
       "last_active": 1776661830,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -483,8 +438,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "21.04.2026 01:00:06",
-    "updated_ts": 1776722406,
+    "updated_at": "21.04.2026 07:39:01",
+    "updated_ts": 1776746341,
     "version": "8.0"
   }
 }
