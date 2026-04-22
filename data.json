@@ -20,7 +20,7 @@
       "id": "103",
       "supplier_id": "18",
       "number": "2007",
-      "assigned_to": "АЙВЕН ВХОД",
+      "assigned_to": "соня вход актуал",
       "category": "холодка",
       "multisip": false
     },
@@ -52,7 +52,7 @@
       "id": "107",
       "supplier_id": "18",
       "number": "2006",
-      "assigned_to": "СОНЯ",
+      "assigned_to": null,
       "category": "холодка",
       "multisip": false
     }
@@ -369,7 +369,7 @@
       "problems_today": 0,
       "last_active": 1776833706,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -580,20 +580,20 @@
     },
     {
       "display": "СОНЯ",
-      "sip_count": 1,
+      "sip_count": 0,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776845085,
+      "last_active": 1776861607,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "22.04.2026 16:39:07",
-    "updated_ts": 1776865147,
+    "updated_at": "22.04.2026 17:39:09",
+    "updated_ts": 1776868749,
     "version": "8.0"
   }
 }
