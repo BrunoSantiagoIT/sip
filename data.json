@@ -137,7 +137,8 @@
       "id": "20",
       "name": "Хотабыч",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "21": {
       "id": "21",
@@ -573,8 +574,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "22.04.2026 10:39:00",
-    "updated_ts": 1776843540,
+    "updated_at": "22.04.2026 11:39:01",
+    "updated_ts": 1776847141,
     "version": "8.0"
   }
 }
