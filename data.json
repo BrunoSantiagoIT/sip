@@ -40,14 +40,6 @@
       "category": "холодка",
       "multisip": false
     },
-    "98": {
-      "id": "98",
-      "supplier_id": "11",
-      "number": "4031",
-      "assigned_to": "фсб",
-      "category": "холодка",
-      "multisip": false
-    },
     "99": {
       "id": "99",
       "supplier_id": "23",
@@ -568,15 +560,15 @@
       "problems_today": 0,
       "last_active": 1776769876,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "22.04.2026 07:38:57",
-    "updated_ts": 1776832737,
+    "updated_at": "22.04.2026 08:38:58",
+    "updated_ts": 1776836338,
     "version": "8.0"
   }
 }
