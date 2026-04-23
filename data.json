@@ -1,21 +1,5 @@
 {
   "sips": {
-    "102": {
-      "id": "102",
-      "supplier_id": "18",
-      "number": "2005",
-      "assigned_to": "ВХОД СОНЯ",
-      "category": "холодка",
-      "multisip": false
-    },
-    "103": {
-      "id": "103",
-      "supplier_id": "18",
-      "number": "2007",
-      "assigned_to": "соня вход актуал",
-      "category": "холодка",
-      "multisip": false
-    },
     "104": {
       "id": "104",
       "supplier_id": "22",
@@ -24,27 +8,43 @@
       "category": "холодка",
       "multisip": false
     },
-    "105": {
-      "id": "105",
-      "supplier_id": "23",
-      "number": "307",
+    "108": {
+      "id": "108",
+      "supplier_id": "18",
+      "number": "1003",
+      "assigned_to": "АЙВЕН ВХОД",
+      "category": "холодка",
+      "multisip": false
+    },
+    "109": {
+      "id": "109",
+      "supplier_id": "18",
+      "number": "1004",
+      "assigned_to": "СОНЯ ВХОД",
+      "category": "холодка",
+      "multisip": false
+    },
+    "110": {
+      "id": "110",
+      "supplier_id": "24",
+      "number": "527",
+      "assigned_to": "йосып",
+      "category": "холодка",
+      "multisip": false
+    },
+    "111": {
+      "id": "111",
+      "supplier_id": "16",
+      "number": "503",
       "assigned_to": "Ганж",
       "category": "холодка",
       "multisip": false
     },
-    "106": {
-      "id": "106",
-      "supplier_id": "24",
-      "number": "2005",
-      "assigned_to": "Йосып",
-      "category": "холодка",
-      "multisip": false
-    },
-    "107": {
-      "id": "107",
-      "supplier_id": "18",
-      "number": "2006",
-      "assigned_to": null,
+    "112": {
+      "id": "112",
+      "supplier_id": "16",
+      "number": "504",
+      "assigned_to": "йосып",
       "category": "холодка",
       "multisip": false
     }
@@ -149,7 +149,8 @@
       "id": "23",
       "name": "Билли",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "24": {
       "id": "24",
@@ -159,7 +160,7 @@
     }
   },
   "supplier_counter": 24,
-  "sip_counter": 107,
+  "sip_counter": 112,
   "problems": {
     "1": {
       "callsign": "",
@@ -349,19 +350,19 @@
       "problems_today": 0,
       "last_active": 1776833616,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     },
     {
       "display": "АЙВЕН ВХОД",
-      "sip_count": 10,
+      "sip_count": 11,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776833706,
+      "last_active": 1776920804,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -452,12 +453,12 @@
     },
     {
       "display": "Йосып",
-      "sip_count": 11,
+      "sip_count": 13,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776834193,
+      "last_active": 1776921340,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
@@ -500,10 +501,10 @@
     },
     {
       "display": "Ганж",
-      "sip_count": 7,
+      "sip_count": 8,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776834284,
+      "last_active": 1776920892,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -524,12 +525,12 @@
     },
     {
       "display": "СОНЯ ВХОД",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776746669,
+      "last_active": 1776919927,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -584,8 +585,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "23.04.2026 08:43:46",
-    "updated_ts": 1776923026,
+    "updated_at": "23.04.2026 10:30:00",
+    "updated_ts": 1776929400,
     "version": "8.0"
   }
 }
