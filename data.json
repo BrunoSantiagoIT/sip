@@ -316,6 +316,12 @@
       "user_name": "­",
       "rating": 1,
       "label": "😡 Очень плохая"
+    },
+    {
+      "user_id": 8240409625,
+      "user_name": "Bruno Santiago",
+      "rating": 5,
+      "label": "🤩 Очень хорошая"
     }
   ],
   "autofix_mode": "off",
@@ -610,8 +616,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "24.04.2026 14:30:00",
-    "updated_ts": 1777030200,
+    "updated_at": "24.04.2026 15:30:07",
+    "updated_ts": 1777033807,
     "version": "8.0"
   }
 }
