@@ -24,18 +24,34 @@
       "category": "холодка",
       "multisip": false
     },
-    "110": {
-      "id": "110",
+    "113": {
+      "id": "113",
       "supplier_id": "24",
-      "number": "527",
-      "assigned_to": "йосып",
+      "number": "40786",
+      "assigned_to": "Ганж",
       "category": "холодка",
       "multisip": false
     },
-    "112": {
-      "id": "112",
+    "114": {
+      "id": "114",
       "supplier_id": "16",
-      "number": "504",
+      "number": "312",
+      "assigned_to": "Ганж",
+      "category": "холодка",
+      "multisip": false
+    },
+    "115": {
+      "id": "115",
+      "supplier_id": "16",
+      "number": "313",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "116": {
+      "id": "116",
+      "supplier_id": "23",
+      "number": "225",
       "assigned_to": "йосып",
       "category": "холодка",
       "multisip": false
@@ -141,8 +157,7 @@
       "id": "23",
       "name": "Билли",
       "multisip": false,
-      "multisip_workers": [],
-      "archived": true
+      "multisip_workers": []
     },
     "24": {
       "id": "24",
@@ -152,7 +167,7 @@
     }
   },
   "supplier_counter": 24,
-  "sip_counter": 112,
+  "sip_counter": 116,
   "problems": {
     "1": {
       "callsign": "",
@@ -463,12 +478,12 @@
     },
     {
       "display": "Йосып",
-      "sip_count": 13,
+      "sip_count": 14,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776921340,
+      "last_active": 1777006708,
       "category_breakdown": {
-        "холодка": 2,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -511,12 +526,12 @@
     },
     {
       "display": "Ганж",
-      "sip_count": 8,
+      "sip_count": 10,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776920892,
+      "last_active": 1777007610,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
@@ -595,8 +610,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "24.04.2026 08:47:57",
-    "updated_ts": 1777009677,
+    "updated_at": "24.04.2026 09:47:58",
+    "updated_ts": 1777013278,
     "version": "8.0"
   }
 }
