@@ -55,6 +55,14 @@
       "assigned_to": "АЙВЕН ВХОД",
       "category": "холодка",
       "multisip": false
+    },
+    "130": {
+      "id": "130",
+      "supplier_id": "19",
+      "number": "5032",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
     }
   },
   "suppliers": {
@@ -129,8 +137,7 @@
       "id": "19",
       "name": "ЦРУ",
       "multisip": false,
-      "multisip_workers": [],
-      "archived": true
+      "multisip_workers": []
     },
     "20": {
       "id": "20",
@@ -167,7 +174,7 @@
     }
   },
   "supplier_counter": 24,
-  "sip_counter": 129,
+  "sip_counter": 130,
   "problems": {
     "1": {
       "callsign": "",
@@ -328,6 +335,12 @@
       "user_name": "Bruno Santiago",
       "rating": 5,
       "label": "🤩 Очень хорошая"
+    },
+    {
+      "user_id": 7474036403,
+      "user_name": "­",
+      "rating": 1,
+      "label": "😡 Очень плохая"
     }
   ],
   "autofix_mode": "off",
@@ -646,8 +659,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "28.04.2026 13:30:01",
-    "updated_ts": 1777372201,
+    "updated_at": "28.04.2026 14:30:02",
+    "updated_ts": 1777375802,
     "version": "8.0"
   }
 }
