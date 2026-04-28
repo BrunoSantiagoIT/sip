@@ -150,7 +150,8 @@
       "id": "22",
       "name": "cleopatra",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "23": {
       "id": "23",
@@ -633,8 +634,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "28.04.2026 00:00:05",
-    "updated_ts": 1777323605,
+    "updated_at": "28.04.2026 07:41:18",
+    "updated_ts": 1777351278,
     "version": "8.0"
   }
 }
