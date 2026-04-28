@@ -4,7 +4,7 @@
       "id": "117",
       "supplier_id": "18",
       "number": "1031",
-      "assigned_to": "АЙВЕН ВХОД",
+      "assigned_to": "ment",
       "category": "холодка",
       "multisip": false
     },
@@ -16,43 +16,51 @@
       "category": "холодка",
       "multisip": false
     },
-    "119": {
-      "id": "119",
+    "124": {
+      "id": "124",
+      "supplier_id": "23",
+      "number": "312",
+      "assigned_to": "ЮЛЯ",
+      "category": "холодка",
+      "multisip": false
+    },
+    "125": {
+      "id": "125",
       "supplier_id": "24",
-      "number": "519",
+      "number": "40281",
       "assigned_to": "Йосып",
       "category": "холодка",
       "multisip": false
     },
-    "120": {
-      "id": "120",
-      "supplier_id": "23",
-      "number": "221",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "121": {
-      "id": "121",
-      "supplier_id": "22",
-      "number": "4010",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "122": {
-      "id": "122",
-      "supplier_id": "15",
-      "number": "41085",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
-    "123": {
-      "id": "123",
+    "126": {
+      "id": "126",
       "supplier_id": "16",
       "number": "510",
       "assigned_to": "Ганж",
+      "category": "холодка",
+      "multisip": false
+    },
+    "127": {
+      "id": "127",
+      "supplier_id": "15",
+      "number": "41085",
+      "assigned_to": "Тарзан",
+      "category": "холодка",
+      "multisip": false
+    },
+    "128": {
+      "id": "128",
+      "supplier_id": "16",
+      "number": "508",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "129": {
+      "id": "129",
+      "supplier_id": "16",
+      "number": "509",
+      "assigned_to": "АЙВЕН ВХОД",
       "category": "холодка",
       "multisip": false
     }
@@ -167,7 +175,7 @@
     }
   },
   "supplier_counter": 24,
-  "sip_counter": 123,
+  "sip_counter": 129,
   "problems": {
     "1": {
       "callsign": "",
@@ -394,10 +402,10 @@
     },
     {
       "display": "АЙВЕН ВХОД",
-      "sip_count": 12,
+      "sip_count": 13,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777265351,
+      "last_active": 1777354324,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -430,12 +438,12 @@
     },
     {
       "display": "юля",
-      "sip_count": 18,
+      "sip_count": 19,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1776853220,
+      "last_active": 1777352039,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -493,7 +501,7 @@
       "sip_count": 15,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777265740,
+      "last_active": 1777352245,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -538,10 +546,10 @@
     },
     {
       "display": "Ганж",
-      "sip_count": 11,
+      "sip_count": 12,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777265801,
+      "last_active": 1777352289,
       "category_breakdown": {
         "холодка": 1,
         "госы": 0,
@@ -631,11 +639,23 @@
         "госы": 0,
         "входяшка": 0
       }
+    },
+    {
+      "display": "Тарзан",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1777352389,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
     }
   ],
   "_meta": {
-    "updated_at": "28.04.2026 08:41:19",
-    "updated_ts": 1777354879,
+    "updated_at": "28.04.2026 10:30:00",
+    "updated_ts": 1777361400,
     "version": "8.0"
   }
 }
