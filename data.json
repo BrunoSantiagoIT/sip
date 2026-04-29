@@ -36,7 +36,7 @@
       "id": "135",
       "supplier_id": "24",
       "number": "40282",
-      "assigned_to": null,
+      "assigned_to": "Тарзан",
       "category": "холодка",
       "multisip": false
     },
@@ -44,7 +44,7 @@
       "id": "136",
       "supplier_id": "16",
       "number": "510",
-      "assigned_to": null,
+      "assigned_to": "Ганж",
       "category": "холодка",
       "multisip": false
     },
@@ -385,11 +385,35 @@
         "госы": 0,
         "входяшка": 0
       }
+    },
+    {
+      "display": "Тарзан",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1777445618,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
+    },
+    {
+      "display": "Ганж",
+      "sip_count": 1,
+      "problems_total": 0,
+      "problems_today": 0,
+      "last_active": 1777445665,
+      "category_breakdown": {
+        "холодка": 1,
+        "госы": 0,
+        "входяшка": 0
+      }
     }
   ],
   "_meta": {
-    "updated_at": "29.04.2026 10:29:11",
-    "updated_ts": 1777447751,
+    "updated_at": "29.04.2026 11:29:12",
+    "updated_ts": 1777451352,
     "version": "8.0"
   }
 }
