@@ -40,14 +40,6 @@
       "category": "холодка",
       "multisip": false
     },
-    "136": {
-      "id": "136",
-      "supplier_id": "16",
-      "number": "510",
-      "assigned_to": "Ганж",
-      "category": "холодка",
-      "multisip": false
-    },
     "137": {
       "id": "137",
       "supplier_id": "23",
@@ -405,15 +397,15 @@
       "problems_today": 0,
       "last_active": 1777445665,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
     }
   ],
   "_meta": {
-    "updated_at": "30.04.2026 06:51:38",
-    "updated_ts": 1777521098,
+    "updated_at": "30.04.2026 07:51:39",
+    "updated_ts": 1777524699,
     "version": "8.0"
   }
 }
