@@ -12,9 +12,15 @@
       "id": "139",
       "supplier_id": "18",
       "number": "2001",
-      "assigned_to": "СОНЯ ВХОД",
+      "assigned_to": null,
       "category": "холодка",
       "multisip": false
+    },
+    "140": {
+      "id": "140",
+      "supplier_id": "24",
+      "number": "40187",
+      "assigned_to": null
     }
   },
   "suppliers": {
@@ -130,7 +136,7 @@
     }
   },
   "supplier_counter": 24,
-  "sip_counter": 139,
+  "sip_counter": 140,
   "problems": {
     "1": {
       "callsign": "",
@@ -315,12 +321,12 @@
     },
     {
       "display": "СОНЯ ВХОД",
-      "sip_count": 2,
+      "sip_count": 1,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777522181,
+      "last_active": 1777535014,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -375,8 +381,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "30.04.2026 11:30:01",
-    "updated_ts": 1777537801,
+    "updated_at": "30.04.2026 12:30:02",
+    "updated_ts": 1777541402,
     "version": "8.0"
   }
 }
