@@ -1,13 +1,5 @@
 {
   "sips": {
-    "138": {
-      "id": "138",
-      "supplier_id": "18",
-      "number": "1032",
-      "assigned_to": null,
-      "category": "холодка",
-      "multisip": false
-    },
     "139": {
       "id": "139",
       "supplier_id": "18",
@@ -383,8 +375,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "01.05.2026 07:59:16",
-    "updated_ts": 1777611556,
+    "updated_at": "01.05.2026 08:59:17",
+    "updated_ts": 1777615157,
     "version": "8.0"
   }
 }
