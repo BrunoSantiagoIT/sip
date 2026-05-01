@@ -1,18 +1,18 @@
 {
   "sips": {
-    "139": {
-      "id": "139",
+    "141": {
+      "id": "141",
       "supplier_id": "18",
-      "number": "2001",
-      "assigned_to": null,
+      "number": "2032",
+      "assigned_to": "СОНЯ ВХОД",
       "category": "холодка",
       "multisip": false
     },
-    "140": {
-      "id": "140",
-      "supplier_id": "24",
-      "number": "40187",
-      "assigned_to": null,
+    "142": {
+      "id": "142",
+      "supplier_id": "18",
+      "number": "2031",
+      "assigned_to": "Тарзан",
       "category": "холодка",
       "multisip": false
     }
@@ -126,11 +126,12 @@
       "id": "24",
       "name": "Прокурор",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     }
   },
   "supplier_counter": 24,
-  "sip_counter": 140,
+  "sip_counter": 142,
   "problems": {
     "1": {
       "callsign": "",
@@ -315,12 +316,12 @@
     },
     {
       "display": "СОНЯ ВХОД",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777535014,
+      "last_active": 1777611640,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -351,12 +352,12 @@
     },
     {
       "display": "Тарзан",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777445618,
+      "last_active": 1777611698,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -375,8 +376,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "01.05.2026 08:59:17",
-    "updated_ts": 1777615157,
+    "updated_at": "01.05.2026 10:30:00",
+    "updated_ts": 1777620600,
     "version": "8.0"
   }
 }
