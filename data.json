@@ -1,10 +1,26 @@
 {
   "sips": {
-    "142": {
-      "id": "142",
+    "143": {
+      "id": "143",
+      "supplier_id": "15",
+      "number": "40783",
+      "assigned_to": "СОНЯ ВХОД",
+      "category": "холодка",
+      "multisip": false
+    },
+    "144": {
+      "id": "144",
       "supplier_id": "18",
-      "number": "2031",
-      "assigned_to": "Тарзан",
+      "number": "1015",
+      "assigned_to": "АЙВЕН ВХОД",
+      "category": "холодка",
+      "multisip": false
+    },
+    "145": {
+      "id": "145",
+      "supplier_id": "18",
+      "number": "1016",
+      "assigned_to": "СОНЯ ВХОД",
       "category": "холодка",
       "multisip": false
     }
@@ -56,8 +72,7 @@
       "id": "15",
       "name": "LUMA",
       "multisip": false,
-      "multisip_workers": [],
-      "archived": true
+      "multisip_workers": []
     },
     "16": {
       "id": "16",
@@ -123,7 +138,7 @@
     }
   },
   "supplier_counter": 24,
-  "sip_counter": 142,
+  "sip_counter": 145,
   "problems": {
     "1": {
       "callsign": "",
@@ -296,24 +311,24 @@
   "notes_stats": [
     {
       "display": "АЙВЕН ВХОД",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777535009,
+      "last_active": 1777867188,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
     },
     {
       "display": "СОНЯ ВХОД",
-      "sip_count": 2,
+      "sip_count": 4,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777611640,
+      "last_active": 1777868815,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
@@ -349,7 +364,7 @@
       "problems_today": 0,
       "last_active": 1777611698,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -368,8 +383,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "04.05.2026 07:52:07",
-    "updated_ts": 1777870327,
+    "updated_at": "04.05.2026 08:52:08",
+    "updated_ts": 1777873928,
     "version": "8.0"
   }
 }
