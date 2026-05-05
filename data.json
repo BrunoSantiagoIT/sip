@@ -1,22 +1,5 @@
 {
-  "sips": {
-    "144": {
-      "id": "144",
-      "supplier_id": "18",
-      "number": "1015",
-      "assigned_to": "АЙВЕН ВХОД",
-      "category": "холодка",
-      "multisip": false
-    },
-    "145": {
-      "id": "145",
-      "supplier_id": "18",
-      "number": "1016",
-      "assigned_to": "СОНЯ ВХОД",
-      "category": "холодка",
-      "multisip": false
-    }
-  },
+  "sips": {},
   "suppliers": {
     "8": {
       "id": "8",
@@ -308,7 +291,7 @@
       "problems_today": 0,
       "last_active": 1777867188,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -320,7 +303,7 @@
       "problems_today": 0,
       "last_active": 1777868815,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 0,
         "госы": 0,
         "входяшка": 0
       }
@@ -375,8 +358,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "05.05.2026 09:16:31",
-    "updated_ts": 1777961791,
+    "updated_at": "05.05.2026 10:30:00",
+    "updated_ts": 1777966200,
     "version": "8.0"
   }
 }
