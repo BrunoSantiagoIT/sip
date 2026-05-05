@@ -1,13 +1,5 @@
 {
   "sips": {
-    "143": {
-      "id": "143",
-      "supplier_id": "15",
-      "number": "40783",
-      "assigned_to": "СОНЯ ВХОД",
-      "category": "холодка",
-      "multisip": false
-    },
     "144": {
       "id": "144",
       "supplier_id": "18",
@@ -328,7 +320,7 @@
       "problems_today": 0,
       "last_active": 1777868815,
       "category_breakdown": {
-        "холодка": 2,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -383,8 +375,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "05.05.2026 08:16:30",
-    "updated_ts": 1777958190,
+    "updated_at": "05.05.2026 09:16:31",
+    "updated_ts": 1777961791,
     "version": "8.0"
   }
 }
