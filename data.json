@@ -28,7 +28,7 @@
       "id": "149",
       "supplier_id": "25",
       "number": "215",
-      "assigned_to": null,
+      "assigned_to": "АЙВЕН ВХОД",
       "category": "холодка",
       "multisip": false
     }
@@ -331,12 +331,12 @@
   "notes_stats": [
     {
       "display": "АЙВЕН ВХОД",
-      "sip_count": 3,
+      "sip_count": 4,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1778045233,
+      "last_active": 1778047459,
       "category_breakdown": {
-        "холодка": 1,
+        "холодка": 2,
         "госы": 0,
         "входяшка": 0
       }
@@ -403,8 +403,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "06.05.2026 09:39:11",
-    "updated_ts": 1778049551,
+    "updated_at": "06.05.2026 10:39:12",
+    "updated_ts": 1778053152,
     "version": "8.0"
   }
 }
