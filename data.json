@@ -4,7 +4,7 @@
       "id": "146",
       "supplier_id": "26",
       "number": "215",
-      "assigned_to": null,
+      "assigned_to": "ЮЛЯ",
       "category": "холодка",
       "multisip": false
     },
@@ -12,7 +12,7 @@
       "id": "147",
       "supplier_id": "16",
       "number": "606",
-      "assigned_to": null,
+      "assigned_to": "АЙВЕН ВХОД",
       "category": "холодка",
       "multisip": false
     },
@@ -20,6 +20,14 @@
       "id": "148",
       "supplier_id": "18",
       "number": "1013",
+      "assigned_to": "СОНЯ ВХОД",
+      "category": "холодка",
+      "multisip": false
+    },
+    "149": {
+      "id": "149",
+      "supplier_id": "25",
+      "number": "215",
       "assigned_to": null,
       "category": "холодка",
       "multisip": false
@@ -150,7 +158,7 @@
     }
   },
   "supplier_counter": 26,
-  "sip_counter": 148,
+  "sip_counter": 149,
   "problems": {
     "1": {
       "callsign": "",
@@ -323,24 +331,24 @@
   "notes_stats": [
     {
       "display": "АЙВЕН ВХОД",
-      "sip_count": 2,
+      "sip_count": 3,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777867188,
+      "last_active": 1778045233,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
     },
     {
       "display": "СОНЯ ВХОД",
-      "sip_count": 4,
+      "sip_count": 5,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777868815,
+      "last_active": 1778045239,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -359,12 +367,12 @@
     },
     {
       "display": "ЮЛЯ",
-      "sip_count": 1,
+      "sip_count": 2,
       "problems_total": 0,
       "problems_today": 0,
-      "last_active": 1777439361,
+      "last_active": 1778045265,
       "category_breakdown": {
-        "холодка": 0,
+        "холодка": 1,
         "госы": 0,
         "входяшка": 0
       }
@@ -395,8 +403,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "06.05.2026 08:39:10",
-    "updated_ts": 1778045950,
+    "updated_at": "06.05.2026 09:39:11",
+    "updated_ts": 1778049551,
     "version": "8.0"
   }
 }
