@@ -47,7 +47,8 @@
       "id": "15",
       "name": "LUMA",
       "multisip": false,
-      "multisip_workers": []
+      "multisip_workers": [],
+      "archived": true
     },
     "16": {
       "id": "16",
@@ -358,8 +359,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "06.05.2026 06:39:08",
-    "updated_ts": 1778038748,
+    "updated_at": "06.05.2026 07:39:09",
+    "updated_ts": 1778042349,
     "version": "8.0"
   }
 }
