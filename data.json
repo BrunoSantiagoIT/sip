@@ -1,5 +1,30 @@
 {
-  "sips": {},
+  "sips": {
+    "146": {
+      "id": "146",
+      "supplier_id": "26",
+      "number": "215",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "147": {
+      "id": "147",
+      "supplier_id": "16",
+      "number": "606",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    },
+    "148": {
+      "id": "148",
+      "supplier_id": "18",
+      "number": "1013",
+      "assigned_to": null,
+      "category": "холодка",
+      "multisip": false
+    }
+  },
   "suppliers": {
     "8": {
       "id": "8",
@@ -54,8 +79,7 @@
       "id": "16",
       "name": "Bert",
       "multisip": false,
-      "multisip_workers": [],
-      "archived": true
+      "multisip_workers": []
     },
     "17": {
       "id": "17",
@@ -111,10 +135,22 @@
       "multisip": false,
       "multisip_workers": [],
       "archived": true
+    },
+    "25": {
+      "id": "25",
+      "name": "Никита Звезда",
+      "multisip": false,
+      "multisip_workers": []
+    },
+    "26": {
+      "id": "26",
+      "name": "Бендер",
+      "multisip": false,
+      "multisip_workers": []
     }
   },
-  "supplier_counter": 24,
-  "sip_counter": 145,
+  "supplier_counter": 26,
+  "sip_counter": 148,
   "problems": {
     "1": {
       "callsign": "",
@@ -359,8 +395,8 @@
     }
   ],
   "_meta": {
-    "updated_at": "06.05.2026 07:39:09",
-    "updated_ts": 1778042349,
+    "updated_at": "06.05.2026 08:39:10",
+    "updated_ts": 1778045950,
     "version": "8.0"
   }
 }
